@@ -1,5 +1,15 @@
 [
   {
+    "id": "welib",
+    "title": "WeLib",
+    "url": "https://de.welib.org/",
+    "description": "Schattenbibliothek mit 43 Millionen Büchern und 98 Millionen wissenschaftlichen Artikeln — Volltextsuche, kostenlose PDF-Downloads.",
+    "category": "Research",
+    "tags": ["books", "papers", "library", "pdf", "search"],
+    "createdAt": "2026-04-30",
+    "favorite": false
+  },
+  {
     "id": "get-shit-done",
     "title": "GET SHIT DONE (GSD)",
     "url": "https://github.com/gsd-build/get-shit-done",
