@@ -1,0 +1,56 @@
+[
+  {
+    "id": "github",
+    "title": "GitHub",
+    "url": "https://github.com",
+    "description": "Code-Hosting, Pull Requests und Open-Source-Welt — Heimat für jedes Repo.",
+    "category": "GitHub",
+    "tags": ["repo", "open-source", "git"],
+    "note": "Default-Anlaufstelle für Repositories und Code-Discovery.",
+    "createdAt": "2026-04-25",
+    "favorite": true
+  },
+  {
+    "id": "claude-code-docs",
+    "title": "Claude Code Documentation",
+    "url": "https://docs.claude.com/en/docs/agents-and-tools/claude-code/overview",
+    "description": "Offizielle Doku zu Claude Code — Setup, Skills, Hooks, MCP und Agents.",
+    "category": "AI",
+    "tags": ["claude", "ai", "docs", "agents"],
+    "note": "Erste Stelle bei Fragen zu Skills, Hooks und MCP-Setup.",
+    "createdAt": "2026-04-26",
+    "favorite": true
+  },
+  {
+    "id": "mdn-web-docs",
+    "title": "MDN Web Docs",
+    "url": "https://developer.mozilla.org",
+    "description": "Referenz für HTML, CSS und JavaScript — community-gepflegt und sehr verlässlich.",
+    "category": "Coding",
+    "tags": ["docs", "web", "javascript", "css", "html"],
+    "createdAt": "2026-04-27",
+    "favorite": false
+  },
+  {
+    "id": "react-dev",
+    "title": "React",
+    "url": "https://react.dev",
+    "description": "Offizielle Doku der React-Library — neues Tutorial, klare API-Beispiele.",
+    "category": "Coding",
+    "tags": ["react", "frontend", "library"],
+    "note": "Tutorial \"Tic-Tac-Toe\" eignet sich gut zum schnellen Aufwärmen.",
+    "createdAt": "2026-04-28",
+    "favorite": false
+  },
+  {
+    "id": "godly-website",
+    "title": "Godly — Awwward-grade Web Design",
+    "url": "https://godly.website",
+    "description": "Kuratierte Galerie hochwertiger, modern designter Websites.",
+    "category": "Inspiration",
+    "tags": ["design", "inspiration", "ui"],
+    "note": "Top-Quelle für \"Edge of Tech\"-Optik.",
+    "createdAt": "2026-04-29",
+    "favorite": true
+  }
+]
