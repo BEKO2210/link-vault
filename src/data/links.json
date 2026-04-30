@@ -1,5 +1,15 @@
 [
   {
+    "id": "glif-mcp-server",
+    "title": "glifxyz/glif-mcp-server",
+    "url": "https://github.com/glifxyz/glif-mcp-server",
+    "description": "MCP-Server, der glif.app-Workflows direkt im LLM verfügbar macht — Image-Gen, Memes und Multimedia-KI per Tool-Call.",
+    "category": "GitHub",
+    "tags": ["mcp", "ai", "image", "workflows", "server"],
+    "createdAt": "2026-04-30",
+    "favorite": false
+  },
+  {
     "id": "web-to-app",
     "title": "shiahonb777/web-to-app",
     "url": "https://github.com/shiahonb777/web-to-app",
