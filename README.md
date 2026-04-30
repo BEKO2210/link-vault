@@ -81,17 +81,44 @@ Die Hauptquelle ist **eine einzige Datei**: `src/data/links.json`.
 
 ## Wie nutze ich das Formular?
 
-Das Formular ist der Helfer im Browser, **nicht** der Speicherort.
+Das Formular bietet drei Wege, einen neuen Link zu sichern:
+
+1. **JSON kopieren** → manuell in `src/data/links.json` einfügen, committen, pushen.
+2. **Lokal als Entwurf merken** → `localStorage`, erscheint sofort in der Liste mit Cyan-Badge (Drafts lassen sich dort wieder entfernen).
+3. **Direkt zu GitHub committen** → ein Klick, fertig (siehe unten).
+
+**Allgemeines Verhalten:**
 
 - **URL-Validierung** in Echtzeit — `http://` oder `https://` ist Pflicht.
 - **ID/Slug** wird automatisch aus dem Titel erzeugt (`Mein cooler Link!` → `mein-cooler-link`). Umlaute werden transliteriert (`ä` → `ae`).
 - **Datum** wird automatisch auf heute gesetzt (`YYYY-MM-DD`).
 - **Tags** werden getrimmt, lowercased und als Array ausgegeben.
-- **JSON-Vorschau** wird live aktualisiert.
+- **JSON-Vorschau** rechts wird live aktualisiert.
 - **Copy-Button** kopiert den Block in die Zwischenablage (mit Fallback für ältere Browser).
-- **Lokaler Entwurf** speichert den Eintrag im Browser (`localStorage`) — z. B. wenn du gerade keine Zeit hast, ihn zu committen. Drafts erscheinen mit einem Badge in der Liste und lassen sich dort wieder entfernen.
 
-> ⚠️ Da die Seite statisch auf GitHub Pages läuft, kann das Formular **nicht** direkt in `links.json` schreiben. Der Workflow ist bewusst manuell: kopieren → einfügen → committen.
+### GitHub Direkt-Commit
+
+Im Formular gibt es den Bereich **„GitHub Direkt-Commit"**. Wenn dort ein Personal-Access-Token hinterlegt ist, committet der Button **„Direkt zu GitHub committen"**:
+
+1. lädt die aktuelle `src/data/links.json` über die GitHub Contents API,
+2. fügt den neuen Eintrag oben in das Array ein,
+3. committet mit Message `feat(links): add "<Titel>"` direkt auf den `main`-Branch,
+4. zeigt einen Link auf den entstandenen Commit an.
+
+Der GitHub-Pages-Workflow baut die Seite anschließend automatisch in 1–2 Minuten neu.
+
+**Token erstellen** (einmalig):
+
+1. https://github.com/settings/personal-access-tokens/new öffnen
+2. **Repository access** → **Only select repositories** → `BEKO2210/link-vault` auswählen
+3. **Permissions → Repository permissions → Contents** → **Read and write**
+4. Token generieren, ins Formular kopieren
+
+Der Token wird ausschließlich in `localStorage` (`blv:gh_settings:v1`) deines Browsers gespeichert und nie an Dritte gesendet — alle API-Calls gehen direkt von deinem Browser an `api.github.com`.
+
+> 🔒 **Sicherheits-Hinweis:** localStorage ist per Origin geteilt. Auf fremden oder geteilten Geräten kein Token speichern. Im Bereich „GitHub Direkt-Commit" gibt es einen `×`-Button, um den Token jederzeit wieder zu entfernen.
+
+> ⚠️ Ohne Token bleibt die Seite 100 % statisch — kein Backend, kein Login, kein Server.
 
 ---
 
