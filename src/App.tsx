@@ -20,6 +20,33 @@ function categoriesOf(link: Link): string[] {
     : ['Sonstiges']
 }
 
+function migrateDraft(d: unknown): Link | null {
+  if (!d || typeof d !== 'object') return null
+  const o = d as Record<string, unknown>
+  if (typeof o.id !== 'string' || typeof o.title !== 'string' || typeof o.url !== 'string') {
+    return null
+  }
+  let categories: string[]
+  if (Array.isArray(o.categories) && o.categories.every((c) => typeof c === 'string')) {
+    categories = o.categories as string[]
+  } else if (typeof o.category === 'string') {
+    categories = [o.category]
+  } else {
+    categories = ['Sonstiges']
+  }
+  return {
+    id: o.id,
+    title: o.title,
+    url: o.url,
+    description: typeof o.description === 'string' ? o.description : '',
+    categories,
+    tags: Array.isArray(o.tags) ? (o.tags.filter((t) => typeof t === 'string') as string[]) : [],
+    note: typeof o.note === 'string' ? o.note : undefined,
+    createdAt: typeof o.createdAt === 'string' ? o.createdAt : '',
+    favorite: o.favorite === true,
+  }
+}
+
 export function App() {
   const [drafts, setDrafts] = useState<Link[]>([])
   const [search, setSearch] = useState('')
@@ -33,7 +60,12 @@ export function App() {
       const raw = localStorage.getItem(DRAFTS_KEY)
       if (raw) {
         const parsed: unknown = JSON.parse(raw)
-        if (Array.isArray(parsed)) setDrafts(parsed as Link[])
+        if (Array.isArray(parsed)) {
+          const migrated = parsed
+            .map(migrateDraft)
+            .filter((d): d is Link => d !== null)
+          setDrafts(migrated)
+        }
       }
     } catch {
       /* ignore corrupt storage */
