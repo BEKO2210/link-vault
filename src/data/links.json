@@ -1,5 +1,16 @@
 [
   {
+    "id": "ace-step-ui",
+    "title": "ACE-Step UI",
+    "url": "https://github.com/fspecii/ace-step-ui",
+    "description": "Lokale Web-UI für das ACE-Step-1.5-Modell — generiert KI-Musik im Browser als Open-Source-Alternative zu Suno.",
+    "category": "GitHub",
+    "tags": ["ai", "music", "audio", "local", "web-ui"],
+    "note": "Audio-KI wie Suno",
+    "createdAt": "2026-05-01",
+    "favorite": false
+  },
+  {
     "id": "welib",
     "title": "WeLib",
     "url": "https://de.welib.org/",
