@@ -4,7 +4,7 @@
     "title": "Decepticon",
     "url": "https://github.com/PurpleAILAB/Decepticon",
     "description": "Autonomer Red-Team-Agent in Kali-Sandbox — fährt echte Kill-Chains von Recon bis C2 mit OPPLAN und MITRE-ATT&CK-Mapping.",
-    "category": "Security",
+    "categories": ["Security", "Agents"],
     "tags": ["red-team", "pentest", "agents", "kali", "ai"],
     "createdAt": "2026-05-01",
     "favorite": false
@@ -14,7 +14,7 @@
     "title": "jcode",
     "url": "https://github.com/1jehuang/jcode",
     "description": "Performance-optimierte Coding-Agent-Harness in Rust mit Memory-Graph, Swarm-Modus, Self-Dev und vielen Provider-Logins.",
-    "category": "GitHub",
+    "categories": ["Coding", "Agents"],
     "tags": ["rust", "cli", "agents", "harness", "coding"],
     "createdAt": "2026-05-01",
     "favorite": false
@@ -24,7 +24,7 @@
     "title": "ACE-Step UI",
     "url": "https://github.com/fspecii/ace-step-ui",
     "description": "Lokale Web-UI für das ACE-Step-1.5-Modell — generiert KI-Musik im Browser als Open-Source-Alternative zu Suno.",
-    "category": "Audio",
+    "categories": ["Audio"],
     "tags": ["ai", "music", "generation", "local", "web-ui"],
     "note": "Audio-KI wie Suno",
     "createdAt": "2026-05-01",
@@ -35,7 +35,7 @@
     "title": "WeLib",
     "url": "https://de.welib.org/",
     "description": "Schattenbibliothek mit 43 Millionen Büchern und 98 Millionen wissenschaftlichen Artikeln — Volltextsuche, kostenlose PDF-Downloads.",
-    "category": "Research",
+    "categories": ["Research"],
     "tags": ["books", "papers", "library", "pdf", "search"],
     "createdAt": "2026-04-30",
     "favorite": false
@@ -45,7 +45,7 @@
     "title": "GET SHIT DONE (GSD)",
     "url": "https://github.com/gsd-build/get-shit-done",
     "description": "Meta-Prompting-Framework für Claude Code, das Projekte in atomare Phasen mit frischem Kontext und Verifikations-Gates zerlegt.",
-    "category": "GitHub",
+    "categories": ["Prompting", "Coding"],
     "tags": ["claude-code", "framework", "prompting", "agents", "workflow"],
     "createdAt": "2026-04-30",
     "favorite": false
@@ -55,7 +55,7 @@
     "title": "MemPalace",
     "url": "https://github.com/MemPalace/mempalace",
     "description": "Open-Source-Memory-System für KI, das Verläufe lokal speichert und per semantischer Suche zurückholt — ohne API, mit 96,6 % Recall.",
-    "category": "GitHub",
+    "categories": ["Memory", "AI"],
     "tags": ["memory", "ai", "local-first", "rag", "library"],
     "createdAt": "2026-04-30",
     "favorite": false
@@ -65,7 +65,7 @@
     "title": "OpenClaw",
     "url": "https://github.com/openclaw/openclaw",
     "description": "Selbst-gehosteter Personal-AI-Assistent für WhatsApp, Telegram, Slack & Co. mit Voice-Wakeword, Multi-Agent-Routing und sandboxed Tools.",
-    "category": "GitHub",
+    "categories": ["Agents", "Voice"],
     "tags": ["assistant", "ai", "self-hosted", "agents", "voice"],
     "createdAt": "2026-04-30",
     "favorite": false
@@ -75,7 +75,7 @@
     "title": "glifxyz/glif-mcp-server",
     "url": "https://github.com/glifxyz/glif-mcp-server",
     "description": "MCP-Server, der glif.app-Workflows direkt im LLM verfügbar macht — Image-Gen, Memes und Multimedia-KI per Tool-Call.",
-    "category": "MCP",
+    "categories": ["MCP", "Image"],
     "tags": ["mcp", "ai", "image", "workflows", "server"],
     "createdAt": "2026-04-30",
     "favorite": false
@@ -85,7 +85,7 @@
     "title": "shiahonb777/web-to-app",
     "url": "https://github.com/shiahonb777/web-to-app",
     "description": "No-Code-Android-App, die beliebige Websites oder Frontend-Projekte in eigenständige APKs verpackt — inklusive JS/CSS-Injection und Verschlüsselung.",
-    "category": "Mobile",
+    "categories": ["Mobile", "Tool"],
     "tags": ["android", "apk", "webview", "no-code", "app-builder"],
     "createdAt": "2026-04-30",
     "favorite": false
@@ -95,7 +95,7 @@
     "title": "GitHub",
     "url": "https://github.com",
     "description": "Code-Hosting, Pull Requests und Open-Source-Welt — Heimat für jedes Repo.",
-    "category": "GitHub",
+    "categories": ["Coding", "Tool"],
     "tags": ["repo", "open-source", "git"],
     "note": "Default-Anlaufstelle für Repositories und Code-Discovery.",
     "createdAt": "2026-04-25",
@@ -106,7 +106,7 @@
     "title": "Claude Code Documentation",
     "url": "https://docs.claude.com/en/docs/agents-and-tools/claude-code/overview",
     "description": "Offizielle Doku zu Claude Code — Setup, Skills, Hooks, MCP und Agents.",
-    "category": "AI",
+    "categories": ["Docs", "Coding", "Agents"],
     "tags": ["claude", "ai", "docs", "agents"],
     "note": "Erste Stelle bei Fragen zu Skills, Hooks und MCP-Setup.",
     "createdAt": "2026-04-26",
@@ -117,7 +117,7 @@
     "title": "MDN Web Docs",
     "url": "https://developer.mozilla.org",
     "description": "Referenz für HTML, CSS und JavaScript — community-gepflegt und sehr verlässlich.",
-    "category": "Coding",
+    "categories": ["Docs", "Coding"],
     "tags": ["docs", "web", "javascript", "css", "html"],
     "createdAt": "2026-04-27",
     "favorite": false
@@ -127,7 +127,7 @@
     "title": "React",
     "url": "https://react.dev",
     "description": "Offizielle Doku der React-Library — neues Tutorial, klare API-Beispiele.",
-    "category": "Coding",
+    "categories": ["Docs", "Coding"],
     "tags": ["react", "frontend", "library"],
     "note": "Tutorial \"Tic-Tac-Toe\" eignet sich gut zum schnellen Aufwärmen.",
     "createdAt": "2026-04-28",
@@ -138,19 +138,18 @@
     "title": "Godly — Awwward-grade Web Design",
     "url": "https://godly.website",
     "description": "Kuratierte Galerie hochwertiger, modern designter Websites.",
-    "category": "Inspiration",
+    "categories": ["Inspiration", "Design"],
     "tags": ["design", "inspiration", "ui"],
     "note": "Top-Quelle für \"Edge of Tech\"-Optik.",
     "createdAt": "2026-04-29",
     "favorite": true
   },
-
   {
     "id": "chatgpt",
     "title": "ChatGPT",
     "url": "https://chatgpt.com",
     "description": "OpenAIs Frontier-Chat — GPT-Modelle mit Web, Vision, Voice, Canvas und Custom GPTs.",
-    "category": "AI",
+    "categories": ["Chat", "AI"],
     "tags": ["chat", "openai", "gpt", "assistant"],
     "createdAt": "2026-04-30",
     "favorite": true
@@ -160,7 +159,7 @@
     "title": "Claude",
     "url": "https://claude.ai",
     "description": "Anthropics Chat-UI — Claude Opus / Sonnet / Haiku mit Projects, Artifacts und Computer Use.",
-    "category": "AI",
+    "categories": ["Chat", "AI"],
     "tags": ["chat", "anthropic", "claude", "assistant"],
     "note": "Mein Default für längere Kontexte und Code.",
     "createdAt": "2026-04-30",
@@ -171,7 +170,7 @@
     "title": "Google Gemini",
     "url": "https://gemini.google.com",
     "description": "Googles Multimodal-Assistent mit 1M-Token-Kontext, Deep Research und Workspace-Integration.",
-    "category": "AI",
+    "categories": ["Chat", "AI"],
     "tags": ["chat", "google", "gemini", "multimodal"],
     "createdAt": "2026-04-30",
     "favorite": false
@@ -181,7 +180,7 @@
     "title": "Microsoft Copilot",
     "url": "https://copilot.microsoft.com",
     "description": "Microsofts AI-Assistent — GPT-basiert mit Web-Suche, Bildgenerierung und Office-Integration.",
-    "category": "AI",
+    "categories": ["Chat", "AI"],
     "tags": ["chat", "microsoft", "copilot", "gpt"],
     "createdAt": "2026-04-30",
     "favorite": false
@@ -191,7 +190,7 @@
     "title": "Perplexity",
     "url": "https://www.perplexity.ai",
     "description": "Answer-Engine mit Quellenangaben — wie ChatGPT, aber für gut belegte Recherche.",
-    "category": "AI",
+    "categories": ["Chat", "Research"],
     "tags": ["search", "research", "answer-engine"],
     "note": "Pro mit Sonar/Claude/GPT als Backend wählbar.",
     "createdAt": "2026-04-30",
@@ -202,7 +201,7 @@
     "title": "DeepSeek",
     "url": "https://www.deepseek.com",
     "description": "Open-weight Frontier-Modelle aus China — DeepSeek-V3 / R1 mit starkem Reasoning.",
-    "category": "AI",
+    "categories": ["AI", "Chat"],
     "tags": ["llm", "open-weight", "reasoning", "china"],
     "createdAt": "2026-04-30",
     "favorite": false
@@ -212,7 +211,7 @@
     "title": "Z.AI (Zhipu GLM)",
     "url": "https://chat.z.ai",
     "description": "Zhipus GLM-Familie — multilingualer Assistent mit Coding-, Vision- und Agent-Modi.",
-    "category": "AI",
+    "categories": ["Chat", "AI"],
     "tags": ["chat", "glm", "zhipu", "china"],
     "createdAt": "2026-04-30",
     "favorite": false
@@ -222,7 +221,7 @@
     "title": "Mistral Le Chat",
     "url": "https://chat.mistral.ai",
     "description": "Schneller europäischer Chat von Mistral AI — Codestral, Pixtral, Mistral Large als Backend.",
-    "category": "AI",
+    "categories": ["Chat", "AI"],
     "tags": ["chat", "mistral", "europe", "open-weight"],
     "createdAt": "2026-04-30",
     "favorite": false
@@ -232,7 +231,7 @@
     "title": "Grok (xAI)",
     "url": "https://grok.com",
     "description": "xAIs Assistent mit Live-X-Daten, Witz und Think-Modi für Reasoning.",
-    "category": "AI",
+    "categories": ["Chat", "AI"],
     "tags": ["chat", "xai", "grok"],
     "createdAt": "2026-04-30",
     "favorite": false
@@ -242,7 +241,7 @@
     "title": "Meta AI",
     "url": "https://www.meta.ai",
     "description": "Metas Llama-basierter Assistent — kostenlos und in WhatsApp / Instagram integriert.",
-    "category": "AI",
+    "categories": ["Chat", "AI"],
     "tags": ["chat", "meta", "llama"],
     "createdAt": "2026-04-30",
     "favorite": false
@@ -252,7 +251,7 @@
     "title": "Qwen Chat",
     "url": "https://chat.qwen.ai",
     "description": "Alibabas Qwen-Familie — sehr starke Open-Weight-Modelle, multilingual und multimodal.",
-    "category": "AI",
+    "categories": ["Chat", "AI"],
     "tags": ["chat", "qwen", "alibaba", "open-weight"],
     "createdAt": "2026-04-30",
     "favorite": false
@@ -262,7 +261,7 @@
     "title": "HuggingChat",
     "url": "https://huggingface.co/chat",
     "description": "Hugging Faces Open-Source-Chat — wechselbare Modelle, keine Anmeldung nötig.",
-    "category": "AI",
+    "categories": ["Chat", "AI"],
     "tags": ["chat", "open-source", "huggingface"],
     "createdAt": "2026-04-30",
     "favorite": false
@@ -272,19 +271,18 @@
     "title": "Google NotebookLM",
     "url": "https://notebooklm.google",
     "description": "Quellen-gestütztes Notebook mit Audio-Overviews und Mind-Map-Synthese.",
-    "category": "AI",
+    "categories": ["Research", "Audio", "AI"],
     "tags": ["notes", "research", "google", "audio"],
     "note": "Audio-Overviews machen aus Quellen einen 10-Min-Podcast.",
     "createdAt": "2026-04-30",
     "favorite": true
   },
-
   {
     "id": "ollama",
     "title": "Ollama",
     "url": "https://ollama.com",
     "description": "Lokale LLMs in einer Minute starten — CLI, Library und Modell-Registry für Llama, Qwen, DeepSeek & Co.",
-    "category": "AI",
+    "categories": ["AI", "Tool"],
     "tags": ["local", "llm", "self-hosted", "cli"],
     "note": "ollama run llama3.1 — fertig.",
     "createdAt": "2026-04-30",
@@ -295,7 +293,7 @@
     "title": "LM Studio",
     "url": "https://lmstudio.ai",
     "description": "Desktop-App zum Discovern, Laden und Chatten mit lokalen Open-Source-LLMs.",
-    "category": "AI",
+    "categories": ["AI", "Tool"],
     "tags": ["local", "llm", "desktop", "self-hosted"],
     "createdAt": "2026-04-30",
     "favorite": false
@@ -305,7 +303,7 @@
     "title": "Jan",
     "url": "https://jan.ai",
     "description": "Open-Source-Alternative zu ChatGPT, die 100 % offline und lokal läuft.",
-    "category": "AI",
+    "categories": ["AI", "Tool"],
     "tags": ["local", "open-source", "offline", "desktop"],
     "createdAt": "2026-04-30",
     "favorite": false
@@ -315,7 +313,7 @@
     "title": "llama.cpp",
     "url": "https://github.com/ggerganov/llama.cpp",
     "description": "C/C++-Inferenz für LLaMA-Modelle — Foundation für fast alles im Local-LLM-Ökosystem.",
-    "category": "AI",
+    "categories": ["AI", "Coding"],
     "tags": ["local", "llm", "inference", "cpp"],
     "createdAt": "2026-04-30",
     "favorite": false
@@ -325,7 +323,7 @@
     "title": "LocalAI",
     "url": "https://localai.io",
     "description": "Drop-in-Ersatz für die OpenAI-API, der lokal auf Consumer-Hardware läuft.",
-    "category": "AI",
+    "categories": ["AI", "Tool"],
     "tags": ["local", "self-hosted", "api", "openai-compatible"],
     "createdAt": "2026-04-30",
     "favorite": false
@@ -335,18 +333,17 @@
     "title": "vLLM",
     "url": "https://github.com/vllm-project/vllm",
     "description": "High-Throughput-Inference-Engine für LLMs — Standard für Self-Hosting in Production.",
-    "category": "AI",
+    "categories": ["AI", "Coding"],
     "tags": ["inference", "self-hosted", "production"],
     "createdAt": "2026-04-30",
     "favorite": false
   },
-
   {
     "id": "huggingface",
     "title": "Hugging Face",
     "url": "https://huggingface.co",
     "description": "Modell-, Dataset- und Spaces-Hub — die GitHub-artige Plattform fürs ML-Ökosystem.",
-    "category": "AI",
+    "categories": ["AI", "Research"],
     "tags": ["models", "datasets", "hub"],
     "note": "Erste Anlaufstelle für jedes neue Open-Weight-Modell.",
     "createdAt": "2026-04-30",
@@ -357,7 +354,7 @@
     "title": "Replicate",
     "url": "https://replicate.com",
     "description": "Open-Source-Modelle als API mit Pay-per-Second — perfekt für Prototypen.",
-    "category": "AI",
+    "categories": ["AI", "Tool"],
     "tags": ["api", "inference", "models"],
     "createdAt": "2026-04-30",
     "favorite": false
@@ -367,7 +364,7 @@
     "title": "Groq",
     "url": "https://groq.com",
     "description": "LPU-basierte Inferenz mit absurd niedriger Latenz — Llama / Qwen / DeepSeek in Echtzeit.",
-    "category": "AI",
+    "categories": ["AI", "Tool"],
     "tags": ["api", "inference", "fast", "lpu"],
     "createdAt": "2026-04-30",
     "favorite": false
@@ -377,7 +374,7 @@
     "title": "Together AI",
     "url": "https://www.together.ai",
     "description": "Inferenz-API + Fine-Tuning für 200+ Open-Source-Modelle.",
-    "category": "AI",
+    "categories": ["AI", "Tool"],
     "tags": ["api", "inference", "fine-tuning"],
     "createdAt": "2026-04-30",
     "favorite": false
@@ -387,7 +384,7 @@
     "title": "OpenRouter",
     "url": "https://openrouter.ai",
     "description": "Eine API für alle Modelle — OpenAI, Anthropic, Mistral, Llama & Co. mit einheitlichem Pricing.",
-    "category": "AI",
+    "categories": ["AI", "Tool"],
     "tags": ["api", "router", "multi-model"],
     "note": "Nützlich für A/B-Tests zwischen Frontier-Modellen.",
     "createdAt": "2026-04-30",
@@ -398,18 +395,17 @@
     "title": "Fireworks AI",
     "url": "https://fireworks.ai",
     "description": "Schnelle Inferenz und Fine-Tuning für Open-Source-Modelle in Production.",
-    "category": "AI",
+    "categories": ["AI", "Tool"],
     "tags": ["api", "inference", "fine-tuning"],
     "createdAt": "2026-04-30",
     "favorite": false
   },
-
   {
     "id": "cursor",
     "title": "Cursor",
     "url": "https://www.cursor.com",
     "description": "AI-First-Code-Editor auf VS-Code-Fork — Composer-, Agent- und Tab-Modi.",
-    "category": "AI",
+    "categories": ["Coding", "Agents"],
     "tags": ["ide", "coding", "agent"],
     "createdAt": "2026-04-30",
     "favorite": true
@@ -419,7 +415,7 @@
     "title": "Windsurf",
     "url": "https://windsurf.com",
     "description": "Codeiums Agentic-IDE mit Cascade-Workflow für mehrteilige Aufgaben.",
-    "category": "AI",
+    "categories": ["Coding", "Agents"],
     "tags": ["ide", "coding", "agent", "codeium"],
     "createdAt": "2026-04-30",
     "favorite": false
@@ -429,7 +425,7 @@
     "title": "Cline",
     "url": "https://cline.bot",
     "description": "Open-Source-Coding-Agent als VS-Code-Extension mit Plan/Act-Modus und MCP-Support.",
-    "category": "AI",
+    "categories": ["Coding", "Agents", "MCP"],
     "tags": ["agent", "vscode", "open-source", "mcp"],
     "createdAt": "2026-04-30",
     "favorite": false
@@ -439,7 +435,7 @@
     "title": "Aider",
     "url": "https://aider.chat",
     "description": "AI-Pair-Programmer im Terminal — git-aware, modell-agnostisch, sehr schnell.",
-    "category": "AI",
+    "categories": ["Coding", "Agents"],
     "tags": ["cli", "coding", "git", "open-source"],
     "createdAt": "2026-04-30",
     "favorite": false
@@ -449,7 +445,7 @@
     "title": "Continue.dev",
     "url": "https://continue.dev",
     "description": "Open-Source-Coding-Assistent für VS Code und JetBrains mit eigenem Modell-Backend.",
-    "category": "AI",
+    "categories": ["Coding", "AI"],
     "tags": ["ide", "coding", "open-source"],
     "createdAt": "2026-04-30",
     "favorite": false
@@ -459,7 +455,7 @@
     "title": "GitHub Copilot",
     "url": "https://github.com/features/copilot",
     "description": "GitHubs AI-Pair-Programmer — Tab-Completion, Chat und Agent-Modi direkt im Editor.",
-    "category": "AI",
+    "categories": ["Coding", "AI"],
     "tags": ["ide", "github", "copilot", "coding"],
     "createdAt": "2026-04-30",
     "favorite": false
@@ -469,7 +465,7 @@
     "title": "v0 by Vercel",
     "url": "https://v0.app",
     "description": "Generative UI — aus Prompt → fertige React/shadcn-Komponenten und Apps.",
-    "category": "AI",
+    "categories": ["Coding", "Design"],
     "tags": ["ui", "react", "vercel", "generative"],
     "createdAt": "2026-04-30",
     "favorite": false
@@ -479,7 +475,7 @@
     "title": "Bolt.new",
     "url": "https://bolt.new",
     "description": "Full-Stack-Web-App-Generator von StackBlitz — Prompt rein, Live-Projekt raus.",
-    "category": "AI",
+    "categories": ["Coding", "AI"],
     "tags": ["fullstack", "generative", "stackblitz"],
     "createdAt": "2026-04-30",
     "favorite": false
@@ -489,7 +485,7 @@
     "title": "Lovable",
     "url": "https://lovable.dev",
     "description": "AI-getriebener App-Builder — von Idee zu deploybarer Web-App per Chat.",
-    "category": "AI",
+    "categories": ["Coding", "AI"],
     "tags": ["fullstack", "generative", "no-code"],
     "createdAt": "2026-04-30",
     "favorite": false
@@ -499,18 +495,17 @@
     "title": "Devin (Cognition)",
     "url": "https://devin.ai",
     "description": "Autonomer Software-Engineer von Cognition Labs — eigene Sandbox, Browser und Editor.",
-    "category": "AI",
+    "categories": ["Agents", "Coding"],
     "tags": ["agent", "autonomous", "cognition"],
     "createdAt": "2026-04-30",
     "favorite": false
   },
-
   {
     "id": "midjourney",
     "title": "Midjourney",
     "url": "https://www.midjourney.com",
     "description": "Image-Generation mit Premium-Ästhetik — V7-Modelle und Web-Editor.",
-    "category": "AI",
+    "categories": ["Image"],
     "tags": ["image", "art", "generative"],
     "createdAt": "2026-04-30",
     "favorite": false
@@ -520,7 +515,7 @@
     "title": "Stability AI",
     "url": "https://stability.ai",
     "description": "Macher von Stable Diffusion — Open-Weight-Bild-, Audio- und Video-Modelle.",
-    "category": "AI",
+    "categories": ["Image", "AI"],
     "tags": ["image", "open-weight", "stable-diffusion"],
     "createdAt": "2026-04-30",
     "favorite": false
@@ -530,7 +525,7 @@
     "title": "Black Forest Labs (FLUX)",
     "url": "https://blackforestlabs.ai",
     "description": "FLUX-Modellfamilie — derzeit beste Open-Weight-Bildgenerierung.",
-    "category": "AI",
+    "categories": ["Image"],
     "tags": ["image", "flux", "open-weight"],
     "createdAt": "2026-04-30",
     "favorite": true
@@ -540,7 +535,7 @@
     "title": "Ideogram",
     "url": "https://ideogram.ai",
     "description": "Image-AI mit ausgezeichneter Typografie und Logo-Generierung.",
-    "category": "AI",
+    "categories": ["Image", "Design"],
     "tags": ["image", "typography", "logo"],
     "createdAt": "2026-04-30",
     "favorite": false
@@ -550,7 +545,7 @@
     "title": "Leonardo AI",
     "url": "https://leonardo.ai",
     "description": "Game-/Concept-Art-orientierte Bild-AI mit feinen Style-Controls.",
-    "category": "AI",
+    "categories": ["Image", "Design"],
     "tags": ["image", "concept-art", "game"],
     "createdAt": "2026-04-30",
     "favorite": false
@@ -560,18 +555,17 @@
     "title": "Krea AI",
     "url": "https://www.krea.ai",
     "description": "Realtime-Bild- und Video-Generation, Upscaling und Style-Transfer in einer Suite.",
-    "category": "AI",
+    "categories": ["Image", "Video"],
     "tags": ["image", "video", "realtime"],
     "createdAt": "2026-04-30",
     "favorite": false
   },
-
   {
     "id": "elevenlabs",
     "title": "ElevenLabs",
     "url": "https://elevenlabs.io",
     "description": "Spitzen-TTS und Voice-Cloning mit Studio, Dubbing und Conversational-Voice-API.",
-    "category": "AI",
+    "categories": ["Voice", "Audio"],
     "tags": ["voice", "tts", "audio"],
     "createdAt": "2026-04-30",
     "favorite": true
@@ -581,7 +575,7 @@
     "title": "Suno",
     "url": "https://suno.com",
     "description": "Music-Generation aus Prompt — Songs mit Lyrics, Vocals und Instrumental.",
-    "category": "AI",
+    "categories": ["Audio"],
     "tags": ["music", "audio", "generative"],
     "createdAt": "2026-04-30",
     "favorite": false
@@ -591,7 +585,7 @@
     "title": "Runway",
     "url": "https://runwayml.com",
     "description": "AI-Video-Suite — Gen-Modelle, Editor, Inpainting und Motion-Transfer.",
-    "category": "AI",
+    "categories": ["Video"],
     "tags": ["video", "generative", "editing"],
     "createdAt": "2026-04-30",
     "favorite": false
@@ -601,7 +595,7 @@
     "title": "Luma Dream Machine",
     "url": "https://lumalabs.ai/dream-machine",
     "description": "Text-to-Video mit cineastischer Kamera-Bewegung und konsistenten Charakteren.",
-    "category": "AI",
+    "categories": ["Video"],
     "tags": ["video", "generative", "luma"],
     "createdAt": "2026-04-30",
     "favorite": false
@@ -611,18 +605,17 @@
     "title": "Pika",
     "url": "https://pika.art",
     "description": "Schnelle Text/Image-to-Video-Generation mit verspielten Effekten.",
-    "category": "AI",
+    "categories": ["Video"],
     "tags": ["video", "generative"],
     "createdAt": "2026-04-30",
     "favorite": false
   },
-
   {
     "id": "vercel-ai-sdk",
     "title": "Vercel AI SDK",
     "url": "https://sdk.vercel.ai",
     "description": "TypeScript-Toolkit für Streaming-Chat, Tools und generative UI mit jedem LLM.",
-    "category": "AI",
+    "categories": ["Coding", "AI"],
     "tags": ["sdk", "typescript", "vercel", "frontend"],
     "note": "Provider-agnostisch und Streaming ist sehr clean.",
     "createdAt": "2026-04-30",
@@ -633,7 +626,7 @@
     "title": "LangChain",
     "url": "https://www.langchain.com",
     "description": "Standard-Framework für LLM-Apps mit Chains, Agents und Integrationen.",
-    "category": "AI",
+    "categories": ["Agents", "Coding"],
     "tags": ["framework", "agents", "rag"],
     "createdAt": "2026-04-30",
     "favorite": false
@@ -643,7 +636,7 @@
     "title": "LangGraph",
     "url": "https://www.langchain.com/langgraph",
     "description": "Stateful Agent-Orchestrierung als Graph — kontrollierter als klassische Chains.",
-    "category": "AI",
+    "categories": ["Agents", "Coding"],
     "tags": ["agents", "framework", "orchestration"],
     "createdAt": "2026-04-30",
     "favorite": false
@@ -653,7 +646,7 @@
     "title": "LlamaIndex",
     "url": "https://www.llamaindex.ai",
     "description": "Daten-Framework für RAG — Connectoren, Indizes, Retriever und Workflows.",
-    "category": "AI",
+    "categories": ["Coding", "AI"],
     "tags": ["rag", "framework", "data"],
     "createdAt": "2026-04-30",
     "favorite": false
@@ -663,7 +656,7 @@
     "title": "CrewAI",
     "url": "https://www.crewai.com",
     "description": "Framework für Multi-Agent-Crews mit klaren Rollen und Aufgaben.",
-    "category": "AI",
+    "categories": ["Agents", "Coding"],
     "tags": ["agents", "framework", "multi-agent"],
     "createdAt": "2026-04-30",
     "favorite": false
@@ -673,7 +666,7 @@
     "title": "Langfuse",
     "url": "https://langfuse.com",
     "description": "Open-Source-Observability für LLM-Apps — Traces, Evals, Prompt-Management.",
-    "category": "AI",
+    "categories": ["Tool", "AI"],
     "tags": ["observability", "evals", "open-source"],
     "createdAt": "2026-04-30",
     "favorite": false
@@ -683,7 +676,7 @@
     "title": "OpenAI",
     "url": "https://openai.com",
     "description": "Macher von GPT, DALL·E, Whisper und Sora — API-Doku unter platform.openai.com.",
-    "category": "AI",
+    "categories": ["AI"],
     "tags": ["lab", "api", "gpt"],
     "createdAt": "2026-04-30",
     "favorite": false
@@ -693,7 +686,7 @@
     "title": "Anthropic",
     "url": "https://www.anthropic.com",
     "description": "Macher von Claude — Research, API und Safety-Forschung.",
-    "category": "AI",
+    "categories": ["AI"],
     "tags": ["lab", "claude", "safety"],
     "createdAt": "2026-04-30",
     "favorite": true
@@ -703,7 +696,7 @@
     "title": "Google AI",
     "url": "https://ai.google",
     "description": "Googles AI-Hub — Gemini, AI Studio, Research-Papers und APIs.",
-    "category": "AI",
+    "categories": ["AI"],
     "tags": ["lab", "google", "gemini"],
     "createdAt": "2026-04-30",
     "favorite": false
@@ -713,7 +706,7 @@
     "title": "xAI",
     "url": "https://x.ai",
     "description": "Elon Musks AI-Lab — entwickelt Grok und die zugehörige Infrastruktur.",
-    "category": "AI",
+    "categories": ["AI"],
     "tags": ["lab", "xai", "grok"],
     "createdAt": "2026-04-30",
     "favorite": false
@@ -723,7 +716,7 @@
     "title": "Mistral AI",
     "url": "https://mistral.ai",
     "description": "Europäisches Frontier-Lab — Open-Weight- und Premium-Modelle (Codestral, Pixtral, Magistral).",
-    "category": "AI",
+    "categories": ["AI"],
     "tags": ["lab", "europe", "open-weight"],
     "createdAt": "2026-04-30",
     "favorite": false
@@ -733,7 +726,7 @@
     "title": "Cohere",
     "url": "https://cohere.com",
     "description": "Enterprise-LLMs (Command, Embed, Rerank) mit starkem Fokus auf RAG-Qualität.",
-    "category": "AI",
+    "categories": ["AI"],
     "tags": ["lab", "enterprise", "rag", "embeddings"],
     "createdAt": "2026-04-30",
     "favorite": false

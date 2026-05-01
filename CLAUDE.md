@@ -29,7 +29,7 @@ Alles, was wie eine URL aussieht (`http://…`, `https://…`, `www.…`). Wenn 
   "title": "Canonical Product Name",
   "url": "https://example.com/path",
   "description": "Ein Satz auf Deutsch, 12–20 Wörter, was es ist und warum es nützlich ist.",
-  "category": "AI",
+  "categories": ["AI", "Tool"],
   "tags": ["lower", "case", "kebab"],
   "note": "Nur wenn User etwas dazu geschrieben hat",
   "createdAt": "2026-04-30",
@@ -53,29 +53,43 @@ Die URL nehmen, die geschickt wurde. Tracking-Params strippen (`utm_*`, `fbclid`
 ### `description`
 **Deutsch, ein Satz, 12–20 Wörter.** Was es macht + warum nützlich. Kein Marketing-Geschwurbel. Keine Emoji.
 
-### `category`
-Genau eine aus:
-`AI · Coding · GitHub · MCP · Prompting · Security · Audio · Video · Design · Mobile · Tool · Business · Learning · Inspiration · Research · Sonstiges`
+### `categories`
+**Array mit 1–3 Werten**, wichtigste zuerst. Erlaubte Werte:
 
-**Wichtig:** Themen-Kategorien (Security, Audio, Video, Mobile, MCP, Design, Prompting) **schlagen `GitHub`**, auch wenn die URL ein Repo ist. `GitHub` ist nur das Auffangbecken für Repos ohne klare thematische Heimat.
+`AI · Chat · Image · Audio · Voice · Video · Coding · Agents · MCP · Memory · Prompting · Security · Design · Mobile · Tool · Docs · Research · Learning · Inspiration · Business · GitHub · Sonstiges`
+
+Konkrete Themen schlagen Sammel-Kategorien — wenn ein Tool z. B. Image-Gen ist, gehört `Image` rein, nicht (nur) `AI`. `GitHub` ist nur das Auffangbecken für Repos, die in keine andere Kategorie passen.
 
 Schnellguide:
-- `AI` — LLM/ML/Agent/Image-Gen/Coding-AI ohne deutlichere Heimat.
-- `Coding` — Sprach-Docs, Frameworks, Dev-Tools, Coding-Agent-Harnesses.
-- `GitHub` — Repos ohne stärkere thematische Kategorie. Nicht für „GitHub Copilot" o.ä.
+- `AI` — Frontier-Labs, LLM-Infra, alles ohne spezifischere Heimat.
+- `Chat` — ChatGPT-artige Assistenten / Frontends.
+- `Image` — Bild-Generierung, Bildbearbeitung, Image-AI (Midjourney, FLUX, Stable Diffusion).
+- `Audio` — Musik-, Sound-, Sprachsynthese als Audio (Suno, ACE-Step).
+- `Voice` — TTS, STT, Voice-Cloning, Conversational Voice (ElevenLabs).
+- `Video` — Video-Gen, Editing, AI-Video.
+- `Coding` — Sprach-Docs, Frameworks, IDEs, SDKs, Coding-Tools.
+- `Agents` — Coding-/General-Agent-Harnesses, autonome Agenten, Multi-Agent-Frameworks.
 - `MCP` — MCP-Server, Model-Context-Protocol-Tools, Bridges, Gateways.
-- `Prompting` — Prompt-Libraries, Prompt-Engineering-Guides, Meta-Prompting-Frameworks.
+- `Memory` — Memory-Systeme, RAG-Stores für Agenten/Chats.
+- `Prompting` — Prompt-Libraries, Engineering-Guides, Meta-Prompting-Frameworks.
 - `Security` — Red-Team, Pentest, Defensive, CVEs, Hacking-Tools, OWASP.
-- `Audio` — Musik-, Sprach-, Sound-Generierung, TTS/STT, Audio-Tools.
-- `Video` — Video-Generation, Editing, AI-Video-Tools.
-- `Design` — Figma, Design-Tools, Type-Tools, Color-Tools.
+- `Design` — Figma, Design-Tools, Type-/Color-Tools, generative UI.
 - `Mobile` — iOS/Android-Apps, Mobile-Frameworks, App-Builder.
-- `Tool` — Productivity-Utilities, die nicht in obige fallen.
-- `Business` — SaaS-Pricing, Founder-Content, Strategie.
+- `Tool` — Productivity-Utilities, Hosting, APIs, Inferenz-Anbieter.
+- `Docs` — Reine Dokumentations-Sites (MDN, react.dev, offizielle Doku).
+- `Research` — Papers, Datasets, Benchmarks, Schatten-Bibliotheken.
 - `Learning` — Kurse, Tutorials, Bücher.
 - `Inspiration` — Galerien, Awwwards, Portfolios.
-- `Research` — Papers, Datasets, Benchmarks, Schatten-Bibliotheken.
+- `Business` — SaaS-Pricing, Founder-Content, Strategie.
+- `GitHub` — Repos ohne stärkere thematische Heimat. Nicht für „GitHub Copilot" o.ä.
 - `Sonstiges` — nur wenn wirklich nichts passt.
+
+Beispiele:
+- Cursor → `["Coding", "Agents"]`
+- ElevenLabs → `["Voice", "Audio"]`
+- MemPalace → `["Memory", "AI"]`
+- Decepticon → `["Security", "Agents"]`
+- MDN → `["Docs", "Coding"]`
 
 ### `tags`
 3–5 Tags. Lowercase, ein Wort oder kebab-case. Kein `#`, keine Spaces. Mische:
@@ -139,7 +153,7 @@ Du:
      "title": "Cursor",
      "url": "https://www.cursor.com",
      "description": "AI-First-Code-Editor auf VS-Code-Fork mit Composer-, Agent- und Tab-Modi für schnelles Pair-Coding.",
-     "category": "AI",
+     "categories": ["Coding", "Agents"],
      "tags": ["ide", "coding", "agent", "ai"],
      "note": "Hab ich heute getestet, ist nice",
      "createdAt": "2026-04-30",

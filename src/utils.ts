@@ -43,3 +43,16 @@ export function parseTags(input: string): string[] {
     .map((s) => s.trim().toLowerCase())
     .filter(Boolean)
 }
+
+export function shuffled<T>(arr: readonly T[], seed: number): T[] {
+  const out = arr.slice()
+  let s = (seed | 0) || 1
+  for (let i = out.length - 1; i > 0; i--) {
+    s ^= s << 13
+    s ^= s >>> 17
+    s ^= s << 5
+    const j = Math.abs(s) % (i + 1)
+    ;[out[i], out[j]] = [out[j], out[i]]
+  }
+  return out
+}

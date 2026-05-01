@@ -13,7 +13,13 @@ export function LinkCard({ link, isDraft = false, onRemoveDraft }: LinkCardProps
       className={`card ${link.favorite ? 'card--fav' : ''} ${isDraft ? 'card--draft' : ''}`}
     >
       <header className="card__head">
-        <span className="card__cat">{link.category}</span>
+        <div className="card__cats">
+          {(link.categories?.length ? link.categories : ['Sonstiges']).map((c) => (
+            <span className="card__cat" key={c}>
+              {c}
+            </span>
+          ))}
+        </div>
         <div className="card__head-right">
           {isDraft && <span className="card__badge">Lokaler Entwurf</span>}
           {link.favorite && (

@@ -586,6 +586,18 @@ button {
   border: 1px solid var(--border);
 }
 
+.cat-section__hint {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(34, 211, 238, 0.06);
+  border: 1px solid rgba(34, 211, 238, 0.18);
+}
+
 .cat-section__more {
   margin-left: auto;
   background: transparent;
@@ -676,6 +688,13 @@ button {
   gap: var(--s-2);
 }
 
+.card__cats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  min-width: 0;
+}
+
 .card__cat {
   font-size: 10px;
   padding: 4px 10px;
@@ -686,6 +705,13 @@ button {
   text-transform: uppercase;
   border: 1px solid rgba(139, 92, 246, 0.25);
   font-weight: 500;
+  white-space: nowrap;
+}
+
+.card__cats .card__cat:nth-child(n + 2) {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-secondary);
+  border-color: var(--border-strong);
 }
 
 .card__star {
@@ -929,6 +955,21 @@ code,
 
 .field__error::before {
   content: '⚠';
+}
+
+.cat-picker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: var(--s-3);
+  border: 1px solid var(--border);
+  border-radius: var(--r-2);
+  background: var(--bg-elev);
+}
+
+.cat-picker__chip {
+  padding: 6px 11px;
+  font-size: 12.5px;
 }
 
 .checkbox {
