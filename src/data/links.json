@@ -1,5 +1,15 @@
 [
   {
+    "id": "jcode",
+    "title": "jcode",
+    "url": "https://github.com/1jehuang/jcode",
+    "description": "Performance-optimierte Coding-Agent-Harness in Rust mit Memory-Graph, Swarm-Modus, Self-Dev und vielen Provider-Logins.",
+    "category": "GitHub",
+    "tags": ["rust", "cli", "agents", "harness", "coding"],
+    "createdAt": "2026-05-01",
+    "favorite": false
+  },
+  {
     "id": "ace-step-ui",
     "title": "ACE-Step UI",
     "url": "https://github.com/fspecii/ace-step-ui",
