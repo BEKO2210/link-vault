@@ -1,5 +1,15 @@
 [
   {
+    "id": "cobalt",
+    "title": "Cobalt",
+    "url": "https://cobalt.tools/",
+    "description": "Werbefreier Media-Downloader im Browser — URL einfügen und Videos/Audio von YouTube, TikTok, Instagram & Co. herunterladen.",
+    "categories": ["Tool", "Video", "Audio"],
+    "tags": ["downloader", "media", "video", "audio", "open-source"],
+    "createdAt": "2026-05-01",
+    "favorite": false
+  },
+  {
     "id": "hunyuanvideogp",
     "title": "HunyuanVideoGP",
     "url": "https://github.com/deepbeepmeep/HunyuanVideoGP",
