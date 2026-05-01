@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useState, type CSSProperties } from 'react'
 import linksData from './data/links.json'
 import { CATEGORIES, type Link, type SortKey } from './types'
 import { Filters } from './components/Filters'
@@ -7,7 +7,7 @@ import { Hero } from './components/Hero'
 import { LinkCard } from './components/LinkCard'
 import { LinkForm } from './components/LinkForm'
 import { Stats } from './components/Stats'
-import { shuffled } from './utils'
+import { colorOf, shuffled } from './utils'
 
 const DRAFTS_KEY = 'blv:drafts:v1'
 const PREVIEW_LIMIT = 5
@@ -53,7 +53,9 @@ export function App() {
   const [category, setCategory] = useState<string>('all')
   const [favOnly, setFavOnly] = useState(false)
   const [sort, setSort] = useState<SortKey>('newest')
-  const [shuffleSeed] = useState<number>(() => Math.floor(Math.random() * 1e9) + 1)
+  const [shuffleSeed, setShuffleSeed] = useState<number>(
+    () => Math.floor(Math.random() * 1e9) + 1,
+  )
 
   useEffect(() => {
     try {
@@ -153,25 +155,19 @@ export function App() {
 
   const isHomeView = category === 'all' && search.trim() === '' && !favOnly
 
-  const grouped = useMemo<{ name: string; items: Link[] }[] | null>(() => {
-    if (category !== 'all') return null
-    const map = new Map<string, Link[]>()
-    for (const l of filtered) {
-      for (const c of categoriesOf(l)) {
-        const arr = map.get(c)
-        if (arr) arr.push(l)
-        else map.set(c, [l])
-      }
-    }
-    const ordered: { name: string; items: Link[] }[] = []
-    for (const c of CATEGORIES) {
-      const items = map.get(c)
-      if (items?.length) ordered.push({ name: c, items })
-      map.delete(c)
-    }
-    for (const [name, items] of map) ordered.push({ name, items })
-    return ordered
-  }, [filtered, category])
+  const discover = useMemo<Link[]>(() => {
+    if (!isHomeView) return []
+    return shuffled(filtered, shuffleSeed).slice(0, PREVIEW_LIMIT)
+  }, [filtered, shuffleSeed, isHomeView])
+
+  const orderedCats = useMemo<string[]>(() => {
+    const used = new Set<string>()
+    for (const l of allLinks) for (const c of categoriesOf(l)) used.add(c)
+    const out: string[] = []
+    for (const c of CATEGORIES) if (used.has(c)) out.push(c)
+    for (const c of used) if (!out.includes(c)) out.push(c)
+    return out
+  }, [allLinks])
 
   const isDraft = (id: string): boolean => drafts.some((d) => d.id === id)
 
@@ -225,50 +221,73 @@ export function App() {
             <p>Keine Links passen zu deinen Filtern.</p>
             <p className="empty__hint">Versuche eine andere Suche oder setze die Filter zurück.</p>
           </div>
-        ) : grouped ? (
-          grouped.map((g) => {
-            const showPreview = isHomeView && g.items.length > PREVIEW_LIMIT
-            const visible = showPreview
-              ? shuffled(g.items, shuffleSeed + g.name.length).slice(0, PREVIEW_LIMIT)
-              : g.items
-            return (
-              <section
-                className="cat-section"
-                key={g.name}
-                aria-labelledby={`cat-${g.name}`}
-              >
-                <header className="cat-section__head">
-                  <h2 id={`cat-${g.name}`} className="cat-section__title">
-                    {g.name}
-                  </h2>
-                  <span className="cat-section__count">{g.items.length}</span>
-                  {showPreview && (
-                    <span className="cat-section__hint">
-                      {PREVIEW_LIMIT} zufällig
-                    </span>
-                  )}
-                  <button
-                    type="button"
-                    className="cat-section__more"
-                    onClick={() => setCategory(g.name)}
-                    aria-label={`Alle ${g.items.length} ${g.name}-Links anzeigen`}
-                  >
-                    {showPreview ? `Alle ${g.items.length} anzeigen →` : `Nur ${g.name} →`}
-                  </button>
-                </header>
-                <div className="grid">
-                  {visible.map((l) => (
-                    <LinkCard
-                      key={l.id}
-                      link={l}
-                      isDraft={isDraft(l.id)}
-                      onRemoveDraft={removeDraft}
-                    />
-                  ))}
-                </div>
-              </section>
-            )
-          })
+        ) : isHomeView ? (
+          <>
+            <section className="discover" aria-labelledby="discover-title">
+              <header className="discover__head">
+                <h2 id="discover-title" className="discover__title">
+                  Heute zufällig
+                </h2>
+                <span className="discover__count">
+                  {discover.length} von {filtered.length}
+                </span>
+                <button
+                  type="button"
+                  className="discover__shuffle"
+                  onClick={() =>
+                    setShuffleSeed(Math.floor(Math.random() * 1e9) + 1)
+                  }
+                  aria-label="Neu mischen"
+                >
+                  ↻ Neu mischen
+                </button>
+              </header>
+              <div className="grid">
+                {discover.map((l) => (
+                  <LinkCard
+                    key={l.id}
+                    link={l}
+                    isDraft={isDraft(l.id)}
+                    onRemoveDraft={removeDraft}
+                  />
+                ))}
+              </div>
+            </section>
+
+            <section className="cat-tiles-section" aria-labelledby="cats-title">
+              <header className="cat-tiles-section__head">
+                <h2 id="cats-title" className="cat-tiles-section__title">
+                  Kategorien
+                </h2>
+                <span className="cat-tiles-section__count">
+                  {orderedCats.length}
+                </span>
+              </header>
+              <div className="cat-tiles">
+                {orderedCats.map((c) => {
+                  const count = categoryCounts.get(c) ?? 0
+                  const tileStyle = { '--cat-color': colorOf(c) } as CSSProperties
+                  return (
+                    <button
+                      type="button"
+                      key={c}
+                      className="cat-tile"
+                      style={tileStyle}
+                      onClick={() => {
+                        setCategory(c)
+                        window.scrollTo({ top: 0, behavior: 'smooth' })
+                      }}
+                      aria-label={`${c} — ${count} Links anzeigen`}
+                    >
+                      <span className="cat-tile__dot" aria-hidden="true" />
+                      <span className="cat-tile__name">{c}</span>
+                      <span className="cat-tile__count">{count}</span>
+                    </button>
+                  )
+                })}
+              </div>
+            </section>
+          </>
         ) : (
           <div className="grid">
             {filtered.map((l) => (
