@@ -1,5 +1,15 @@
 [
   {
+    "id": "decepticon",
+    "title": "Decepticon",
+    "url": "https://github.com/PurpleAILAB/Decepticon",
+    "description": "Autonomer Red-Team-Agent in Kali-Sandbox — fährt echte Kill-Chains von Recon bis C2 mit OPPLAN und MITRE-ATT&CK-Mapping.",
+    "category": "GitHub",
+    "tags": ["security", "red-team", "agents", "pentest", "ai"],
+    "createdAt": "2026-05-01",
+    "favorite": false
+  },
+  {
     "id": "jcode",
     "title": "jcode",
     "url": "https://github.com/1jehuang/jcode",
