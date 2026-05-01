@@ -1,5 +1,15 @@
 [
   {
+    "id": "wangp",
+    "title": "WanGP",
+    "url": "https://github.com/deepbeepmeep/Wan2GP",
+    "description": "Video-, Bild- und Audio-Generierungssuite für GPU-arme Setups — Wan, Hunyuan, Flux, LTX-2 & Co. mit Quantisierung und Web-UI.",
+    "categories": ["Video", "Image", "Audio"],
+    "tags": ["low-vram", "video-gen", "image-gen", "open-source", "tool"],
+    "createdAt": "2026-05-01",
+    "favorite": false
+  },
+  {
     "id": "decepticon",
     "title": "Decepticon",
     "url": "https://github.com/PurpleAILAB/Decepticon",
