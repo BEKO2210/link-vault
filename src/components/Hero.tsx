@@ -1,9 +1,10 @@
 interface HeroProps {
   onExport: () => void
+  exportLabel?: string
   compact?: boolean
 }
 
-export function Hero({ onExport, compact = false }: HeroProps) {
+export function Hero({ onExport, exportLabel = 'JSON', compact = false }: HeroProps) {
   if (compact) {
     return (
       <header className="hero hero--compact">
@@ -13,8 +14,13 @@ export function Hero({ onExport, compact = false }: HeroProps) {
             Belkis <span className="hero__title-grad">Link Vault</span>
           </span>
         </a>
-        <button className="btn btn--ghost btn--sm" onClick={onExport} type="button">
-          JSON ↓
+        <button
+          className="btn btn--ghost btn--sm"
+          onClick={onExport}
+          type="button"
+          title={`${exportLabel} herunterladen`}
+        >
+          {exportLabel} ↓
         </button>
       </header>
     )

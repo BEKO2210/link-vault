@@ -49,7 +49,7 @@ export function PromptDetail({ prompt, onBack }: PromptDetailProps) {
 
   return (
     <article className="wf-detail prompt-detail" style={style}>
-      <button type="button" className="wf-back" onClick={onBack}>
+      <button type="button" className="btn-back" onClick={onBack}>
         ← Zurück zu Prompts
       </button>
 

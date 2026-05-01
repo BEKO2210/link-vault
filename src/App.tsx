@@ -241,30 +241,75 @@ export function App() {
     persistDrafts(drafts.filter((d) => d.id !== id))
   }
 
-  const exportAll = () => {
-    const blob = new Blob([JSON.stringify(allLinks, null, 2)], {
+  const activeWorkflow =
+    route.name === 'workflow' ? workflows.find((w) => w.id === route.id) : undefined
+  const activePrompt =
+    route.name === 'prompt' ? prompts.find((p) => p.id === route.id) : undefined
+
+  const downloadJson = (data: unknown, filename: string) => {
+    const blob = new Blob([JSON.stringify(data, null, 2)], {
       type: 'application/json',
     })
     const a = document.createElement('a')
     a.href = URL.createObjectURL(blob)
-    a.download = 'belkis-link-vault.json'
+    a.download = filename
     document.body.appendChild(a)
     a.click()
     a.remove()
     URL.revokeObjectURL(a.href)
   }
 
-  const activeWorkflow =
-    route.name === 'workflow' ? workflows.find((w) => w.id === route.id) : undefined
-  const activePrompt =
-    route.name === 'prompt' ? prompts.find((p) => p.id === route.id) : undefined
+  const exportCurrent = () => {
+    switch (route.name) {
+      case 'links':
+        return downloadJson(allLinks, 'belkis-links.json')
+      case 'workflows':
+        return downloadJson(workflows, 'belkis-workflows.json')
+      case 'workflow':
+        return activeWorkflow
+          ? downloadJson(activeWorkflow, `workflow-${activeWorkflow.id}.json`)
+          : undefined
+      case 'prompts':
+        return downloadJson(prompts, 'belkis-prompts.json')
+      case 'prompt':
+        return activePrompt
+          ? downloadJson(activePrompt, `prompt-${activePrompt.id}.json`)
+          : undefined
+      default:
+        return downloadJson(
+          { links: allLinks, workflows, prompts },
+          'belkis-vault.json',
+        )
+    }
+  }
+
+  const exportLabel = (() => {
+    switch (route.name) {
+      case 'links':
+        return 'Links JSON'
+      case 'workflows':
+        return 'Workflows JSON'
+      case 'workflow':
+        return 'Workflow JSON'
+      case 'prompts':
+        return 'Prompts JSON'
+      case 'prompt':
+        return 'Prompt JSON'
+      default:
+        return 'Alles JSON'
+    }
+  })()
 
   return (
     <div className="app">
       <div className="bg-gradient" aria-hidden="true" />
       <div className="bg-grid" aria-hidden="true" />
 
-      <Hero onExport={exportAll} compact={route.name !== 'home'} />
+      <Hero
+        onExport={exportCurrent}
+        exportLabel={exportLabel}
+        compact={route.name !== 'home'}
+      />
 
       {route.name === 'home' && (
         <>
@@ -284,7 +329,7 @@ export function App() {
         <>
           <button
             type="button"
-            className="back-link"
+            className="btn-back"
             onClick={() => navigate({ name: 'home' })}
           >
             ← Startseite
@@ -398,7 +443,7 @@ export function App() {
         <>
           <button
             type="button"
-            className="back-link"
+            className="btn-back"
             onClick={() => navigate({ name: 'home' })}
           >
             ← Startseite
@@ -440,7 +485,7 @@ export function App() {
               <p>Workflow nicht gefunden.</p>
               <button
                 type="button"
-                className="back-link"
+                className="btn-back"
                 onClick={() => navigate({ name: 'workflows' })}
               >
                 ← Zurück
@@ -454,7 +499,7 @@ export function App() {
         <>
           <button
             type="button"
-            className="back-link"
+            className="btn-back"
             onClick={() => navigate({ name: 'home' })}
           >
             ← Startseite
@@ -496,7 +541,7 @@ export function App() {
               <p>Prompt nicht gefunden.</p>
               <button
                 type="button"
-                className="back-link"
+                className="btn-back"
                 onClick={() => navigate({ name: 'prompts' })}
               >
                 ← Zurück

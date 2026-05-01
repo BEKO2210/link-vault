@@ -108,9 +108,14 @@ button {
 }
 
 :focus-visible {
-  outline: 2px solid var(--acc-violet);
+  outline: 2px solid var(--cat-color, var(--acc-violet));
   outline-offset: 3px;
   border-radius: 4px;
+}
+
+button {
+  font-family: inherit;
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* App shell */
@@ -265,27 +270,45 @@ button {
 }
 
 .btn--sm {
-  padding: 8px 12px;
+  padding: 8px 14px;
   font-size: 12.5px;
+  min-height: 36px;
+  border-radius: 999px;
 }
 
-.back-link {
+.btn-back {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: transparent;
-  border: 0;
-  color: var(--text-muted);
+  background: var(--bg-glass);
+  border: 1px solid var(--border-strong);
+  color: var(--text-secondary);
   font-size: 13px;
+  font-weight: 500;
   cursor: pointer;
-  padding: 8px 4px;
-  margin-bottom: var(--s-3);
+  padding: 8px 14px;
+  border-radius: 999px;
+  margin-bottom: var(--s-4);
   font-family: inherit;
-  transition: color 180ms;
+  min-height: 36px;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  transition:
+    color 180ms,
+    border-color 180ms,
+    background 180ms,
+    transform 180ms;
 }
 
-.back-link:hover {
+.btn-back:hover {
   color: var(--text);
+  border-color: var(--cat-color, var(--acc-violet));
+  background: var(--bg-glass-strong);
+  transform: translateX(-2px);
+}
+
+.btn-back:active {
+  transform: translateX(-2px) scale(0.98);
 }
 
 /* =========================================================================
@@ -557,13 +580,18 @@ button {
   background: var(--bg-elev);
   border: 1px solid var(--border-strong);
   color: var(--text-secondary);
-  border-radius: var(--r-1);
-  padding: 6px 12px;
-  font-size: 12px;
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 12.5px;
+  font-weight: 500;
   cursor: pointer;
   font-family: inherit;
-  min-height: 32px;
-  transition: color 180ms, border-color 180ms, background 180ms;
+  min-height: 36px;
+  transition: color 180ms, border-color 180ms, background 180ms, transform 180ms;
+}
+
+.prompt-body__copy:active {
+  transform: scale(0.96);
 }
 
 .prompt-body__copy:hover {
@@ -733,26 +761,7 @@ button {
   z-index: -1;
 }
 
-.wf-back {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: var(--bg-elev);
-  border: 1px solid var(--border-strong);
-  color: var(--text-secondary);
-  border-radius: 999px;
-  padding: 6px 12px;
-  font-size: 12px;
-  cursor: pointer;
-  font-family: inherit;
-  margin-bottom: var(--s-4);
-  transition: color 180ms, border-color 180ms;
-}
-
-.wf-back:hover {
-  color: var(--text);
-  border-color: var(--cat-color);
-}
+/* Back-button shared with .btn-back above (kept for backward-compat selectors). */
 
 .wf-detail__head {
   margin-bottom: var(--s-5);
@@ -1165,8 +1174,15 @@ button {
   font-size: 13px;
   font-weight: 500;
   cursor: pointer;
-  transition: all 180ms;
+  transition: color 180ms, border-color 180ms, background 180ms, transform 180ms;
   font-family: inherit;
+  min-height: 36px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.chip:active {
+  transform: scale(0.96);
 }
 
 .chip:hover {
@@ -1338,16 +1354,23 @@ button {
   font-weight: 500;
   cursor: pointer;
   padding: 8px 14px;
-  border-radius: var(--r-2);
+  border-radius: 999px;
   font-family: inherit;
   min-height: 36px;
-  transition: color 180ms, background 180ms, border-color 180ms;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 180ms, background 180ms, border-color 180ms, transform 180ms;
 }
 
 .discover__shuffle:hover {
   color: var(--text);
   border-color: var(--acc-violet);
   background: rgba(239, 68, 68, 0.08);
+}
+
+.discover__shuffle:active {
+  transform: scale(0.97);
 }
 
 .cat-tiles {
@@ -1632,23 +1655,27 @@ button {
 
 .card__remove {
   position: absolute;
-  top: 6px;
-  right: 6px;
+  top: 8px;
+  right: 8px;
   z-index: 3;
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
   border: 1px solid var(--border-strong);
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(0, 0, 0, 0.6);
   color: var(--text-secondary);
   border-radius: 50%;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: inherit;
-  transition: color 180ms, background 180ms, border-color 180ms;
+  transition: color 180ms, background 180ms, border-color 180ms, transform 180ms;
+}
+
+.card__remove:active {
+  transform: scale(0.92);
 }
 
 .card__remove:hover {
