@@ -55,19 +55,26 @@ Die URL nehmen, die geschickt wurde. Tracking-Params strippen (`utm_*`, `fbclid`
 
 ### `category`
 Genau eine aus:
-`AI · Coding · Design · Business · Learning · Tool · GitHub · Inspiration · Prompting · Research · Sonstiges`
+`AI · Coding · GitHub · MCP · Prompting · Security · Audio · Video · Design · Mobile · Tool · Business · Learning · Inspiration · Research · Sonstiges`
+
+**Wichtig:** Themen-Kategorien (Security, Audio, Video, Mobile, MCP, Design, Prompting) **schlagen `GitHub`**, auch wenn die URL ein Repo ist. `GitHub` ist nur das Auffangbecken für Repos ohne klare thematische Heimat.
 
 Schnellguide:
-- `GitHub` — nur wenn URL `github.com/owner/repo` ist UND das Repo selbst die Hauptsache ist (nicht „GitHub Copilot" oder ähnliches).
-- `AI` — alles LLM/ML/Agent/Image-Gen/Voice-Gen/Coding-AI.
-- `Coding` — Sprach-Docs, Frameworks, Dev-Tools, die nicht AI-first sind.
+- `AI` — LLM/ML/Agent/Image-Gen/Coding-AI ohne deutlichere Heimat.
+- `Coding` — Sprach-Docs, Frameworks, Dev-Tools, Coding-Agent-Harnesses.
+- `GitHub` — Repos ohne stärkere thematische Kategorie. Nicht für „GitHub Copilot" o.ä.
+- `MCP` — MCP-Server, Model-Context-Protocol-Tools, Bridges, Gateways.
+- `Prompting` — Prompt-Libraries, Prompt-Engineering-Guides, Meta-Prompting-Frameworks.
+- `Security` — Red-Team, Pentest, Defensive, CVEs, Hacking-Tools, OWASP.
+- `Audio` — Musik-, Sprach-, Sound-Generierung, TTS/STT, Audio-Tools.
+- `Video` — Video-Generation, Editing, AI-Video-Tools.
 - `Design` — Figma, Design-Tools, Type-Tools, Color-Tools.
-- `Inspiration` — Galerien, Awwwards, Portfolios.
+- `Mobile` — iOS/Android-Apps, Mobile-Frameworks, App-Builder.
 - `Tool` — Productivity-Utilities, die nicht in obige fallen.
-- `Learning` — Kurse, Tutorials, Bücher.
-- `Research` — Papers, Datasets, Benchmarks.
-- `Prompting` — Prompt-Libraries, Prompt-Engineering-Guides.
 - `Business` — SaaS-Pricing, Founder-Content, Strategie.
+- `Learning` — Kurse, Tutorials, Bücher.
+- `Inspiration` — Galerien, Awwwards, Portfolios.
+- `Research` — Papers, Datasets, Benchmarks, Schatten-Bibliotheken.
 - `Sonstiges` — nur wenn wirklich nichts passt.
 
 ### `tags`
