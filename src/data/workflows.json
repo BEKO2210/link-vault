@@ -1,0 +1,28 @@
+[
+  {
+    "id": "nvidia-free-models",
+    "title": "NVIDIA hostet ~80 AI-Modelle kostenlos",
+    "subtitle": "MiniMax, GLM, Kimi, DeepSeek, GPT-OSS und viele weitere — gratis über die NVIDIA-Build-API.",
+    "highlights": ["NVIDIA", "80 AI-Modellen", "absolut kostenlos"],
+    "bullets": [
+      {
+        "icon": "📦",
+        "text": "Zugriff auf MiniMax M2.7, GLM 5.1, Kimi 2.5, DeepSeek 3.2, GPT-OSS-120B, Sarvam-M und viele weitere."
+      },
+      {
+        "icon": "🔌",
+        "text": "Lässt sich direkt in OpenClaude, OpenCode, Zed IDE, Hermes-Agent und Cursor IDE einbinden."
+      }
+    ],
+    "steps": [
+      { "label": "API-Key holen", "code": "https://build.nvidia.com/models", "type": "url" },
+      { "label": "base_url setzen", "code": "https://integrate.api.nvidia.com/v1", "type": "url" },
+      { "label": "API-Key als Env-Var", "code": "api_key = \"$NVIDIA_API_KEY\"", "type": "env" },
+      { "label": "Modell wählen", "code": "z. B. minimaxai/minimax-m2.7", "type": "note" }
+    ],
+    "source": { "name": "@thefutureguyy.ai" },
+    "tags": ["nvidia", "api", "free", "llm", "openai-compatible"],
+    "createdAt": "2026-05-01",
+    "accent": "#76b900"
+  }
+]
