@@ -1,5 +1,65 @@
 [
   {
+    "id": "hunyuanvideogp",
+    "title": "HunyuanVideoGP",
+    "url": "https://github.com/deepbeepmeep/HunyuanVideoGP",
+    "description": "GPU-arme Variante von HunyuanVideo — eines der besten Open-Source-Text-zu-Video-Modelle mit deutlich reduziertem VRAM-Bedarf.",
+    "categories": ["Video"],
+    "tags": ["text-to-video", "hunyuan", "low-vram", "open-source", "generative"],
+    "createdAt": "2026-05-01",
+    "favorite": false
+  },
+  {
+    "id": "hunyuan3d-2gp",
+    "title": "Hunyuan3D-2GP",
+    "url": "https://github.com/deepbeepmeep/Hunyuan3D-2GP",
+    "description": "Bild- und Text-zu-3D-Tool auf Basis von Hunyuan3D 2.0 — generiert 3D-Modelle auf GPU-armen Systemen.",
+    "categories": ["Image", "Tool"],
+    "tags": ["3d", "image-to-3d", "hunyuan", "low-vram", "generative"],
+    "createdAt": "2026-05-01",
+    "favorite": false
+  },
+  {
+    "id": "fluxfillgp",
+    "title": "FluxFillGP",
+    "url": "https://github.com/deepbeepmeep/FluxFillGP",
+    "description": "Inpainting- und Outpainting-Tool auf FLUX-Basis, optimiert für niedrigen VRAM-Verbrauch und alte GPUs.",
+    "categories": ["Image"],
+    "tags": ["inpainting", "outpainting", "flux", "low-vram", "tool"],
+    "createdAt": "2026-05-01",
+    "favorite": false
+  },
+  {
+    "id": "cosmos1gp",
+    "title": "Cosmos1GP",
+    "url": "https://github.com/deepbeepmeep/Cosmos1GP",
+    "description": "GPU-arme Implementierung von NVIDIAs Cosmos World-Foundation-Modell — Text-zu-World und Image/Video-zu-World.",
+    "categories": ["Video", "Image"],
+    "tags": ["world-model", "cosmos", "nvidia", "low-vram", "generative"],
+    "createdAt": "2026-05-01",
+    "favorite": false
+  },
+  {
+    "id": "ominicontrolgp",
+    "title": "OminiControlGP",
+    "url": "https://github.com/deepbeepmeep/OminiControlGP",
+    "description": "FLUX-basiertes Tool für Objekt-Transfer zwischen Bildern, optimiert für GPU-arme Konfigurationen.",
+    "categories": ["Image"],
+    "tags": ["object-transfer", "flux", "low-vram", "control", "tool"],
+    "createdAt": "2026-05-01",
+    "favorite": false
+  },
+  {
+    "id": "yuegp",
+    "title": "YuE GP",
+    "url": "https://github.com/deepbeepmeep/YuEGP",
+    "description": "Song-Generator mit Instrumenten und Singstimme — GPU-Poor-Variante des YuE-Foundation-Modells.",
+    "categories": ["Audio"],
+    "tags": ["music", "song", "voice", "low-vram", "generative"],
+    "createdAt": "2026-05-01",
+    "favorite": false
+  },
+  {
     "id": "wangp",
     "title": "WanGP",
     "url": "https://github.com/deepbeepmeep/Wan2GP",
