@@ -164,8 +164,72 @@ button {
    ========================================================================= */
 .hero {
   position: relative;
-  padding: clamp(80px, 12vw, 140px) 0 var(--s-7);
+  padding: clamp(72px, 11vw, 130px) 0 var(--s-7);
   text-align: center;
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero__logo {
+  display: block;
+  margin: 0 auto var(--s-4);
+  filter: drop-shadow(0 14px 40px rgba(239, 68, 68, 0.30))
+    drop-shadow(0 0 22px rgba(34, 211, 238, 0.18));
+}
+
+/* BrandMark animations */
+.bm__spin {
+  transform-origin: 50px 50px;
+  transform-box: fill-box;
+  animation: bmSpin 26s linear infinite;
+}
+
+.bm__counter {
+  transform-origin: 50px 50px;
+  transform-box: fill-box;
+  animation: bmCounter 32s linear infinite;
+}
+
+.bm__halo {
+  transform-origin: 50px 50px;
+  transform-box: fill-box;
+  animation: bmHalo 5.5s ease-in-out infinite;
+}
+
+@keyframes bmSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bmCounter {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes bmHalo {
+  0%,
+  100% {
+    transform: scale(0.86);
+    opacity: 0.35;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 0.7;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bm__spin,
+  .bm__counter,
+  .bm__halo {
+    animation: none;
+  }
 }
 
 .hero__halo {
@@ -248,25 +312,19 @@ button {
 .hero__brand {
   display: inline-flex;
   align-items: center;
-  gap: var(--s-2);
+  gap: 10px;
   text-decoration: none;
   color: var(--text);
   font-weight: 700;
-  font-size: 16px;
+  font-size: 15.5px;
   letter-spacing: -0.01em;
+  padding: 4px;
+  border-radius: 12px;
+  transition: opacity 200ms;
 }
 
-.hero__brand-mark {
-  width: 26px;
-  height: 26px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 7px;
-  background: linear-gradient(135deg, var(--acc-violet), var(--acc-violet-deep));
-  color: white;
-  font-size: 13px;
-  box-shadow: 0 4px 14px rgba(239, 68, 68, 0.35);
+.hero__brand:hover {
+  opacity: 0.85;
 }
 
 .btn--sm {
@@ -411,6 +469,22 @@ button {
   border: 1px solid var(--border-strong);
   color: var(--text);
   margin-bottom: var(--s-2);
+  transition: transform 320ms cubic-bezier(0.2, 0.7, 0.2, 1),
+    border-color 320ms, background 320ms;
+}
+
+.home-card__icon svg {
+  transition: transform 380ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.home-card:hover .home-card__icon {
+  transform: translateY(-1px);
+  border-color: var(--home-card-border);
+  background: color-mix(in srgb, var(--home-card-glow) 20%, transparent);
+}
+
+.home-card:hover .home-card__icon svg {
+  transform: scale(1.08);
 }
 
 .home-card--links .home-card__icon {
