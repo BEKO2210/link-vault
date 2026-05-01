@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import linksData from './data/links.json'
-import type { Link, SortKey } from './types'
+import { CATEGORIES, type Link, type SortKey } from './types'
 import { Filters } from './components/Filters'
 import { Guide } from './components/Guide'
 import { Hero } from './components/Hero'
@@ -100,6 +100,34 @@ export function App() {
     }
   }, [allLinks])
 
+  const categoryCounts = useMemo(() => {
+    const counts = new Map<string, number>()
+    for (const l of allLinks) {
+      const key = String(l.category)
+      counts.set(key, (counts.get(key) ?? 0) + 1)
+    }
+    return counts
+  }, [allLinks])
+
+  const grouped = useMemo<{ name: string; items: Link[] }[] | null>(() => {
+    if (category !== 'all') return null
+    const map = new Map<string, Link[]>()
+    for (const l of filtered) {
+      const k = String(l.category)
+      const arr = map.get(k)
+      if (arr) arr.push(l)
+      else map.set(k, [l])
+    }
+    const ordered: { name: string; items: Link[] }[] = []
+    for (const c of CATEGORIES) {
+      const items = map.get(c)
+      if (items?.length) ordered.push({ name: c, items })
+      map.delete(c)
+    }
+    for (const [name, items] of map) ordered.push({ name, items })
+    return ordered
+  }, [filtered, category])
+
   const isDraft = (id: string): boolean => drafts.some((d) => d.id === id)
 
   const saveDraft = (link: Link) => {
@@ -142,23 +170,60 @@ export function App() {
         onFavOnly={setFavOnly}
         sort={sort}
         onSort={setSort}
+        categoryCounts={categoryCounts}
+        totalCount={allLinks.length}
       />
 
-      <main className="grid" aria-live="polite">
+      <main aria-live="polite">
         {filtered.length === 0 ? (
           <div className="empty">
             <p>Keine Links passen zu deinen Filtern.</p>
             <p className="empty__hint">Versuche eine andere Suche oder setze die Filter zurück.</p>
           </div>
-        ) : (
-          filtered.map((l) => (
-            <LinkCard
-              key={l.id}
-              link={l}
-              isDraft={isDraft(l.id)}
-              onRemoveDraft={removeDraft}
-            />
+        ) : grouped ? (
+          grouped.map((g) => (
+            <section
+              className="cat-section"
+              key={g.name}
+              aria-labelledby={`cat-${g.name}`}
+            >
+              <header className="cat-section__head">
+                <h2 id={`cat-${g.name}`} className="cat-section__title">
+                  {g.name}
+                </h2>
+                <span className="cat-section__count">{g.items.length}</span>
+                <button
+                  type="button"
+                  className="cat-section__more"
+                  onClick={() => setCategory(g.name)}
+                  aria-label={`Nur ${g.name} anzeigen`}
+                >
+                  Nur {g.name} →
+                </button>
+              </header>
+              <div className="grid">
+                {g.items.map((l) => (
+                  <LinkCard
+                    key={l.id}
+                    link={l}
+                    isDraft={isDraft(l.id)}
+                    onRemoveDraft={removeDraft}
+                  />
+                ))}
+              </div>
+            </section>
           ))
+        ) : (
+          <div className="grid">
+            {filtered.map((l) => (
+              <LinkCard
+                key={l.id}
+                link={l}
+                isDraft={isDraft(l.id)}
+                onRemoveDraft={removeDraft}
+              />
+            ))}
+          </div>
         )}
       </main>
 

@@ -1,5 +1,55 @@
 [
   {
+    "id": "welib",
+    "title": "WeLib",
+    "url": "https://de.welib.org/",
+    "description": "Schattenbibliothek mit 43 Millionen Büchern und 98 Millionen wissenschaftlichen Artikeln — Volltextsuche, kostenlose PDF-Downloads.",
+    "category": "Research",
+    "tags": ["books", "papers", "library", "pdf", "search"],
+    "createdAt": "2026-04-30",
+    "favorite": false
+  },
+  {
+    "id": "get-shit-done",
+    "title": "GET SHIT DONE (GSD)",
+    "url": "https://github.com/gsd-build/get-shit-done",
+    "description": "Meta-Prompting-Framework für Claude Code, das Projekte in atomare Phasen mit frischem Kontext und Verifikations-Gates zerlegt.",
+    "category": "GitHub",
+    "tags": ["claude-code", "framework", "prompting", "agents", "workflow"],
+    "createdAt": "2026-04-30",
+    "favorite": false
+  },
+  {
+    "id": "mempalace",
+    "title": "MemPalace",
+    "url": "https://github.com/MemPalace/mempalace",
+    "description": "Open-Source-Memory-System für KI, das Verläufe lokal speichert und per semantischer Suche zurückholt — ohne API, mit 96,6 % Recall.",
+    "category": "GitHub",
+    "tags": ["memory", "ai", "local-first", "rag", "library"],
+    "createdAt": "2026-04-30",
+    "favorite": false
+  },
+  {
+    "id": "openclaw",
+    "title": "OpenClaw",
+    "url": "https://github.com/openclaw/openclaw",
+    "description": "Selbst-gehosteter Personal-AI-Assistent für WhatsApp, Telegram, Slack & Co. mit Voice-Wakeword, Multi-Agent-Routing und sandboxed Tools.",
+    "category": "GitHub",
+    "tags": ["assistant", "ai", "self-hosted", "agents", "voice"],
+    "createdAt": "2026-04-30",
+    "favorite": false
+  },
+  {
+    "id": "glif-mcp-server",
+    "title": "glifxyz/glif-mcp-server",
+    "url": "https://github.com/glifxyz/glif-mcp-server",
+    "description": "MCP-Server, der glif.app-Workflows direkt im LLM verfügbar macht — Image-Gen, Memes und Multimedia-KI per Tool-Call.",
+    "category": "GitHub",
+    "tags": ["mcp", "ai", "image", "workflows", "server"],
+    "createdAt": "2026-04-30",
+    "favorite": false
+  },
+  {
     "id": "web-to-app",
     "title": "shiahonb777/web-to-app",
     "url": "https://github.com/shiahonb777/web-to-app",
