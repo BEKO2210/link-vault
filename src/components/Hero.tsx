@@ -1,20 +1,28 @@
+import { BrandMark } from './BrandMark'
+
 interface HeroProps {
   onExport: () => void
+  exportLabel?: string
   compact?: boolean
 }
 
-export function Hero({ onExport, compact = false }: HeroProps) {
+export function Hero({ onExport, exportLabel = 'JSON', compact = false }: HeroProps) {
   if (compact) {
     return (
       <header className="hero hero--compact">
-        <a className="hero__brand" href="#/">
-          <span className="hero__brand-mark" aria-hidden="true">▲</span>
+        <a className="hero__brand" href="#/" aria-label="Zur Startseite">
+          <BrandMark size={28} animated />
           <span>
             Belkis <span className="hero__title-grad">Link Vault</span>
           </span>
         </a>
-        <button className="btn btn--ghost btn--sm" onClick={onExport} type="button">
-          JSON ↓
+        <button
+          className="btn btn--ghost btn--sm"
+          onClick={onExport}
+          type="button"
+          title={`${exportLabel} herunterladen`}
+        >
+          {exportLabel} ↓
         </button>
       </header>
     )
@@ -23,6 +31,7 @@ export function Hero({ onExport, compact = false }: HeroProps) {
     <header className="hero">
       <div className="hero__halo" aria-hidden="true" />
       <div className="hero__content">
+        <BrandMark size={108} animated className="hero__logo" />
         <span className="eyebrow">Personal Vault</span>
         <h1 className="hero__title">
           Belkis <span className="hero__title-grad">Link Vault</span>

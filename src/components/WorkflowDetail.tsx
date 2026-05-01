@@ -29,7 +29,7 @@ export function WorkflowDetail({ workflow, onBack }: WorkflowDetailProps) {
 
   return (
     <article className="wf-detail" style={style}>
-      <button type="button" className="wf-back" onClick={onBack}>
+      <button type="button" className="btn-back" onClick={onBack}>
         ← Zurück zu Workflows
       </button>
 
