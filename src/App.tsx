@@ -7,10 +7,45 @@ import { Hero } from './components/Hero'
 import { LinkCard } from './components/LinkCard'
 import { LinkForm } from './components/LinkForm'
 import { Stats } from './components/Stats'
+import { shuffled } from './utils'
 
 const DRAFTS_KEY = 'blv:drafts:v1'
+const PREVIEW_LIMIT = 5
 
 const baseLinks = linksData as Link[]
+
+function categoriesOf(link: Link): string[] {
+  return Array.isArray(link.categories) && link.categories.length > 0
+    ? link.categories
+    : ['Sonstiges']
+}
+
+function migrateDraft(d: unknown): Link | null {
+  if (!d || typeof d !== 'object') return null
+  const o = d as Record<string, unknown>
+  if (typeof o.id !== 'string' || typeof o.title !== 'string' || typeof o.url !== 'string') {
+    return null
+  }
+  let categories: string[]
+  if (Array.isArray(o.categories) && o.categories.every((c) => typeof c === 'string')) {
+    categories = o.categories as string[]
+  } else if (typeof o.category === 'string') {
+    categories = [o.category]
+  } else {
+    categories = ['Sonstiges']
+  }
+  return {
+    id: o.id,
+    title: o.title,
+    url: o.url,
+    description: typeof o.description === 'string' ? o.description : '',
+    categories,
+    tags: Array.isArray(o.tags) ? (o.tags.filter((t) => typeof t === 'string') as string[]) : [],
+    note: typeof o.note === 'string' ? o.note : undefined,
+    createdAt: typeof o.createdAt === 'string' ? o.createdAt : '',
+    favorite: o.favorite === true,
+  }
+}
 
 export function App() {
   const [drafts, setDrafts] = useState<Link[]>([])
@@ -18,14 +53,19 @@ export function App() {
   const [category, setCategory] = useState<string>('all')
   const [favOnly, setFavOnly] = useState(false)
   const [sort, setSort] = useState<SortKey>('newest')
+  const [shuffleSeed] = useState<number>(() => Math.floor(Math.random() * 1e9) + 1)
 
-  // Hydrate drafts from localStorage once
   useEffect(() => {
     try {
       const raw = localStorage.getItem(DRAFTS_KEY)
       if (raw) {
         const parsed: unknown = JSON.parse(raw)
-        if (Array.isArray(parsed)) setDrafts(parsed as Link[])
+        if (Array.isArray(parsed)) {
+          const migrated = parsed
+            .map(migrateDraft)
+            .filter((d): d is Link => d !== null)
+          setDrafts(migrated)
+        }
       }
     } catch {
       /* ignore corrupt storage */
@@ -50,7 +90,9 @@ export function App() {
   const filtered = useMemo<Link[]>(() => {
     const q = search.trim().toLowerCase()
     let result = allLinks
-    if (category !== 'all') result = result.filter((l) => l.category === category)
+    if (category !== 'all') {
+      result = result.filter((l) => categoriesOf(l).includes(category))
+    }
     if (favOnly) result = result.filter((l) => l.favorite)
     if (q) {
       result = result.filter((l) => {
@@ -58,7 +100,7 @@ export function App() {
           l.title,
           l.description,
           l.url,
-          String(l.category),
+          categoriesOf(l).join(' '),
           l.note ?? '',
           l.tags.join(' '),
         ]
@@ -89,7 +131,8 @@ export function App() {
   }, [allLinks, category, favOnly, search, sort])
 
   const stats = useMemo(() => {
-    const cats = new Set(allLinks.map((l) => l.category))
+    const cats = new Set<string>()
+    for (const l of allLinks) for (const c of categoriesOf(l)) cats.add(c)
     const tags = new Set(allLinks.flatMap((l) => l.tags))
     const favs = allLinks.filter((l) => l.favorite).length
     return {
@@ -103,20 +146,22 @@ export function App() {
   const categoryCounts = useMemo(() => {
     const counts = new Map<string, number>()
     for (const l of allLinks) {
-      const key = String(l.category)
-      counts.set(key, (counts.get(key) ?? 0) + 1)
+      for (const c of categoriesOf(l)) counts.set(c, (counts.get(c) ?? 0) + 1)
     }
     return counts
   }, [allLinks])
+
+  const isHomeView = category === 'all' && search.trim() === '' && !favOnly
 
   const grouped = useMemo<{ name: string; items: Link[] }[] | null>(() => {
     if (category !== 'all') return null
     const map = new Map<string, Link[]>()
     for (const l of filtered) {
-      const k = String(l.category)
-      const arr = map.get(k)
-      if (arr) arr.push(l)
-      else map.set(k, [l])
+      for (const c of categoriesOf(l)) {
+        const arr = map.get(c)
+        if (arr) arr.push(l)
+        else map.set(c, [l])
+      }
     }
     const ordered: { name: string; items: Link[] }[] = []
     for (const c of CATEGORIES) {
@@ -181,38 +226,49 @@ export function App() {
             <p className="empty__hint">Versuche eine andere Suche oder setze die Filter zurück.</p>
           </div>
         ) : grouped ? (
-          grouped.map((g) => (
-            <section
-              className="cat-section"
-              key={g.name}
-              aria-labelledby={`cat-${g.name}`}
-            >
-              <header className="cat-section__head">
-                <h2 id={`cat-${g.name}`} className="cat-section__title">
-                  {g.name}
-                </h2>
-                <span className="cat-section__count">{g.items.length}</span>
-                <button
-                  type="button"
-                  className="cat-section__more"
-                  onClick={() => setCategory(g.name)}
-                  aria-label={`Nur ${g.name} anzeigen`}
-                >
-                  Nur {g.name} →
-                </button>
-              </header>
-              <div className="grid">
-                {g.items.map((l) => (
-                  <LinkCard
-                    key={l.id}
-                    link={l}
-                    isDraft={isDraft(l.id)}
-                    onRemoveDraft={removeDraft}
-                  />
-                ))}
-              </div>
-            </section>
-          ))
+          grouped.map((g) => {
+            const showPreview = isHomeView && g.items.length > PREVIEW_LIMIT
+            const visible = showPreview
+              ? shuffled(g.items, shuffleSeed + g.name.length).slice(0, PREVIEW_LIMIT)
+              : g.items
+            return (
+              <section
+                className="cat-section"
+                key={g.name}
+                aria-labelledby={`cat-${g.name}`}
+              >
+                <header className="cat-section__head">
+                  <h2 id={`cat-${g.name}`} className="cat-section__title">
+                    {g.name}
+                  </h2>
+                  <span className="cat-section__count">{g.items.length}</span>
+                  {showPreview && (
+                    <span className="cat-section__hint">
+                      {PREVIEW_LIMIT} zufällig
+                    </span>
+                  )}
+                  <button
+                    type="button"
+                    className="cat-section__more"
+                    onClick={() => setCategory(g.name)}
+                    aria-label={`Alle ${g.items.length} ${g.name}-Links anzeigen`}
+                  >
+                    {showPreview ? `Alle ${g.items.length} anzeigen →` : `Nur ${g.name} →`}
+                  </button>
+                </header>
+                <div className="grid">
+                  {visible.map((l) => (
+                    <LinkCard
+                      key={l.id}
+                      link={l}
+                      isDraft={isDraft(l.id)}
+                      onRemoveDraft={removeDraft}
+                    />
+                  ))}
+                </div>
+              </section>
+            )
+          })
         ) : (
           <div className="grid">
             {filtered.map((l) => (

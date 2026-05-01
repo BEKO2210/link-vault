@@ -1,19 +1,25 @@
 export const CATEGORIES = [
   'AI',
+  'Chat',
+  'Image',
+  'Audio',
+  'Voice',
+  'Video',
   'Coding',
-  'GitHub',
+  'Agents',
   'MCP',
+  'Memory',
   'Prompting',
   'Security',
-  'Audio',
-  'Video',
   'Design',
   'Mobile',
   'Tool',
-  'Business',
+  'Docs',
+  'Research',
   'Learning',
   'Inspiration',
-  'Research',
+  'Business',
+  'GitHub',
   'Sonstiges',
 ] as const
 
@@ -26,7 +32,7 @@ export interface Link {
   title: string
   url: string
   description: string
-  category: Category | string
+  categories: string[]
   tags: string[]
   note?: string
   createdAt: string

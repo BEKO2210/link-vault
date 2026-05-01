@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
-import type { Category, Link } from '../types'
+import type { Link } from '../types'
 import { CATEGORIES } from '../types'
 import { isValidUrl, parseTags, slugify, todayISO } from '../utils'
 import {
@@ -25,7 +25,7 @@ export function LinkForm({ onSaveDraft }: LinkFormProps) {
   const [title, setTitle] = useState('')
   const [url, setUrl] = useState('')
   const [description, setDescription] = useState('')
-  const [category, setCategory] = useState<Category>('AI')
+  const [categories, setCategories] = useState<string[]>(['AI'])
   const [tagsInput, setTagsInput] = useState('')
   const [note, setNote] = useState('')
   const [favorite, setFavorite] = useState(false)
@@ -75,7 +75,7 @@ export function LinkForm({ onSaveDraft }: LinkFormProps) {
     title: title.trim(),
     url: url.trim(),
     description: description.trim(),
-    category,
+    categories: categories.length ? categories : ['Sonstiges'],
     tags,
     ...(note.trim() ? { note: note.trim() } : {}),
     createdAt: todayISO(),
@@ -83,14 +83,21 @@ export function LinkForm({ onSaveDraft }: LinkFormProps) {
   }
 
   const json = JSON.stringify(link, null, 2)
-  const canSubmit = !!title.trim() && !!url.trim() && !urlError
+  const canSubmit =
+    !!title.trim() && !!url.trim() && !urlError && categories.length > 0
   const canCommit = canSubmit && !!ghToken && !!ghOwner && !!ghRepo
+
+  const toggleCategory = (c: string) => {
+    setCategories((prev) =>
+      prev.includes(c) ? prev.filter((x) => x !== c) : [...prev, c],
+    )
+  }
 
   const resetForm = () => {
     setTitle('')
     setUrl('')
     setDescription('')
-    setCategory('AI')
+    setCategories(['AI'])
     setTagsInput('')
     setNote('')
     setFavorite(false)
@@ -205,34 +212,39 @@ export function LinkForm({ onSaveDraft }: LinkFormProps) {
             />
           </div>
 
-          <div className="field-row">
-            <div className="field">
-              <label htmlFor="f-cat">Kategorie</label>
-              <select
-                id="f-cat"
-                value={category}
-                onChange={(e) => setCategory(e.target.value as Category)}
-              >
-                {CATEGORIES.map((c) => (
-                  <option key={c} value={c}>
+          <div className="field">
+            <label>
+              Kategorien <span className="hint">(1–3 wählen, Reihenfolge = Wichtigkeit)</span>
+            </label>
+            <div className="cat-picker" role="group" aria-label="Kategorien">
+              {CATEGORIES.map((c) => {
+                const active = categories.includes(c)
+                return (
+                  <button
+                    type="button"
+                    key={c}
+                    aria-pressed={active}
+                    className={`chip cat-picker__chip ${active ? 'chip--active' : ''}`}
+                    onClick={() => toggleCategory(c)}
+                  >
                     {c}
-                  </option>
-                ))}
-              </select>
+                  </button>
+                )
+              })}
             </div>
+          </div>
 
-            <div className="field">
-              <label htmlFor="f-tags">
-                Tags <span className="hint">(Komma-getrennt)</span>
-              </label>
-              <input
-                id="f-tags"
-                type="text"
-                value={tagsInput}
-                onChange={(e) => setTagsInput(e.target.value)}
-                placeholder="ki, tool, frontend"
-              />
-            </div>
+          <div className="field">
+            <label htmlFor="f-tags">
+              Tags <span className="hint">(Komma-getrennt)</span>
+            </label>
+            <input
+              id="f-tags"
+              type="text"
+              value={tagsInput}
+              onChange={(e) => setTagsInput(e.target.value)}
+              placeholder="ki, tool, frontend"
+            />
           </div>
 
           <div className="field">
