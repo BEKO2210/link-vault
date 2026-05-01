@@ -38,3 +38,47 @@ export interface Link {
   createdAt: string
   favorite: boolean
 }
+
+export interface WorkflowBullet {
+  text: string
+  icon?: string
+}
+
+export interface WorkflowStep {
+  label?: string
+  code: string
+  type?: 'url' | 'env' | 'cmd' | 'note'
+}
+
+export interface WorkflowSource {
+  name: string
+  url?: string
+}
+
+export interface Workflow {
+  id: string
+  title: string
+  subtitle?: string
+  highlights?: string[]
+  bullets: WorkflowBullet[]
+  steps: WorkflowStep[]
+  source?: WorkflowSource
+  tags: string[]
+  createdAt: string
+  accent?: string
+}
+
+export interface Prompt {
+  id: string
+  title: string
+  subtitle?: string
+  highlights?: string[]
+  body: string
+  target?: string
+  useCase?: string
+  source?: WorkflowSource
+  tags: string[]
+  createdAt: string
+  accent?: string
+  favorite?: boolean
+}

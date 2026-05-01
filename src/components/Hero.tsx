@@ -1,8 +1,24 @@
 interface HeroProps {
   onExport: () => void
+  compact?: boolean
 }
 
-export function Hero({ onExport }: HeroProps) {
+export function Hero({ onExport, compact = false }: HeroProps) {
+  if (compact) {
+    return (
+      <header className="hero hero--compact">
+        <a className="hero__brand" href="#/">
+          <span className="hero__brand-mark" aria-hidden="true">▲</span>
+          <span>
+            Belkis <span className="hero__title-grad">Link Vault</span>
+          </span>
+        </a>
+        <button className="btn btn--ghost btn--sm" onClick={onExport} type="button">
+          JSON ↓
+        </button>
+      </header>
+    )
+  }
   return (
     <header className="hero">
       <div className="hero__halo" aria-hidden="true" />
@@ -15,15 +31,6 @@ export function Hero({ onExport }: HeroProps) {
           Meine persönliche Edge-of-Tech-Sammlung für KI, Coding, Tools, Projekte und Inspiration.
         </p>
         <p className="hero__claim">Sammeln · Filtern · Wiederfinden · Weiterbauen</p>
-        <div className="hero__cta">
-          <a className="btn btn--primary" href="#form">
-            Neuen Link vorbereiten
-          </a>
-          <button className="btn btn--ghost" onClick={onExport} type="button">
-            Alle Links als JSON
-            <span aria-hidden="true">↓</span>
-          </button>
-        </div>
       </div>
     </header>
   )
