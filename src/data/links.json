@@ -4,8 +4,8 @@
     "title": "Decepticon",
     "url": "https://github.com/PurpleAILAB/Decepticon",
     "description": "Autonomer Red-Team-Agent in Kali-Sandbox — fährt echte Kill-Chains von Recon bis C2 mit OPPLAN und MITRE-ATT&CK-Mapping.",
-    "category": "GitHub",
-    "tags": ["security", "red-team", "agents", "pentest", "ai"],
+    "category": "Security",
+    "tags": ["red-team", "pentest", "agents", "kali", "ai"],
     "createdAt": "2026-05-01",
     "favorite": false
   },
@@ -24,8 +24,8 @@
     "title": "ACE-Step UI",
     "url": "https://github.com/fspecii/ace-step-ui",
     "description": "Lokale Web-UI für das ACE-Step-1.5-Modell — generiert KI-Musik im Browser als Open-Source-Alternative zu Suno.",
-    "category": "GitHub",
-    "tags": ["ai", "music", "audio", "local", "web-ui"],
+    "category": "Audio",
+    "tags": ["ai", "music", "generation", "local", "web-ui"],
     "note": "Audio-KI wie Suno",
     "createdAt": "2026-05-01",
     "favorite": false
@@ -75,7 +75,7 @@
     "title": "glifxyz/glif-mcp-server",
     "url": "https://github.com/glifxyz/glif-mcp-server",
     "description": "MCP-Server, der glif.app-Workflows direkt im LLM verfügbar macht — Image-Gen, Memes und Multimedia-KI per Tool-Call.",
-    "category": "GitHub",
+    "category": "MCP",
     "tags": ["mcp", "ai", "image", "workflows", "server"],
     "createdAt": "2026-04-30",
     "favorite": false
@@ -85,8 +85,8 @@
     "title": "shiahonb777/web-to-app",
     "url": "https://github.com/shiahonb777/web-to-app",
     "description": "No-Code-Android-App, die beliebige Websites oder Frontend-Projekte in eigenständige APKs verpackt — inklusive JS/CSS-Injection und Verschlüsselung.",
-    "category": "GitHub",
-    "tags": ["android", "apk", "webview", "no-code", "tool"],
+    "category": "Mobile",
+    "tags": ["android", "apk", "webview", "no-code", "app-builder"],
     "createdAt": "2026-04-30",
     "favorite": false
   },
