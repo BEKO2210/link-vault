@@ -1,5 +1,114 @@
 [
   {
+    "id": "claude-code-5-layers",
+    "title": "Claude Code Agent-Dev-Kit — die 5 Layers verstehen",
+    "subtitle": "CLAUDE.md, Skills, Hooks, Subagents und Plugins — wie ein Agent vom Memo bis zur Distribution wächst.",
+    "highlights": ["Claude Code", "5 Layers", "Agent-Dev-Kit"],
+    "bullets": [
+      {
+        "icon": "📜",
+        "text": "Layer 1 — Memory (CLAUDE.md): Immer geladen, immer aktiv. Die Konstitution des Agents — Architektur-Regeln, Naming, Test-Expectations, Repo-Map. Einmal geschrieben, sparst dir 100 Prompts."
+      },
+      {
+        "icon": "📚",
+        "text": "Layer 2 — Knowledge (Skills): On-demand und modular. Description-matched, auto-invoked. Skill bleibt isoliert und lädt nur, wenn er gebraucht wird — PDF-, Video- oder Excalidraw-Workflows als wiederverwendbare Bausteine."
+      },
+      {
+        "icon": "🛡️",
+        "text": "Layer 3 — Guardrail (Hooks): Deterministisch, kein AI. Shell-Scripts feuern auf Events. Pattern-Matcher blocken gefährliche Tools (exit 2), injizieren Kontext (echo) oder schreiben Audit-Logs."
+      },
+      {
+        "icon": "🌿",
+        "text": "Layer 4 — Delegation (Subagents): Eigenes Context-Window. Main Session plant, Subagent erledigt einen Job und gibt EINE Message zurück. Hauptthread bleibt clean."
+      },
+      {
+        "icon": "📦",
+        "text": "Layer 5 — Distribution (Plugins): npm-Pakete für Agent-Capabilities. plugin.json bündelt skills/, agents/, hooks/ und commands/ — One-Click-Install pro Repo, Updates erreichen das ganze Team."
+      }
+    ],
+    "steps": [
+      {
+        "label": "Layer 1 — Globale Memory (für jedes Projekt)",
+        "code": "~/.claude/CLAUDE.md",
+        "type": "note"
+      },
+      {
+        "label": "Layer 1 — Projekt-Memory (nur dieses Repo)",
+        "code": ".claude/CLAUDE.md",
+        "type": "note"
+      },
+      {
+        "label": "Layer 1 — Was reingehört",
+        "code": "architecture.rules · naming.conventions · test.expectations · repo.map",
+        "type": "note"
+      },
+      {
+        "label": "Layer 2 — Skill anlegen (global oder pro Projekt)",
+        "code": ".claude/skills/<skill-name>/SKILL.md (+ scripts/, templates/, assets/)",
+        "type": "note"
+      },
+      {
+        "label": "Layer 2 — Wirkungsweise",
+        "code": "Description in SKILL.md → Claude matcht automatisch → Skill wird on-demand geladen.",
+        "type": "note"
+      },
+      {
+        "label": "Layer 3 — Hook-Datei (Beispiel: vor Tool-Aufruf)",
+        "code": ".claude/hooks/PreToolUse.sh",
+        "type": "note"
+      },
+      {
+        "label": "Layer 3 — Verfügbare Hook-Events",
+        "code": "PreToolUse · PostToolUse · SessionStart · Stop · SubagentStop",
+        "type": "note"
+      },
+      {
+        "label": "Layer 3 — Tool blocken (Shell-Beispiel)",
+        "code": "if [[ \"$TOOL\" == Bash*rm* ]]; then exit 2; fi",
+        "type": "cmd"
+      },
+      {
+        "label": "Layer 4 — Subagent anlegen",
+        "code": ".claude/agents/code-reviewer.md",
+        "type": "note"
+      },
+      {
+        "label": "Layer 4 — Typische Subagents",
+        "code": "code-reviewer · test-runner · explorer · feature-dev",
+        "type": "note"
+      },
+      {
+        "label": "Layer 5 — Plugin-Manifest",
+        "code": "plugin.json — { name, version, skills: [...] }",
+        "type": "note"
+      },
+      {
+        "label": "Layer 5 — Was ein Plugin bündelt",
+        "code": "skills/ · agents/ · hooks/ · commands/ — alles in einem Drop",
+        "type": "note"
+      },
+      {
+        "label": "Layer 5 — Marketplace einbinden (in Claude Code)",
+        "code": "/plugin marketplace add <owner>/<repo>",
+        "type": "cmd"
+      },
+      {
+        "label": "Layer 5 — Plugin installieren",
+        "code": "/plugin install <plugin-name>@<marketplace>",
+        "type": "cmd"
+      },
+      {
+        "label": "Voll-Doku zu Claude Code",
+        "code": "https://docs.claude.com/en/docs/agents-and-tools/claude-code/overview",
+        "type": "url"
+      }
+    ],
+    "source": { "name": "Agent Development Kit · 5-Layer Stack" },
+    "tags": ["claude-code", "architecture", "skills", "hooks", "subagents", "plugins"],
+    "createdAt": "2026-05-02",
+    "accent": "#f97316"
+  },
+  {
     "id": "ruflo-claude-code-setup",
     "title": "Ruflo — Multi-Agent-Orchestrierung in Claude Code einrichten",
     "subtitle": "100+ Agenten, Swarm-Topologien, persistentes Vector-Memory und Agent-Federation in einem init.",
