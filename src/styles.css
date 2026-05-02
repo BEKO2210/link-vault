@@ -181,22 +181,21 @@ button {
     drop-shadow(0 0 22px rgba(34, 211, 238, 0.18));
 }
 
-/* BrandMark animations */
+/* BrandMark animations
+   transform-origin in SVG defaults to view-box, so 50px 50px
+   maps to the canvas center (viewBox 0 0 100 100) for every layer. */
 .bm__spin {
   transform-origin: 50px 50px;
-  transform-box: fill-box;
   animation: bmSpin 26s linear infinite;
 }
 
 .bm__counter {
   transform-origin: 50px 50px;
-  transform-box: fill-box;
   animation: bmCounter 32s linear infinite;
 }
 
 .bm__halo {
   transform-origin: 50px 50px;
-  transform-box: fill-box;
   animation: bmHalo 5.5s ease-in-out infinite;
 }
 
