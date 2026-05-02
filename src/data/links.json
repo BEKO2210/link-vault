@@ -1,5 +1,15 @@
 [
   {
+    "id": "agent-browser",
+    "title": "agent-browser",
+    "url": "https://github.com/vercel-labs/agent-browser",
+    "description": "Browser-Automation-CLI in nativem Rust für AI-Agents — Snapshot-Refs, CDP-Anbindung, Headed/Headless und Cloud-Provider-Support.",
+    "categories": ["Agents", "Coding", "Tool"],
+    "tags": ["rust", "cli", "browser", "automation", "vercel"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
     "id": "ruflo",
     "title": "Ruflo (ex Claude Flow)",
     "url": "https://github.com/ruvnet/ruflo",
