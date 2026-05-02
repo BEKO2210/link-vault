@@ -1,5 +1,5 @@
 /* Belkis Link Vault — minimal stale-while-revalidate service worker */
-const VERSION = 'blv-v1'
+const VERSION = 'blv-v2'
 const CACHE = `blv-cache-${VERSION}`
 
 self.addEventListener('install', (event) => {
