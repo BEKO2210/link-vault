@@ -615,8 +615,10 @@ button {
     color: var(--home-card-fill);
     -webkit-text-stroke: 1px var(--home-card-fill);
     border-right: 5px solid var(--home-card-fill);
+    opacity: 0;
     transition:
       width 0.55s cubic-bezier(0.2, 0.7, 0.2, 1),
+      opacity 0.18s ease,
       filter 0.4s ease;
     white-space: nowrap;
     pointer-events: none;
@@ -624,6 +626,7 @@ button {
   .home-card:hover .home-card__title-fill,
   .home-card:focus-visible .home-card__title-fill {
     width: 100%;
+    opacity: 1;
     filter: drop-shadow(0 0 22px var(--home-card-fill));
   }
 }
@@ -2341,9 +2344,24 @@ code,
     margin-top: auto;
   }
 
-  /* Tighter hero so the nav-cards land closer to the fold */
+  /* Compact hero — title and logo were eating ~50% of the viewport */
   .hero {
-    padding: clamp(56px, 6vw, 96px) 0 var(--s-6);
+    padding: clamp(28px, 3.5vw, 56px) 0 var(--s-5);
+  }
+  .hero__logo {
+    width: 76px;
+    height: 76px;
+    margin-bottom: var(--s-3);
+  }
+  .hero__title {
+    font-size: clamp(40px, 5.4vw, 64px);
+  }
+  .hero__subtitle {
+    font-size: 15px;
+    max-width: 540px;
+  }
+  .hero__claim {
+    margin-bottom: var(--s-3);
   }
 
   /* More breathing room between the 3 nav-cards so the hover glow
@@ -2351,6 +2369,7 @@ code,
   .home-nav {
     gap: var(--s-5);
     padding: 0 var(--s-2);
+    margin: var(--s-5) 0 var(--s-5);
   }
 
   /* Bigger nav cards — fill the wide viewport with more presence */
