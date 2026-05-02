@@ -1,5 +1,15 @@
 [
   {
+    "id": "uiverse",
+    "title": "Uiverse",
+    "url": "https://uiverse.io",
+    "description": "Community-Library mit kostenlosen Open-Source-UI-Elementen — Buttons, Loader, Cards & Co. zum Copy-Pasten in HTML/CSS.",
+    "categories": ["Design", "Inspiration", "Coding"],
+    "tags": ["ui", "css", "snippets", "copy-paste", "library"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
     "id": "cobalt",
     "title": "Cobalt",
     "url": "https://cobalt.tools/",

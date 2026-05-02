@@ -18,6 +18,17 @@ const ICON = {
   strokeLinejoin: 'round' as const,
 }
 
+function Title({ children }: { children: string }) {
+  return (
+    <span className="home-card__title">
+      <span className="home-card__title-base">{children}</span>
+      <span aria-hidden="true" className="home-card__title-fill">
+        {children}
+      </span>
+    </span>
+  )
+}
+
 export function HomeNav({
   linkCount,
   workflowCount,
@@ -36,7 +47,7 @@ export function HomeNav({
           </svg>
         </span>
         <span className="home-card__kicker">Sammlung</span>
-        <span className="home-card__title">Links</span>
+        <Title>Links</Title>
         <span className="home-card__desc">Kuratierte Tools, Modelle und Resourcen — durchsuchen, filtern, öffnen.</span>
         <span className="home-card__count">
           <strong>{linkCount}</strong> Einträge
@@ -55,7 +66,7 @@ export function HomeNav({
           </svg>
         </span>
         <span className="home-card__kicker">How-Tos</span>
-        <span className="home-card__title">Workflows</span>
+        <Title>Workflows</Title>
         <span className="home-card__desc">Schritt-für-Schritt-Anleitungen zu Setup, APIs und Tricks.</span>
         <span className="home-card__count">
           <strong>{workflowCount}</strong> {workflowCount === 1 ? 'Workflow' : 'Workflows'}
@@ -71,7 +82,7 @@ export function HomeNav({
           </svg>
         </span>
         <span className="home-card__kicker">Library</span>
-        <span className="home-card__title">Prompts</span>
+        <Title>Prompts</Title>
         <span className="home-card__desc">Geprüfte Prompt-Vorlagen — kopieren, anpassen, anwenden.</span>
         <span className="home-card__count">
           <strong>{promptCount}</strong> {promptCount === 1 ? 'Prompt' : 'Prompts'}

@@ -53,6 +53,16 @@ export function Filters(props: FiltersProps) {
         <button
           type="button"
           role="tab"
+          aria-selected={category === 'random'}
+          className={`chip chip--random ${category === 'random' ? 'chip--active' : ''}`}
+          onClick={() => onCategory('random')}
+        >
+          <span aria-hidden="true">✨</span> Random
+          <span className="chip__count">5</span>
+        </button>
+        <button
+          type="button"
+          role="tab"
           aria-selected={category === 'all'}
           className={`chip ${category === 'all' ? 'chip--active' : ''}`}
           onClick={() => onCategory('all')}
