@@ -1,5 +1,95 @@
 [
   {
+    "id": "ruflo-claude-code-setup",
+    "title": "Ruflo — Multi-Agent-Orchestrierung in Claude Code einrichten",
+    "subtitle": "100+ Agenten, Swarm-Topologien, persistentes Vector-Memory und Agent-Federation in einem init.",
+    "highlights": ["Ruflo", "Claude Code", "Multi-Agent"],
+    "bullets": [
+      {
+        "icon": "🤖",
+        "text": "100+ vorgefertigte Agenten (Coding, Testing, Security, Docs, Architecture). Hooks routen Tasks automatisch — Claude Code arbeitet wie gewohnt, Ruflo koordiniert im Hintergrund."
+      },
+      {
+        "icon": "🐝",
+        "text": "Swarm-Coordination mit hierarchischer, mesh und adaptiver Topologie + Konsens. SONA-Neural-Patterns + ReasoningBank lernen aus erfolgreichen Trajectories."
+      },
+      {
+        "icon": "🧠",
+        "text": "AgentDB mit HNSW-Index — 150–12.500× schnellere semantische Suche. Vector-Memory bleibt über Sessions erhalten und wächst mit jedem Run."
+      },
+      {
+        "icon": "🛡️",
+        "text": "Optional: Agent-Federation für Cross-Machine-Collab. mTLS + ed25519, automatisches PII-Stripping vor Send, Trust-Levels upgraden adaptiv. Kein Cert-Handling nötig."
+      }
+    ],
+    "steps": [
+      {
+        "label": "Voraussetzung",
+        "code": "Node ≥ 18 + aktuelle Claude Code-Installation",
+        "type": "note"
+      },
+      {
+        "label": "In Claude Code: Marketplace hinzufügen",
+        "code": "/plugin marketplace add ruvnet/ruflo",
+        "type": "cmd"
+      },
+      {
+        "label": "Core-Plugin installieren (Pflicht)",
+        "code": "/plugin install ruflo-core@ruflo",
+        "type": "cmd"
+      },
+      {
+        "label": "Swarm-Coordination dazu (empfohlen)",
+        "code": "/plugin install ruflo-swarm@ruflo",
+        "type": "cmd"
+      },
+      {
+        "label": "Autopilot (Hooks + Auto-Routing)",
+        "code": "/plugin install ruflo-autopilot@ruflo",
+        "type": "cmd"
+      },
+      {
+        "label": "Federation (nur wenn Cross-Machine-Agents gebraucht)",
+        "code": "/plugin install ruflo-federation@ruflo",
+        "type": "cmd"
+      },
+      {
+        "label": "Claude Code neu starten — fertig",
+        "code": "Hooks werden automatisch beim Start geladen.",
+        "type": "note"
+      },
+      {
+        "label": "Alternativ: globale CLI mit Setup-Wizard",
+        "code": "npx ruflo@latest init --wizard",
+        "type": "cmd"
+      },
+      {
+        "label": "Alternativ: als MCP-Server registrieren",
+        "code": "claude mcp add ruflo -- npx -y @claude-flow/cli@latest",
+        "type": "cmd"
+      },
+      {
+        "label": "Web-UI Demo (kein Login, kein API-Key)",
+        "code": "https://flo.ruv.io",
+        "type": "url"
+      },
+      {
+        "label": "Goal-Planner Demo (Plain-English → A*-Plan)",
+        "code": "https://goal.ruv.io",
+        "type": "url"
+      },
+      {
+        "label": "Repo + volle Doku",
+        "code": "https://github.com/ruvnet/ruflo",
+        "type": "url"
+      }
+    ],
+    "source": { "name": "ruvnet/ruflo · MIT" },
+    "tags": ["claude-code", "agents", "swarm", "mcp", "federation"],
+    "createdAt": "2026-05-02",
+    "accent": "#14b8a6"
+  },
+  {
     "id": "nvidia-free-models",
     "title": "NVIDIA hostet ~80 AI-Modelle kostenlos",
     "subtitle": "MiniMax, GLM, Kimi, DeepSeek, GPT-OSS und viele weitere — gratis über die NVIDIA-Build-API.",

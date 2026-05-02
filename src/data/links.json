@@ -1,5 +1,15 @@
 [
   {
+    "id": "ruflo",
+    "title": "Ruflo (ex Claude Flow)",
+    "url": "https://github.com/ruvnet/ruflo",
+    "description": "Multi-Agent-Orchestrierung für Claude Code — 100+ Agenten, Swarms, Vector-Memory, Federation und MCP-Toolkit in einem init.",
+    "categories": ["Agents", "Coding", "MCP"],
+    "tags": ["claude-code", "swarm", "orchestration", "mcp", "memory"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
     "id": "rtk",
     "title": "rtk — Rust Token Killer",
     "url": "https://github.com/rtk-ai/rtk",
