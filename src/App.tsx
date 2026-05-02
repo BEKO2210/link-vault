@@ -1,4 +1,11 @@
-import { useEffect, useMemo, useState, type CSSProperties } from 'react'
+import {
+  Suspense,
+  lazy,
+  useEffect,
+  useMemo,
+  useState,
+  type CSSProperties,
+} from 'react'
 import linksData from './data/links.json'
 import workflowsData from './data/workflows.json'
 import promptsData from './data/prompts.json'
@@ -7,20 +14,83 @@ import { Filters } from './components/Filters'
 import { Hero } from './components/Hero'
 import { HomeNav } from './components/HomeNav'
 import { LinkCard } from './components/LinkCard'
-import { LinkForm } from './components/LinkForm'
 import { PromptCard } from './components/PromptCard'
-import { PromptDetail } from './components/PromptDetail'
 import { Stats } from './components/Stats'
 import { WorkflowCard } from './components/WorkflowCard'
-import { WorkflowDetail } from './components/WorkflowDetail'
 import { colorOf, shuffled } from './utils'
+
+const LinkForm = lazy(() =>
+  import('./components/LinkForm').then((m) => ({ default: m.LinkForm })),
+)
+const WorkflowDetail = lazy(() =>
+  import('./components/WorkflowDetail').then((m) => ({ default: m.WorkflowDetail })),
+)
+const PromptDetail = lazy(() =>
+  import('./components/PromptDetail').then((m) => ({ default: m.PromptDetail })),
+)
+
+const Spinner = (
+  <div className="loading" role="status" aria-label="Lädt">
+    <span className="loading__dot" />
+    <span className="loading__dot" />
+    <span className="loading__dot" />
+  </div>
+)
 
 const DRAFTS_KEY = 'blv:drafts:v1'
 const PREVIEW_LIMIT = 5
 
-const baseLinks = linksData as Link[]
-const workflows = workflowsData as Workflow[]
-const prompts = promptsData as Prompt[]
+function isStringArray(v: unknown): v is string[] {
+  return Array.isArray(v) && v.every((x) => typeof x === 'string')
+}
+
+function validateLinks(arr: unknown): Link[] {
+  if (!Array.isArray(arr)) return []
+  return arr
+    .map(migrateDraft)
+    .filter((l): l is Link => l !== null)
+}
+
+function validateWorkflows(arr: unknown): Workflow[] {
+  if (!Array.isArray(arr)) return []
+  return arr.flatMap((w): Workflow[] => {
+    if (!w || typeof w !== 'object') return []
+    const o = w as Record<string, unknown>
+    if (
+      typeof o.id !== 'string' ||
+      typeof o.title !== 'string' ||
+      !Array.isArray(o.bullets) ||
+      !Array.isArray(o.steps) ||
+      !isStringArray(o.tags) ||
+      typeof o.createdAt !== 'string'
+    ) {
+      return []
+    }
+    return [w as Workflow]
+  })
+}
+
+function validatePrompts(arr: unknown): Prompt[] {
+  if (!Array.isArray(arr)) return []
+  return arr.flatMap((p): Prompt[] => {
+    if (!p || typeof p !== 'object') return []
+    const o = p as Record<string, unknown>
+    if (
+      typeof o.id !== 'string' ||
+      typeof o.title !== 'string' ||
+      typeof o.body !== 'string' ||
+      !isStringArray(o.tags) ||
+      typeof o.createdAt !== 'string'
+    ) {
+      return []
+    }
+    return [p as Prompt]
+  })
+}
+
+const baseLinks = validateLinks(linksData)
+const workflows = validateWorkflows(workflowsData)
+const prompts = validatePrompts(promptsData)
 
 function categoriesOf(link: Link): string[] {
   return Array.isArray(link.categories) && link.categories.length > 0
@@ -104,6 +174,65 @@ export function App() {
     window.addEventListener('hashchange', handler)
     return () => window.removeEventListener('hashchange', handler)
   }, [])
+
+  // Keyboard shortcuts: "/" focuses search, "Esc" clears it,
+  // "g h/l/w/p" navigates between pages.
+  useEffect(() => {
+    let gPending: number | null = null
+    const handler = (e: KeyboardEvent) => {
+      const target = e.target as HTMLElement | null
+      const inEditable =
+        !!target &&
+        (target.tagName === 'INPUT' ||
+          target.tagName === 'TEXTAREA' ||
+          target.isContentEditable)
+
+      if (e.key === 'Escape' && inEditable && target instanceof HTMLInputElement) {
+        if (target.type === 'search') {
+          setSearch('')
+          target.blur()
+          e.preventDefault()
+        }
+        return
+      }
+
+      if (inEditable || e.metaKey || e.ctrlKey || e.altKey) return
+
+      if (e.key === '/') {
+        if (route.name !== 'links') {
+          window.location.hash = '#/links'
+        }
+        e.preventDefault()
+        window.requestAnimationFrame(() => {
+          const search =
+            document.querySelector<HTMLInputElement>('input[type="search"]')
+          search?.focus()
+        })
+        return
+      }
+
+      if (e.key === 'g') {
+        if (gPending) window.clearTimeout(gPending)
+        gPending = window.setTimeout(() => {
+          gPending = null
+        }, 800)
+        return
+      }
+
+      if (gPending) {
+        window.clearTimeout(gPending)
+        gPending = null
+        if (e.key === 'h') window.location.hash = '#/'
+        else if (e.key === 'l') window.location.hash = '#/links'
+        else if (e.key === 'w') window.location.hash = '#/workflows'
+        else if (e.key === 'p') window.location.hash = '#/prompts'
+        else return
+        e.preventDefault()
+      }
+    }
+    window.addEventListener('keydown', handler)
+    return () => window.removeEventListener('keydown', handler)
+  }, [route.name])
 
   const navigate = (r: Route) => {
     if (typeof window !== 'undefined') {
@@ -348,7 +477,7 @@ export function App() {
             totalCount={allLinks.length}
           />
 
-          <main aria-live="polite">
+          <main id="main" aria-live="polite">
             {filtered.length === 0 ? (
               <div className="empty">
                 <p>Keine Links passen zu deinen Filtern.</p>
@@ -435,7 +564,9 @@ export function App() {
             )}
           </main>
 
-          <LinkForm onSaveDraft={saveDraft} />
+          <Suspense fallback={Spinner}>
+            <LinkForm onSaveDraft={saveDraft} />
+          </Suspense>
         </>
       )}
 
@@ -476,10 +607,12 @@ export function App() {
       {route.name === 'workflow' && (
         <>
           {activeWorkflow ? (
-            <WorkflowDetail
-              workflow={activeWorkflow}
-              onBack={() => navigate({ name: 'workflows' })}
-            />
+            <Suspense fallback={Spinner}>
+              <WorkflowDetail
+                workflow={activeWorkflow}
+                onBack={() => navigate({ name: 'workflows' })}
+              />
+            </Suspense>
           ) : (
             <div className="empty">
               <p>Workflow nicht gefunden.</p>
@@ -532,10 +665,12 @@ export function App() {
       {route.name === 'prompt' && (
         <>
           {activePrompt ? (
-            <PromptDetail
-              prompt={activePrompt}
-              onBack={() => navigate({ name: 'prompts' })}
-            />
+            <Suspense fallback={Spinner}>
+              <PromptDetail
+                prompt={activePrompt}
+                onBack={() => navigate({ name: 'prompts' })}
+              />
+            </Suspense>
           ) : (
             <div className="empty">
               <p>Prompt nicht gefunden.</p>
