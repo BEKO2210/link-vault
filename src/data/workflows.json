@@ -92,25 +92,89 @@
   {
     "id": "nvidia-free-models",
     "title": "NVIDIA hostet ~80 AI-Modelle kostenlos",
-    "subtitle": "MiniMax, GLM, Kimi, DeepSeek, GPT-OSS und viele weitere — gratis über die NVIDIA-Build-API.",
+    "subtitle": "MiniMax, GLM, Kimi, DeepSeek, Qwen, GPT-OSS, Llama & Co. — gratis über die NVIDIA-Build-API mit OpenAI-kompatiblem Endpoint.",
     "highlights": ["NVIDIA", "80 AI-Modellen", "absolut kostenlos"],
     "bullets": [
       {
         "icon": "📦",
-        "text": "Zugriff auf MiniMax M2.7, GLM 5.1, Kimi 2.5, DeepSeek 3.2, GPT-OSS-120B, Sarvam-M und viele weitere."
+        "text": "Zugriff auf MiniMax M2.7, GLM 5.1, Kimi 2.5, DeepSeek 3.2, GPT-OSS-120B, Qwen3-Coder, Llama, Sarvam-M und viele weitere Frontier- + Open-Weight-Modelle in einem Katalog."
       },
       {
         "icon": "🔌",
-        "text": "Lässt sich direkt in OpenClaude, OpenCode, Zed IDE, Hermes-Agent und Cursor IDE einbinden."
+        "text": "OpenAI-kompatibler Endpoint — drop-in als base_url für Cursor, Continue.dev, Cline, OpenClaude, OpenCode, Zed IDE, Hermes-Agent oder jedes andere Tool, das die OpenAI-API spricht."
+      },
+      {
+        "icon": "🆓",
+        "text": "Personal-Key ohne Kreditkarte — Free-Tier mit Rate-Limit, ideal zum Testen und für Hobby-Projekte. Quotas und Usage live im Account-Dashboard."
+      },
+      {
+        "icon": "🛠️",
+        "text": "Standard-Endpoints /v1/chat/completions, /v1/completions, /v1/embeddings — Auth via Bearer-Header. Kein NIM-Deploy nötig, läuft serverless gegen NVIDIA-Cloud."
       }
     ],
     "steps": [
-      { "label": "API-Key holen", "code": "https://build.nvidia.com/models", "type": "url" },
-      { "label": "base_url setzen", "code": "https://integrate.api.nvidia.com/v1", "type": "url" },
-      { "label": "API-Key als Env-Var", "code": "api_key = \"$NVIDIA_API_KEY\"", "type": "env" },
-      { "label": "Modell wählen", "code": "z. B. minimaxai/minimax-m2.7", "type": "note" }
+      {
+        "label": "Voraussetzung",
+        "code": "NVIDIA-Account (kostenlos, kein Payment-Method nötig)",
+        "type": "note"
+      },
+      {
+        "label": "Account anlegen / einloggen",
+        "code": "https://build.nvidia.com",
+        "type": "url"
+      },
+      {
+        "label": "Model-Katalog ansehen",
+        "code": "https://build.nvidia.com/models",
+        "type": "url"
+      },
+      {
+        "label": "Modell anklicken → Tab 'API' → 'Generate Key'",
+        "code": "Key startet mit 'nvapi-…', wird nur einmal angezeigt — sicher speichern.",
+        "type": "note"
+      },
+      {
+        "label": "API-Key als Env-Var setzen",
+        "code": "export NVIDIA_API_KEY=\"nvapi-…\"",
+        "type": "env"
+      },
+      {
+        "label": "base_url im Tool eintragen",
+        "code": "https://integrate.api.nvidia.com/v1",
+        "type": "url"
+      },
+      {
+        "label": "Auth-Header (wenn Tool nach Format fragt)",
+        "code": "Authorization: Bearer $NVIDIA_API_KEY",
+        "type": "env"
+      },
+      {
+        "label": "Test-Request mit curl",
+        "code": "curl https://integrate.api.nvidia.com/v1/chat/completions -H \"Authorization: Bearer $NVIDIA_API_KEY\" -H \"Content-Type: application/json\" -d '{\"model\":\"qwen/qwen3-coder\",\"messages\":[{\"role\":\"user\",\"content\":\"Hi\"}]}'",
+        "type": "cmd"
+      },
+      {
+        "label": "Modell-ID-Format",
+        "code": "vendor/model — z. B. minimaxai/minimax-m2.7, deepseek-ai/deepseek-v3.2, qwen/qwen3-coder, meta/llama-3.3-70b-instruct",
+        "type": "note"
+      },
+      {
+        "label": "Rate-Limits (Free-Tier)",
+        "code": "~40 RPM, tägliches Quota im Dashboard sichtbar — bei 429 kurz warten oder Modell wechseln.",
+        "type": "note"
+      },
+      {
+        "label": "Usage + Keys verwalten",
+        "code": "https://build.nvidia.com/account/keys",
+        "type": "url"
+      },
+      {
+        "label": "Voll-Doku",
+        "code": "https://docs.nvidia.com/nim/large-language-models/latest/openai-api.html",
+        "type": "url"
+      }
     ],
-    "source": { "name": "@thefutureguyy.ai" },
+    "source": { "name": "NVIDIA Build", "url": "https://build.nvidia.com" },
     "tags": ["nvidia", "api", "free", "llm", "openai-compatible"],
     "createdAt": "2026-05-01",
     "accent": "#76b900"
