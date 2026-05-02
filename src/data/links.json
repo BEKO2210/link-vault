@@ -1,5 +1,15 @@
 [
   {
+    "id": "rtk",
+    "title": "rtk — Rust Token Killer",
+    "url": "https://github.com/rtk-ai/rtk",
+    "description": "Rust-CLI-Proxy, der Befehlsausgaben für LLMs filtert und 60–90 % Token im Coding-Agent-Workflow spart.",
+    "categories": ["Coding", "Agents", "Tool"],
+    "tags": ["rust", "cli", "claude-code", "proxy", "tokens"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
     "id": "uiverse",
     "title": "Uiverse",
     "url": "https://uiverse.io",

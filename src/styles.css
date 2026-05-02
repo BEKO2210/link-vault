@@ -2346,6 +2346,13 @@ code,
     padding: clamp(56px, 6vw, 96px) 0 var(--s-6);
   }
 
+  /* More breathing room between the 3 nav-cards so the hover glow
+     of the middle card stops crowding its neighbours. */
+  .home-nav {
+    gap: var(--s-5);
+    padding: 0 var(--s-2);
+  }
+
   /* Bigger nav cards — fill the wide viewport with more presence */
   .home-card {
     min-height: 280px;
