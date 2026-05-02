@@ -1,5 +1,230 @@
 [
   {
+    "id": "claude-security-codebase-scan",
+    "title": "Claude Security — AI-powered Codebase-Scanning einrichten",
+    "subtitle": "Claude Opus 4.7 liest und reasoned über deinen Code wie ein Security-Researcher — Setup unter 10 Minuten, kein API-Integration nötig.",
+    "highlights": ["Claude Security", "Opus 4.7", "Codebase-Scan"],
+    "bullets": [
+      {
+        "icon": "🛡️",
+        "text": "Was es ist: in Claude.ai eingebaute Capability, scannt GitHub-Repos auf Vulnerabilities und schlägt zielgerichtete Patches vor. Multi-Stage-Validation hält False-Positives niedrig — jedes Finding bekommt Confidence-Rating."
+      },
+      {
+        "icon": "🔍",
+        "text": "Vier Vulnerability-Klassen, die Pattern-Matching (Snyk, SonarQube, BlackDuck) verfehlt: Business-Logic-Flaws, Broken-Access-Control über Dateien, Multi-Step-Data-Flow und kontextabhängige Issues. Claude tracet den Daten-Flow end-to-end."
+      },
+      {
+        "icon": "📊",
+        "text": "Jedes Finding enthält: Title, Details, Location (Datei + Zeile), Severity (HIGH/MEDIUM/LOW), Confidence-Rating, Impact, Reproduction-Steps und Recommended Fix. Direkt zu Claude Code on the Web springen für Patch-Session."
+      },
+      {
+        "icon": "⚠️",
+        "text": "Limitierungen Public Beta: nur Claude Enterprise (Team/Max coming soon), nur GitHub.com (kein GitLab/Bitbucket), Consumption-Billing (Spend-Limit setzen!), kein ZDR, Scans sind stochastisch — gleicher Repo zweimal kann unterschiedliche Findings liefern."
+      }
+    ],
+    "steps": [
+      {
+        "label": "Voraussetzung — Claude Enterprise-Account",
+        "code": "Team und Max Plan support kommt, ist aber noch nicht live.",
+        "type": "note"
+      },
+      {
+        "label": "Voraussetzung — Claude Code on the Web aktiv",
+        "code": "https://claude.ai/code",
+        "type": "url"
+      },
+      {
+        "label": "Voraussetzung — Extra Usage in Org-Billing aktivieren",
+        "code": "Consumption-Billing — ohne keinen Scan-Lauf möglich.",
+        "type": "note"
+      },
+      {
+        "label": "Voraussetzung — Anthropic GitHub App installieren",
+        "code": "Auf der GitHub-Org installieren + Repo-Access granten (gleicher App wie Claude Code on the Web).",
+        "type": "note"
+      },
+      {
+        "label": "Voraussetzung — Premium-Seat pro Scan-User",
+        "code": "Standard-Seats enthalten Claude Code on the Web NICHT.",
+        "type": "note"
+      },
+      {
+        "label": "Admin — Claude Security Feature aktivieren",
+        "code": "https://claude.ai/admin-settings/claudecode",
+        "type": "url"
+      },
+      {
+        "label": "Admin — Spend-Limit speziell für Security setzen",
+        "code": "Eigenes Limit, damit Security-Scans nicht das restliche Claude-Code-Budget aufbrauchen.",
+        "type": "note"
+      },
+      {
+        "label": "Login + Security-Dashboard öffnen",
+        "code": "https://claude.ai/security",
+        "type": "url"
+      },
+      {
+        "label": "GitHub-Repo aus der Liste wählen",
+        "code": "Es erscheinen nur Repos, auf die die Anthropic GitHub App Zugriff hat.",
+        "type": "note"
+      },
+      {
+        "label": "Scope eingrenzen (empfohlen für große Repos)",
+        "code": "Optional Directory oder Branch wählen — engerer Scope = schnellere Scans, weniger Timeouts.",
+        "type": "note"
+      },
+      {
+        "label": "Scan-Effort wählen",
+        "code": "Regular für Standard, Extended für deeper Review (Empfehlung: Extended beim ersten Scan oder nach großen Changes).",
+        "type": "note"
+      },
+      {
+        "label": "Scan starten",
+        "code": "Klein: Minuten. Groß: Stunden. Mehrere Scans parallel laufen lassen ist möglich.",
+        "type": "note"
+      },
+      {
+        "label": "Findings reviewen — Severity-Definitionen",
+        "code": "HIGH = unauthenticated remote, no preconditions · MEDIUM = behind auth oder 1–2 Preconditions · LOW = 3+ Preconditions oder kein klarer Attack-Path.",
+        "type": "note"
+      },
+      {
+        "label": "Pro Finding handeln",
+        "code": "Review · Open Remediation (in Claude Code Web) · Dismiss-with-reason · Export.",
+        "type": "note"
+      },
+      {
+        "label": "Export-Optionen",
+        "code": "Copy · CSV · Markdown · Webhook (Slack, Jira, eigenes Endpoint pro Projekt).",
+        "type": "note"
+      },
+      {
+        "label": "Webhooks pro Projekt konfigurieren",
+        "code": "scan-completion + new-finding-Events landen direkt im Slack-Channel oder Jira-Board.",
+        "type": "note"
+      },
+      {
+        "label": "Recurring Scans aufsetzen — empfohlen wöchentlich",
+        "code": "An Sprint-Boundary, Pre-Release-Checkpoint oder Monday-Triage koppeln. Named Owner zuweisen!",
+        "type": "note"
+      },
+      {
+        "label": "Best Practice — kritische Repos zuerst",
+        "code": "Auth · Payments · User-Data · API-Endpoints. Rest kann warten.",
+        "type": "note"
+      },
+      {
+        "label": "Best Practice — separate Projects pro Repo/Team",
+        "code": "Findings bleiben attribuierbar, Reviewer waden nicht durch fremden Output.",
+        "type": "note"
+      },
+      {
+        "label": "Best Practice — Confidence ernst nehmen",
+        "code": "High-Confidence sofort fixen. Low-Confidence trotzdem ansehen, aber priorisiert.",
+        "type": "note"
+      }
+    ],
+    "source": { "name": "Claude · Anthropic", "url": "https://claude.ai/security" },
+    "tags": ["claude", "security", "vulnerability-scan", "code-review", "anthropic"],
+    "createdAt": "2026-05-02",
+    "accent": "#dc2626"
+  },
+  {
+    "id": "10k-website-claude-code-21st",
+    "title": "$10.000-Website mit einem Command bauen",
+    "subtitle": "Claude Code + Framer Motion + 21st.dev — Pro-Website ohne manuellen Code, ohne Design-Arbeit.",
+    "highlights": ["$10.000", "Claude Code", "21st.dev"],
+    "bullets": [
+      {
+        "icon": "📦",
+        "text": "Was du brauchst: Node.js 18+, Anthropic API-Key (als ANTHROPIC_API_KEY env), kostenloser 21st.dev-Account für die MCP-URL, ein Terminal (macOS, Linux, Windows-WSL)."
+      },
+      {
+        "icon": "🎨",
+        "text": "Claude Code generiert clean designtes, responsives Layout. Framer Motion liefert Production-quality Animationen (Fade-Ins, Slides, Scroll-Effekte) ohne dass du eine Zeile Animation-Code schreibst."
+      },
+      {
+        "icon": "✨",
+        "text": "21st.dev als MCP-Server liefert Premium-UI-Komponenten on-demand. Eine /21st-Direktive im Chat reicht für Hero, Features, Pricing, Footer — alles automatisch generiert."
+      },
+      {
+        "icon": "✏️",
+        "text": "Resultat: voll editierbarer React-Code, gehört dir, deploybar überall (Vercel, Netlify, eigener Server). Iterativ verfeinerbar via Follow-up-Prompts statt Re-Generate."
+      }
+    ],
+    "steps": [
+      {
+        "label": "Voraussetzung prüfen — Node.js ≥ 18",
+        "code": "node --version",
+        "type": "cmd"
+      },
+      {
+        "label": "Anthropic API-Key als Env-Var",
+        "code": "export ANTHROPIC_API_KEY=\"sk-ant-…\"",
+        "type": "env"
+      },
+      {
+        "label": "21st.dev-Account anlegen + MCP-URL holen",
+        "code": "https://21st.dev",
+        "type": "url"
+      },
+      {
+        "label": "Claude Code global installieren",
+        "code": "npm install -g @anthropic-ai/claude-code",
+        "type": "cmd"
+      },
+      {
+        "label": "Claude Code starten (Erstinstall-Setup)",
+        "code": "claude",
+        "type": "cmd"
+      },
+      {
+        "label": "21st.dev als MCP-Server registrieren",
+        "code": "claude mcp add 21st -- <MCP-URL aus deinem 21st.dev-Account>",
+        "type": "cmd"
+      },
+      {
+        "label": "Framer Motion ins Projekt installieren",
+        "code": "npm install framer-motion",
+        "type": "cmd"
+      },
+      {
+        "label": "UI/UX Pro Max Skill aktivieren",
+        "code": "In Claude Code: Settings → Skills/Tools → nach 'UI/UX Pro Max' suchen → adden",
+        "type": "note"
+      },
+      {
+        "label": "Website generieren (Niche einsetzen)",
+        "code": "/21st build a professional [your niche] website",
+        "type": "cmd"
+      },
+      {
+        "label": "Beispiel-Niches",
+        "code": "SaaS landing page · creative agency · personal portfolio · e-commerce store",
+        "type": "note"
+      },
+      {
+        "label": "Iterativ verfeinern (Follow-up-Prompts)",
+        "code": "add a pricing section · make the hero darker · swap brand color to purple",
+        "type": "note"
+      },
+      {
+        "label": "Tipp — sei spezifisch",
+        "code": "Mehr Kontext zu Niche, Zielgruppe und Tonalität → bessere erste Generierung.",
+        "type": "note"
+      },
+      {
+        "label": "Resultat — voll editierbarer Code",
+        "code": "React-Code im eigenen Repo: deploy auf Vercel, Netlify oder eigenem Server. Du besitzt den Code.",
+        "type": "note"
+      }
+    ],
+    "source": { "name": "Claude Code · 21st.dev · Framer Motion" },
+    "tags": ["claude-code", "21st-dev", "framer-motion", "mcp", "design"],
+    "createdAt": "2026-05-02",
+    "accent": "#ec4899"
+  },
+  {
     "id": "claude-code-5-layers",
     "title": "Claude Code Agent-Dev-Kit — die 5 Layers verstehen",
     "subtitle": "CLAUDE.md, Skills, Hooks, Subagents und Plugins — wie ein Agent vom Memo bis zur Distribution wächst.",
