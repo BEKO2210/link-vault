@@ -1,15 +1,8 @@
-import {
-  Suspense,
-  lazy,
-  useEffect,
-  useMemo,
-  useState,
-  type CSSProperties,
-} from 'react'
+import { Suspense, lazy, useEffect, useMemo, useState } from 'react'
 import linksData from './data/links.json'
 import workflowsData from './data/workflows.json'
 import promptsData from './data/prompts.json'
-import { CATEGORIES, type Link, type Prompt, type SortKey, type Workflow } from './types'
+import type { Link, Prompt, SortKey, Workflow } from './types'
 import { Filters } from './components/Filters'
 import { Hero } from './components/Hero'
 import { HomeNav } from './components/HomeNav'
@@ -17,7 +10,7 @@ import { LinkCard } from './components/LinkCard'
 import { PromptCard } from './components/PromptCard'
 import { Stats } from './components/Stats'
 import { WorkflowCard } from './components/WorkflowCard'
-import { colorOf, shuffled } from './utils'
+import { shuffled } from './utils'
 
 const LinkForm = lazy(() =>
   import('./components/LinkForm').then((m) => ({ default: m.LinkForm })),
@@ -158,7 +151,7 @@ function routeToHash(r: Route): string {
 export function App() {
   const [drafts, setDrafts] = useState<Link[]>([])
   const [search, setSearch] = useState('')
-  const [category, setCategory] = useState<string>('all')
+  const [category, setCategory] = useState<string>('random')
   const [favOnly, setFavOnly] = useState(false)
   const [sort, setSort] = useState<SortKey>('newest')
   const [shuffleSeed, setShuffleSeed] = useState<number>(
@@ -282,7 +275,7 @@ export function App() {
   const filtered = useMemo<Link[]>(() => {
     const q = search.trim().toLowerCase()
     let result = allLinks
-    if (category !== 'all') {
+    if (category !== 'all' && category !== 'random') {
       result = result.filter((l) => categoriesOf(l).includes(category))
     }
     if (favOnly) result = result.filter((l) => l.favorite)
@@ -343,21 +336,12 @@ export function App() {
     return counts
   }, [allLinks])
 
-  const isAllView = category === 'all' && search.trim() === '' && !favOnly
+  const showRandom = category === 'random' && search.trim() === ''
 
   const discover = useMemo<Link[]>(() => {
-    if (!isAllView) return []
+    if (!showRandom) return []
     return shuffled(filtered, shuffleSeed).slice(0, PREVIEW_LIMIT)
-  }, [filtered, shuffleSeed, isAllView])
-
-  const orderedCats = useMemo<string[]>(() => {
-    const used = new Set<string>()
-    for (const l of allLinks) for (const c of categoriesOf(l)) used.add(c)
-    const out: string[] = []
-    for (const c of CATEGORIES) if (used.has(c)) out.push(c)
-    for (const c of used) if (!out.includes(c)) out.push(c)
-    return out
-  }, [allLinks])
+  }, [filtered, shuffleSeed, showRandom])
 
   const isDraft = (id: string): boolean => drafts.some((d) => d.id === id)
 
@@ -483,84 +467,56 @@ export function App() {
                 <p>Keine Links passen zu deinen Filtern.</p>
                 <p className="empty__hint">Versuche eine andere Suche oder setze die Filter zurück.</p>
               </div>
-            ) : isAllView ? (
-              <>
-                <section className="discover" aria-labelledby="discover-title">
-                  <header className="discover__head">
-                    <h2 id="discover-title" className="discover__title">
-                      Heute zufällig
-                    </h2>
-                    <span className="discover__count">
-                      {discover.length} von {filtered.length}
-                    </span>
-                    <button
-                      type="button"
-                      className="discover__shuffle"
-                      onClick={() =>
-                        setShuffleSeed(Math.floor(Math.random() * 1e9) + 1)
-                      }
-                      aria-label="Neu mischen"
-                    >
-                      ↻ Neu mischen
-                    </button>
-                  </header>
-                  <div className="grid">
-                    {discover.map((l) => (
-                      <LinkCard
-                        key={l.id}
-                        link={l}
-                        isDraft={isDraft(l.id)}
-                        onRemoveDraft={removeDraft}
-                      />
-                    ))}
-                  </div>
-                </section>
-
-                <section className="cat-tiles-section" aria-labelledby="cats-title">
-                  <header className="cat-tiles-section__head">
-                    <h2 id="cats-title" className="cat-tiles-section__title">
-                      Kategorien
-                    </h2>
-                    <span className="cat-tiles-section__count">
-                      {orderedCats.length}
-                    </span>
-                  </header>
-                  <div className="cat-tiles">
-                    {orderedCats.map((c) => {
-                      const count = categoryCounts.get(c) ?? 0
-                      const tileStyle = { '--cat-color': colorOf(c) } as CSSProperties
-                      return (
-                        <button
-                          type="button"
-                          key={c}
-                          className="cat-tile"
-                          style={tileStyle}
-                          onClick={() => {
-                            setCategory(c)
-                            window.scrollTo({ top: 0, behavior: 'smooth' })
-                          }}
-                          aria-label={`${c} — ${count} Links anzeigen`}
-                        >
-                          <span className="cat-tile__dot" aria-hidden="true" />
-                          <span className="cat-tile__name">{c}</span>
-                          <span className="cat-tile__count">{count}</span>
-                        </button>
-                      )
-                    })}
-                  </div>
-                </section>
-              </>
+            ) : showRandom ? (
+              <section className="discover" aria-labelledby="discover-title">
+                <header className="discover__head">
+                  <h2 id="discover-title" className="discover__title">
+                    Heute zufällig
+                  </h2>
+                  <span className="discover__count">
+                    {discover.length} von {filtered.length}
+                  </span>
+                  <button
+                    type="button"
+                    className="discover__shuffle"
+                    onClick={() =>
+                      setShuffleSeed(Math.floor(Math.random() * 1e9) + 1)
+                    }
+                    aria-label="Neu mischen"
+                  >
+                    ↻ Neu mischen
+                  </button>
+                </header>
+                <div className="grid">
+                  {discover.map((l) => (
+                    <LinkCard
+                      key={l.id}
+                      link={l}
+                      isDraft={isDraft(l.id)}
+                      onRemoveDraft={removeDraft}
+                    />
+                  ))}
+                </div>
+              </section>
             ) : (
-              <div className="grid">
-                {filtered.map((l) => (
-                  <LinkCard
-                    key={l.id}
-                    link={l}
-                    isDraft={isDraft(l.id)}
-                    onRemoveDraft={removeDraft}
-                  />
-                ))}
-              </div>
+              <section aria-labelledby="results-title">
+                <header className="discover__head">
+                  <h2 id="results-title" className="discover__title">
+                    {category === 'all' ? 'Alle Links' : category}
+                  </h2>
+                  <span className="discover__count">{filtered.length}</span>
+                </header>
+                <div className="grid">
+                  {filtered.map((l) => (
+                    <LinkCard
+                      key={l.id}
+                      link={l}
+                      isDraft={isDraft(l.id)}
+                      onRemoveDraft={removeDraft}
+                    />
+                  ))}
+                </div>
+              </section>
             )}
           </main>
 
