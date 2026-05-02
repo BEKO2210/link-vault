@@ -511,16 +511,19 @@ button {
 .home-card--links {
   --home-card-glow: rgba(239, 68, 68, 0.28);
   --home-card-border: rgba(239, 68, 68, 0.55);
+  --home-card-fill: #ef4444;
 }
 
 .home-card--workflows {
   --home-card-glow: rgba(34, 211, 238, 0.28);
   --home-card-border: rgba(34, 211, 238, 0.55);
+  --home-card-fill: #22d3ee;
 }
 
 .home-card--prompts {
   --home-card-glow: rgba(168, 85, 247, 0.28);
   --home-card-border: rgba(168, 85, 247, 0.55);
+  --home-card-fill: #a855f7;
 }
 
 .home-card--prompts .home-card__icon {
@@ -579,10 +582,56 @@ button {
 }
 
 .home-card__title {
+  position: relative;
+  display: inline-block;
   font-size: clamp(28px, 5vw, 38px);
-  font-weight: 700;
-  letter-spacing: -0.025em;
+  font-weight: 800;
+  letter-spacing: 2px;
   line-height: 1;
+  text-transform: uppercase;
+}
+
+.home-card__title-base {
+  display: inline-block;
+  color: var(--home-card-fill);
+}
+
+.home-card__title-fill {
+  display: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .home-card__title-base {
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.6);
+  }
+  .home-card__title-fill {
+    display: inline-block;
+    box-sizing: border-box;
+    position: absolute;
+    inset: 0;
+    width: 0;
+    overflow: hidden;
+    color: var(--home-card-fill);
+    -webkit-text-stroke: 1px var(--home-card-fill);
+    border-right: 5px solid var(--home-card-fill);
+    transition:
+      width 0.55s cubic-bezier(0.2, 0.7, 0.2, 1),
+      filter 0.4s ease;
+    white-space: nowrap;
+    pointer-events: none;
+  }
+  .home-card:hover .home-card__title-fill,
+  .home-card:focus-visible .home-card__title-fill {
+    width: 100%;
+    filter: drop-shadow(0 0 22px var(--home-card-fill));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-card__title-fill {
+    transition: none;
+  }
 }
 
 .home-card__desc {
