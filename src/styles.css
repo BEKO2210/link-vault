@@ -2327,6 +2327,33 @@ code,
 }
 
 /* =========================================================================
+   Desktop refinements (>=1024px)
+   Mobile layout below this breakpoint is intentionally untouched.
+   ========================================================================= */
+@media (min-width: 1024px) {
+  /* Sticky-footer pattern so empty space sits below content, not above it */
+  .app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  .footer {
+    margin-top: auto;
+  }
+
+  /* Tighter hero so the nav-cards land closer to the fold */
+  .hero {
+    padding: clamp(56px, 6vw, 96px) 0 var(--s-6);
+  }
+
+  /* Bigger nav cards — fill the wide viewport with more presence */
+  .home-card {
+    min-height: 280px;
+    padding: var(--s-7) var(--s-6);
+  }
+}
+
+/* =========================================================================
    GitHub Direct-Commit panel
    ========================================================================= */
 .gh {
