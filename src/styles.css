@@ -2377,6 +2377,24 @@ code,
     min-height: 280px;
     padding: var(--s-7) var(--s-6);
   }
+
+  /* Back-Button als kompakte Pille (statt 1200-px-Wand) — links auf der Seite */
+  .btn-back {
+    align-self: flex-start;
+    width: auto;
+    margin-left: var(--s-2);
+  }
+
+  /* Chip-Reihe der Filter mittig, sonst klebt sie weit links */
+  .chips {
+    justify-content: center;
+  }
+
+  /* Footer-Zeile zentriert statt L/R-Spreizung über 1200 px */
+  .footer {
+    justify-content: center;
+    gap: var(--s-4);
+  }
 }
 
 /* =========================================================================

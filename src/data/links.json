@@ -1,5 +1,15 @@
 [
   {
+    "id": "agency-agents",
+    "title": "Agency Agents",
+    "url": "https://github.com/msitarzewski/agency-agents",
+    "description": "Sammlung von 144+ spezialisierten AI-Agent-Personalities in 12 Divisionen für Claude Code, Cursor, Copilot, Aider & Co.",
+    "categories": ["Agents", "Prompting", "Coding"],
+    "tags": ["claude-code", "agent-library", "prompts", "automation", "copilot"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
     "id": "graphify",
     "title": "graphify — The Memory Layer",
     "url": "https://github.com/safishamsi/graphify",
