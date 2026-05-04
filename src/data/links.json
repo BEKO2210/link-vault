@@ -1,5 +1,25 @@
 [
   {
+    "id": "scrapling",
+    "title": "Scrapling",
+    "url": "https://github.com/D4Vinci/Scrapling",
+    "description": "Python-Web-Scraping-Framework mit adaptiven Selektoren, Stealth-Fetchern, Spider/Crawler, Proxy-Rotation und MCP-Server für AI-Agenten.",
+    "categories": ["Coding", "Tool", "MCP"],
+    "tags": ["python", "scraping", "crawler", "mcp", "stealth"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
+    "id": "android-foss",
+    "title": "android-foss",
+    "url": "https://github.com/offa/android-foss",
+    "description": "Kuratierte Liste freier und Open-Source-Apps für Android, nach Kategorien sortiert — FOSS-Alternativen zu proprietärer Software finden.",
+    "categories": ["Mobile", "Tool", "Inspiration"],
+    "tags": ["android", "foss", "open-source", "apps", "list"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
     "id": "agency-agents",
     "title": "Agency Agents",
     "url": "https://github.com/msitarzewski/agency-agents",
