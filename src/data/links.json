@@ -1,5 +1,15 @@
 [
   {
+    "id": "tradingagents",
+    "title": "TradingAgents",
+    "url": "https://github.com/TauricResearch/TradingAgents",
+    "description": "Multi-Agenten-Framework für LLM-basierte Finanzanalyse — simuliert virtuelle Trading-Firma mit Fundamental-, Sentiment-, Technical-, Bull/Bear- und Risk-Manager-Rollen.",
+    "categories": ["Agents", "Research", "Business"],
+    "tags": ["trading", "finance", "multi-agent", "llm", "python"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
     "id": "scrapling",
     "title": "Scrapling",
     "url": "https://github.com/D4Vinci/Scrapling",
