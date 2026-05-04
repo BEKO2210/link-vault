@@ -1,5 +1,15 @@
 [
   {
+    "id": "deer-flow",
+    "title": "DeerFlow 2.0",
+    "url": "https://github.com/bytedance/deer-flow",
+    "description": "Open-Source SuperAgent-Harness von ByteDance — plant, recherchiert und führt Code in Docker-Sandbox aus, mit Sub-Agenten, Memory und Skills.",
+    "categories": ["Agents", "Coding", "Tool"],
+    "tags": ["bytedance", "agents", "langgraph", "sandbox", "python"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
     "id": "tradingagents",
     "title": "TradingAgents",
     "url": "https://github.com/TauricResearch/TradingAgents",
