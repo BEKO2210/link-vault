@@ -1,5 +1,35 @@
 [
   {
+    "id": "screenpipe",
+    "title": "screenpipe",
+    "url": "https://github.com/screenpipe/screenpipe",
+    "description": "AI-Memory für deinen Bildschirm — captured Screen + Audio lokal, durchsuchbar und mit Agenten automatisierbar, alles offline.",
+    "categories": ["Memory", "Agents", "Tool"],
+    "tags": ["screen-recording", "audio", "local-first", "automation", "desktop"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
+    "id": "claude-octopus",
+    "title": "Claude Octopus",
+    "url": "https://github.com/nyldn/claude-octopus",
+    "description": "Claude Code Plugin, das bis zu 8 AI-Modelle (Claude, Codex, Gemini, Qwen, Ollama, Perplexity & Co.) mit Konsens-Gates kollaborieren lässt.",
+    "categories": ["Coding", "Agents", "MCP"],
+    "tags": ["claude-code", "plugin", "multi-model", "consensus", "orchestration"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
+    "id": "deer-flow",
+    "title": "DeerFlow 2.0",
+    "url": "https://github.com/bytedance/deer-flow",
+    "description": "Open-Source SuperAgent-Harness von ByteDance — plant, recherchiert und führt Code in Docker-Sandbox aus, mit Sub-Agenten, Memory und Skills.",
+    "categories": ["Agents", "Coding", "Tool"],
+    "tags": ["bytedance", "agents", "langgraph", "sandbox", "python"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
     "id": "tradingagents",
     "title": "TradingAgents",
     "url": "https://github.com/TauricResearch/TradingAgents",
