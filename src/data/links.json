@@ -1,5 +1,15 @@
 [
   {
+    "id": "screenpipe",
+    "title": "screenpipe",
+    "url": "https://github.com/screenpipe/screenpipe",
+    "description": "AI-Memory für deinen Bildschirm — captured Screen + Audio lokal, durchsuchbar und mit Agenten automatisierbar, alles offline.",
+    "categories": ["Memory", "Agents", "Tool"],
+    "tags": ["screen-recording", "audio", "local-first", "automation", "desktop"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
     "id": "claude-octopus",
     "title": "Claude Octopus",
     "url": "https://github.com/nyldn/claude-octopus",
