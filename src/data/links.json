@@ -1,5 +1,15 @@
 [
   {
+    "id": "agent-workgraph",
+    "title": "agent-workgraph",
+    "url": "https://github.com/ranausmanai/agent-workgraph",
+    "description": "Visualisiert Coding-Agent-Sessions als Graph — Muster, Fehler und Wiederverwendbares pro Repo, statt Wegwerf-Chats.",
+    "categories": ["Agents", "Memory", "Coding"],
+    "tags": ["claude-code", "codex", "visualization", "graph", "session"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
     "id": "screenpipe",
     "title": "screenpipe",
     "url": "https://github.com/screenpipe/screenpipe",

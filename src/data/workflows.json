@@ -1,5 +1,75 @@
 [
   {
+    "id": "agent-workgraph-setup",
+    "title": "WorkGraph — Coding-Agent-Sessions als Graph visualisieren",
+    "subtitle": "Aus Wegwerf-Chats wird eine Memory-Schicht pro Repo: was Claude/Codex gelernt hat, was wiederverwendbar ist, was zukünftige Agenten nicht mehr wiederholen sollen.",
+    "highlights": ["WorkGraph", "Memory-Schicht", "Coding-Agent"],
+    "bullets": [
+      {
+        "icon": "📊",
+        "text": "Trackt jede Coding-Session lokal und rendert Muster, Erkenntnisse und Fehler als interaktiven Graph — pro Repository sichtbar im Browser."
+      },
+      {
+        "icon": "🤖",
+        "text": "Funktioniert mit Claude Code und Codex. Eine globale npm-Installation, ein Befehl pro Projekt — keine Cloud, keine Account-Zwänge."
+      },
+      {
+        "icon": "🤝",
+        "text": "Statt Prompts oder Code-Chats teilen: Graph-Visualisierungen austauschen. Andere Agenten und Teammates übernehmen die Patterns ohne erneute Trial-and-Error-Runden."
+      },
+      {
+        "icon": "🆕",
+        "text": "Status: noch am Anfang. Autor freut sich über Feedback und Bug-Reports — guter Zeitpunkt zum Mitgestalten."
+      }
+    ],
+    "steps": [
+      {
+        "label": "Voraussetzung",
+        "code": "Node.js (aktuelle LTS) + lokal installierte Claude Code oder Codex CLI",
+        "type": "note"
+      },
+      {
+        "label": "Globale Installation",
+        "code": "npm install -g agent-workgraph",
+        "type": "cmd"
+      },
+      {
+        "label": "Im Projekt-Ordner — Session für Claude Code starten",
+        "code": "workgraph start claude",
+        "type": "cmd"
+      },
+      {
+        "label": "Alternativ — Session für Codex starten",
+        "code": "workgraph start codex",
+        "type": "cmd"
+      },
+      {
+        "label": "Lokale UI öffnet automatisch",
+        "code": "Die Web-Oberfläche zeigt den Graph für das aktuelle Repo (live-aktualisiert während der Session).",
+        "type": "note"
+      },
+      {
+        "label": "Im Graph erkennbar",
+        "code": "Was Claude/Codex gelernt hat · Wiederverwendbare Patterns · Bekannte Sackgassen, die zukünftige Agenten meiden sollen.",
+        "type": "note"
+      },
+      {
+        "label": "Use-Case statt Prompt-Sharing",
+        "code": "Graph-View screenshotten oder exportieren und mit Team teilen — statt nur Prompts oder Chat-Logs durchzureichen.",
+        "type": "note"
+      },
+      {
+        "label": "Repo + Issues + Feedback",
+        "code": "https://github.com/ranausmanai/agent-workgraph",
+        "type": "url"
+      }
+    ],
+    "source": { "name": "ranausmanai/agent-workgraph", "url": "https://github.com/ranausmanai/agent-workgraph" },
+    "tags": ["claude-code", "codex", "agents", "memory", "visualization"],
+    "createdAt": "2026-05-02",
+    "accent": "#0ea5e9"
+  },
+  {
     "id": "claude-security-codebase-scan",
     "title": "Claude Security — AI-powered Codebase-Scanning einrichten",
     "subtitle": "Claude Opus 4.7 liest und reasoned über deinen Code wie ein Security-Researcher — Setup unter 10 Minuten, kein API-Integration nötig.",
