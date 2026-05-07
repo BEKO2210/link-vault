@@ -68,12 +68,19 @@ export interface Workflow {
   accent?: string
 }
 
+export interface PromptBlock {
+  title: string
+  intent?: string
+  body: string
+}
+
 export interface Prompt {
   id: string
   title: string
   subtitle?: string
   highlights?: string[]
-  body: string
+  body?: string
+  blocks?: PromptBlock[]
   target?: string
   useCase?: string
   source?: WorkflowSource

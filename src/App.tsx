@@ -68,10 +68,12 @@ function validatePrompts(arr: unknown): Prompt[] {
   return arr.flatMap((p): Prompt[] => {
     if (!p || typeof p !== 'object') return []
     const o = p as Record<string, unknown>
+    const hasBody = typeof o.body === 'string'
+    const hasBlocks = Array.isArray(o.blocks) && o.blocks.length > 0
     if (
       typeof o.id !== 'string' ||
       typeof o.title !== 'string' ||
-      typeof o.body !== 'string' ||
+      (!hasBody && !hasBlocks) ||
       !isStringArray(o.tags) ||
       typeof o.createdAt !== 'string'
     ) {
