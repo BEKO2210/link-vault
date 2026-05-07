@@ -1,5 +1,15 @@
 [
   {
+    "id": "ui-tars-desktop",
+    "title": "UI-TARS-desktop",
+    "url": "https://github.com/bytedance/UI-TARS-desktop",
+    "description": "Open-Source Multimodal-AI-Agent-Stack von ByteDance — sieht den Desktop, steuert GUI und Browser per Natural Language, MCP-integriert.",
+    "categories": ["Agents", "AI", "Tool"],
+    "tags": ["bytedance", "desktop", "vision-language", "gui-automation", "mcp"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
     "id": "pdfcraft",
     "title": "PDFCraft",
     "url": "https://github.com/PDFCraftTool/pdfcraft",
