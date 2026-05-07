@@ -1,5 +1,105 @@
 [
   {
+    "id": "book-to-claude-skill",
+    "title": "Beliebiges Buch in einen Claude-Skill verwandeln",
+    "subtitle": "Methode aus einem Sachbuch als Slash-Command — Buch → Methode → SKILL.md → /command, einmal eingerichtet, jederzeit aufrufbar.",
+    "highlights": ["Buch", "Claude-Skill", "Slash-Command"],
+    "bullets": [
+      {
+        "icon": "📚",
+        "text": "Funktioniert mit Frameworks, Methoden und Checklisten — NICHT mit Fiction oder Memoiren. Test: Kannst du die Buch-Methode in nummerierten Schritten beschreiben? Dann ist sie 'skillable'."
+      },
+      {
+        "icon": "🔍",
+        "text": "Fünf Extraktions-Fragen ans Buch: Welches Problem löst es? Was sind die Schritte in Reihenfolge? Welche Regeln wiederholt der Autor? Vor welchen Fehlern warnt er? Welche Fragen stellt er dem Leser?"
+      },
+      {
+        "icon": "🛠️",
+        "text": "Bau-Setup: Cowork mit Claude Opus 4.7 + Extended Thinking. Der eingebaute skill-creator generiert die SKILL.md aus deinen extrahierten Buch-Inhalten und testet sie an Beispielen."
+      },
+      {
+        "icon": "✂️",
+        "text": "Pro-Tipp für große Bücher: in zwei Skills splitten — /[book]-diagnose (Fragen + Frameworks für deine Situation) und /[book]-apply (Steps + Templates für Output). Beispiel: /momtest-diagnose + /momtest-apply für Rob Fitzpatricks 'The Mom Test'."
+      }
+    ],
+    "steps": [
+      {
+        "label": "Step 1 — richtiges Buch wählen",
+        "code": "Funktioniert: Bücher mit wiederholbarem Framework, Methode oder Checkliste. Skip: Fiction, Memoiren, reines Storytelling.",
+        "type": "note"
+      },
+      {
+        "label": "Step 2 — 5 Fragen ans Buch beantworten",
+        "code": "Problem · Schritte (in Order) · wiederholte Regeln · Warnungen vor Fehlern · Fragen, die der Autor dem Leser stellt",
+        "type": "note"
+      },
+      {
+        "label": "Step 3 — Cowork öffnen + Opus 4.7 mit Extended Thinking",
+        "code": "Cowork ist Anthropics Workspace mit dem skill-creator. Extended Thinking aktivieren, bevor du den Prompt sendest.",
+        "type": "note"
+      },
+      {
+        "label": "Step 3 — Skill-Creator-Prompt (Teil 1)",
+        "code": "Use the skill-creator to build a skill from [BOOK TITLE] by [AUTHOR]. The skill should activate when I ask Claude to [exact task]. Example: validate a startup idea, plan a deep work week, write a brand story.",
+        "type": "cmd"
+      },
+      {
+        "label": "Step 3 — Buch-Body strukturiert einfügen",
+        "code": "Format the body of the book: Steps: [paste] / Rules the author repeats: [paste] / Mistakes to avoid: [paste] / Questions the author asks: [paste]",
+        "type": "cmd"
+      },
+      {
+        "label": "Step 3 — Negative-Liste (NICHT-Use-Cases)",
+        "code": "Do NOT use this skill for: [1–4 adjacent tasks]. Example: general writing, unrelated business advice, basic information requests.",
+        "type": "cmd"
+      },
+      {
+        "label": "Step 3 — Interview + Test-Phase",
+        "code": "Interview me on anything missing before generating the SKILL.md. Run it on examples.",
+        "type": "cmd"
+      },
+      {
+        "label": "Step 4 — Pro-Tipp: Skills splitten",
+        "code": "Bei dicken Büchern zwei Skills bauen: /[book]-diagnose (Fragen + Frameworks) und /[book]-apply (Steps + Templates).",
+        "type": "note"
+      },
+      {
+        "label": "Step 4 — Beispiel: The Mom Test",
+        "code": "/momtest-diagnose reviewed deine Customer-Interview-Fragen und findet die leading questions · /momtest-apply schreibt sie im Rob-Fitzpatrick-Format um.",
+        "type": "note"
+      },
+      {
+        "label": "Step 5 — Test 1: 4 Phrasierungen",
+        "code": "4 verschiedene Phrasierungen derselben Anfrage probieren — triggert der Skill jedes Mal?",
+        "type": "note"
+      },
+      {
+        "label": "Step 5 — Test 2: 3 unverwandte Requests",
+        "code": "3 thematisch fremde Anfragen probieren — der Skill darf NICHT triggern.",
+        "type": "note"
+      },
+      {
+        "label": "Step 5 — Test 3: Claude befragen",
+        "code": "Frage Claude: 'When would you use this skill?' — Antwort sollte deinen Use-Case treffen.",
+        "type": "cmd"
+      },
+      {
+        "label": "Step 6 — Installieren",
+        "code": "Settings → Capabilities → Skills → Upload",
+        "type": "note"
+      },
+      {
+        "label": "Step 6 — Skill nutzen",
+        "code": "Slash-Command (z. B. /momtest-apply) irgendwo in einem Claude-Chat eingeben — Skill läuft.",
+        "type": "cmd"
+      }
+    ],
+    "source": { "name": "Ruben Hassid · How to AI", "url": "https://www.howto-ai.guide" },
+    "tags": ["claude-skill", "book", "prompt-engineering", "framework", "slash-command"],
+    "createdAt": "2026-05-02",
+    "accent": "#fb923c"
+  },
+  {
     "id": "agent-workgraph-setup",
     "title": "WorkGraph — Coding-Agent-Sessions als Graph visualisieren",
     "subtitle": "Aus Wegwerf-Chats wird eine Memory-Schicht pro Repo: was Claude/Codex gelernt hat, was wiederverwendbar ist, was zukünftige Agenten nicht mehr wiederholen sollen.",
