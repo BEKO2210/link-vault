@@ -1,5 +1,35 @@
 [
   {
+    "id": "ui-tars-desktop",
+    "title": "UI-TARS-desktop",
+    "url": "https://github.com/bytedance/UI-TARS-desktop",
+    "description": "Open-Source Multimodal-AI-Agent-Stack von ByteDance — sieht den Desktop, steuert GUI und Browser per Natural Language, MCP-integriert.",
+    "categories": ["Agents", "AI", "Tool"],
+    "tags": ["bytedance", "desktop", "vision-language", "gui-automation", "mcp"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
+    "id": "pdfcraft",
+    "title": "PDFCraft",
+    "url": "https://github.com/PDFCraftTool/pdfcraft",
+    "description": "Browser-basiertes PDF-Toolkit mit 90+ Tools — Merge, Split, Compress, Convert, Edit komplett clientseitig via WebAssembly, ohne Upload.",
+    "categories": ["Tool", "Coding"],
+    "tags": ["pdf", "browser", "wasm", "privacy", "open-source"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
+    "id": "vimax",
+    "title": "ViMax — Agentic Video Generation",
+    "url": "https://github.com/HKUDS/ViMax",
+    "description": "Agentic-AI-Framework von HKUDS — orchestriert End-to-End-Video-Erstellung: Scriptwriting, Storyboard, Character-Creation und Video-Synthese.",
+    "categories": ["Video", "Agents", "AI"],
+    "tags": ["video-gen", "agentic", "storyboard", "open-source", "python"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
     "id": "agent-workgraph",
     "title": "agent-workgraph",
     "url": "https://github.com/ranausmanai/agent-workgraph",
