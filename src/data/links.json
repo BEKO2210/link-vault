@@ -1,5 +1,15 @@
 [
   {
+    "id": "understand-anything",
+    "title": "Understand Anything",
+    "url": "https://github.com/Lum1104/Understand-Anything",
+    "description": "Verwandelt Codebases und Knowledge-Bases in interaktive, visuelle Knowledge-Graphen — Plugin für Claude Code, Cursor, Copilot & Co.",
+    "categories": ["Coding", "Memory", "Agents"],
+    "tags": ["knowledge-graph", "codebase", "claude-code", "cursor", "visualization"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
     "id": "ui-tars-desktop",
     "title": "UI-TARS-desktop",
     "url": "https://github.com/bytedance/UI-TARS-desktop",
