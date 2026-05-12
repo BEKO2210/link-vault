@@ -1,5 +1,15 @@
 [
   {
+    "id": "hyperframes",
+    "title": "HyperFrames",
+    "url": "https://github.com/heygen-com/hyperframes",
+    "description": "Open-Source Video-Rendering-Framework von HeyGen — wandelt HTML-Kompositionen in MP4s, mit Agent-Support sowie GSAP- und Lottie-Animationen.",
+    "categories": ["Video", "Coding", "Tool"],
+    "tags": ["heygen", "video-rendering", "html-to-video", "gsap", "lottie"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
     "id": "understand-anything",
     "title": "Understand Anything",
     "url": "https://github.com/Lum1104/Understand-Anything",
