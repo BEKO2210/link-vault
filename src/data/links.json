@@ -1,5 +1,15 @@
 [
   {
+    "id": "supertonic",
+    "title": "Supertonic",
+    "url": "https://github.com/supertone-inc/supertonic",
+    "description": "Lightweight, on-device Text-to-Speech mit ONNX-Runtime — 31 Sprachen, läuft lokal in Python, JS, Mobile und im Browser.",
+    "categories": ["Voice", "Audio", "AI"],
+    "tags": ["tts", "on-device", "onnx", "local-first", "multilingual"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
     "id": "hyperframes",
     "title": "HyperFrames",
     "url": "https://github.com/heygen-com/hyperframes",
