@@ -1,5 +1,15 @@
 [
   {
+    "id": "exort",
+    "title": "Exort",
+    "url": "https://github.com/Razz19/Exort",
+    "description": "Open-Source-Desktop-App mit AI-Coding-Workspace für Mikrocontroller — Firmware schreiben, kompilieren, flashen und debuggen für Arduino, ESP32, RP2040.",
+    "categories": ["Coding", "Tool", "AI"],
+    "tags": ["microcontroller", "arduino", "esp32", "firmware", "desktop"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
     "id": "unsloth",
     "title": "Unsloth",
     "url": "https://github.com/unslothai/unsloth",
