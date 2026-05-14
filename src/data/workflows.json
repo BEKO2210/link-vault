@@ -1,5 +1,140 @@
 [
   {
+    "id": "claude-21-limit-hacks",
+    "title": "21 Hacks, um nie an Claudes Limit zu stoßen",
+    "subtitle": "Token sparen, Sessions sauber halten, Modelle clever wählen — die komplette Liste aus der How-to-AI-Infografik.",
+    "highlights": ["21 Hacks", "Claudes Limit", "Token sparen"],
+    "bullets": [
+      {
+        "icon": "📁",
+        "text": "Datei-Handling: zu .md konvertieren statt roh hochladen, Files unter 2.000 Wörter halten, nie den ganzen Ordner dumpen, Projects für wiederkehrende Dateien nutzen."
+      },
+      {
+        "icon": "💬",
+        "text": "Chat-Hygiene: neues Thema = neuer Chat, alle 15–20 Messages zusammenfassen und neu starten, die Original-Message editieren statt nachzuhaken, Restart statt Follow-up."
+      },
+      {
+        "icon": "🎯",
+        "text": "Effizient prompten: Tasks in einer Message batchen, feste Prompt-Struktur wiederverwenden, 'Ask me questions' voranstellen, nur den falschen Abschnitt neu generieren lassen."
+      },
+      {
+        "icon": "⚙️",
+        "text": "Setup & Modellwahl: Sonnet/Haiku für Kleinkram, Opus für die echte Arbeit, unnötige Features aus, in Chat planen → in Cowork bauen, Nutzung über das 5-Stunden-Fenster verteilen."
+      }
+    ],
+    "steps": [
+      {
+        "label": "Hack 1 — Dateien vor dem Upload konvertieren",
+        "code": "Keine PDFs, Screenshots oder PPTX roh hochladen. Text in ein Google Doc kopieren, als .md exportieren, das hochladen.",
+        "type": "note"
+      },
+      {
+        "label": "Hack 2 — in Chat planen, in Cowork bauen",
+        "code": "Nicht direkt in Cowork 'Erstell ein Finanzmodell' sagen. Erst in Chat die Struktur planen, dann in Cowork mit 'Build this exact file' rüber.",
+        "type": "note"
+      },
+      {
+        "label": "Hack 3 — 'Ask me questions' voranstellen",
+        "code": "I want to [task] to [success criteria]. Read my folder. Ask me questions using AskUserQuestion before you start.",
+        "type": "cmd"
+      },
+      {
+        "label": "Hack 4 — nicht alles neu machen",
+        "code": "Wenn Abschnitt 3 falsch ist: 'Only redo section 3. Keep everything else.' Plus 'No commentary. Just the output.'",
+        "type": "note"
+      },
+      {
+        "label": "Hack 5 — Tasks in eine Message bündeln",
+        "code": "Statt 3 Prompts (summarize / list points / suggest headline) → ein Prompt: 'Summarize, list points, suggest a headline.'",
+        "type": "note"
+      },
+      {
+        "label": "Hack 6 — gleiche Prompt-Struktur wiederverwenden",
+        "code": "Prompt-Library führen, nur den variablen Teil tauschen. Ruben nutzt denselben 30-Wort-Prompt für 80 % seiner Cowork-Sessions.",
+        "type": "note"
+      },
+      {
+        "label": "Hack 7 — Original-Message editieren",
+        "code": "In Chat auf 'Edit' der Original-Message klicken statt eine neue Nachricht zu schreiben. Fixen, regenerieren — der alte Austausch wird ersetzt. Nur in Chat, nicht in Cowork.",
+        "type": "note"
+      },
+      {
+        "label": "Hack 8 — richtiges Modell wählen",
+        "code": "Grammar-Check? Reformat? Sonnet oder Haiku nehmen. Opus + Extended Thinking für die echte Arbeit aufheben.",
+        "type": "note"
+      },
+      {
+        "label": "Hack 9 — Dateien kurz halten",
+        "code": "Cowork liest deinen Ordner vor jeder Task. Auf unter 2.000 Wörter trimmen — zu viel Text = verbrannte Token.",
+        "type": "note"
+      },
+      {
+        "label": "Hack 10 — Restart statt Follow-up",
+        "code": "Wenn Cowork falsch liegt, nicht 'Nein, ich meinte...' tippen. Auf 'Restart the conversation from here' bei einer früheren Message klicken.",
+        "type": "note"
+      },
+      {
+        "label": "Hack 11 — alle 15–20 Messages zusammenfassen",
+        "code": "Claude alles Wichtige zusammenfassen lassen. Summary kopieren, neue Session öffnen, als erste Message einfügen.",
+        "type": "note"
+      },
+      {
+        "label": "Hack 12 — nicht den ganzen Ordner dumpen",
+        "code": "Nur Dateien einbinden, die Claude für genau diese Task braucht. Für Tasks ohne Dateien: 0 Ordner auswählen.",
+        "type": "note"
+      },
+      {
+        "label": "Hack 13 — neues Thema = neuer Chat",
+        "code": "LinkedIn-Post, dann Proposal, dann Rezept — alles im selben Chat? Nicht machen. Neues Thema → neuer Chat. Immer.",
+        "type": "note"
+      },
+      {
+        "label": "Hack 14 — unnötige Features ausschalten",
+        "code": "Web-Search, Connectors, Explore-Mode kosten alle Token. Standardmäßig alles aus, Features pro Task einschalten.",
+        "type": "note"
+      },
+      {
+        "label": "Hack 15 — Projects für wiederkehrende Dateien",
+        "code": "Hör auf, dasselbe PDF in fünf Chats hochzuladen. Stattdessen Projects nutzen — Datei einmal hochladen.",
+        "type": "note"
+      },
+      {
+        "label": "Hack 16 — wiederkehrende Tasks schedulen",
+        "code": "Nicht jede Woche denselben Digest manuell fahren. Das /schedule-Plugin nutzen — einmal einrichten, läuft selbstständig.",
+        "type": "note"
+      },
+      {
+        "label": "Hack 17 — Claude nicht für Unmögliches nutzen",
+        "code": "Claude kann keine Bilder erzeugen → ChatGPT. Echtzeit-Suche → Grok. Das richtige Tool für den Job.",
+        "type": "note"
+      },
+      {
+        "label": "Hack 18 — Prompts einsprechen",
+        "code": "wispr.ai nutzen, um Prompts einzusprechen — mehr Kontext in einem Schwung, weniger Follow-ups, weniger Reloads.",
+        "type": "note"
+      },
+      {
+        "label": "Hack 19 — Preferences einrichten",
+        "code": "Settings → General → Personal Preferences: Stil festlegen, Memory ausschalten.",
+        "type": "note"
+      },
+      {
+        "label": "Hack 20 — Claude Code knapp prompten",
+        "code": "Build a bar chart from this CSV. Save as chart.png.",
+        "type": "cmd"
+      },
+      {
+        "label": "Hack 21 — über den Tag verteilen",
+        "code": "Claude nutzt ein rollendes 5-Stunden-Fenster. Aufteilen: morgens, nachmittags. Bis du zurückkommst, ist frühere Nutzung rausgerollt.",
+        "type": "note"
+      }
+    ],
+    "source": { "name": "Ruben Hassid · How to AI", "url": "https://www.howto-ai.guide" },
+    "tags": ["claude", "tokens", "limit", "productivity", "tips"],
+    "createdAt": "2026-05-02",
+    "accent": "#d97757"
+  },
+  {
     "id": "gemma4-finetune-unsloth-colab",
     "title": "Gemma 4 kostenlos im Browser fine-tunen",
     "subtitle": "Mit Unsloth Studio im Google Colab — eigenes Custom-Modell trainieren, ohne lokale GPU, ohne Setup, komplett gratis.",
