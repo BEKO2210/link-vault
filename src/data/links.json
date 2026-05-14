@@ -1,5 +1,15 @@
 [
   {
+    "id": "unsloth",
+    "title": "Unsloth",
+    "url": "https://github.com/unslothai/unsloth",
+    "description": "Fine-Tuning- und Training-Library für 500+ Open-Source-Modelle — bis 2x schneller, bis 70 % weniger VRAM, ohne Accuracy-Verlust.",
+    "categories": ["AI", "Coding", "Research"],
+    "tags": ["fine-tuning", "training", "lora", "gemma", "open-source"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
     "id": "supertonic",
     "title": "Supertonic",
     "url": "https://github.com/supertone-inc/supertonic",

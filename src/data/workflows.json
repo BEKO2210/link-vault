@@ -1,5 +1,90 @@
 [
   {
+    "id": "gemma4-finetune-unsloth-colab",
+    "title": "Gemma 4 kostenlos im Browser fine-tunen",
+    "subtitle": "Mit Unsloth Studio im Google Colab — eigenes Custom-Modell trainieren, ohne lokale GPU, ohne Setup, komplett gratis.",
+    "highlights": ["Gemma 4", "kostenlos", "Unsloth Studio"],
+    "bullets": [
+      {
+        "icon": "⚡",
+        "text": "Unsloth trainiert 500+ Open-Source-Modelle bis zu 2x schneller mit bis zu 70 % weniger VRAM — ohne Accuracy-Verlust. Custom Triton-Kernels machen es möglich."
+      },
+      {
+        "icon": "🆓",
+        "text": "Läuft im kostenlosen Google-Colab-Tier — keine eigene GPU nötig, kein lokales Setup. Unsloth Studio ist die Web-UI mit Playground, Recipes und Export."
+      },
+      {
+        "icon": "🎛️",
+        "text": "Unterstützt Full Fine-Tuning, LoRA, RL und Pretraining in 4-bit / 16-bit / FP8 — für Text-, Audio-, Vision- und Embedding-Modelle."
+      },
+      {
+        "icon": "📦",
+        "text": "Nach dem Training exportierst du das fertige Modell (GGUF, Merged-Weights, LoRA-Adapter) und nutzt es lokal mit Ollama, llama.cpp oder direkt in deinen Apps."
+      }
+    ],
+    "steps": [
+      {
+        "label": "Voraussetzung",
+        "code": "Google-Account (für Colab) — sonst nichts. Kein lokales Setup, keine GPU.",
+        "type": "note"
+      },
+      {
+        "label": "Unsloth Studio Colab öffnen",
+        "code": "https://colab.research.google.com/github/unslothai/unsloth/blob/main/studio/Unsloth_Studio_Colab.ipynb",
+        "type": "url"
+      },
+      {
+        "label": "Runtime auf GPU stellen",
+        "code": "Colab-Menü: Runtime → Change runtime type → T4 GPU (free tier)",
+        "type": "note"
+      },
+      {
+        "label": "Alle Zellen starten",
+        "code": "Runtime → Run all — Unsloth Studio bootet und gibt einen UI-Link aus.",
+        "type": "cmd"
+      },
+      {
+        "label": "Im Studio: Basis-Modell wählen",
+        "code": "z. B. Gemma 4 — oder eins der 500+ unterstützten Modelle aus dem Katalog.",
+        "type": "note"
+      },
+      {
+        "label": "Dataset hochladen oder Recipe wählen",
+        "code": "Eigene Daten (JSONL/CSV) einspielen oder ein vorgefertigtes Recipe als Startpunkt nehmen.",
+        "type": "note"
+      },
+      {
+        "label": "Trainings-Modus setzen",
+        "code": "LoRA für schnell + sparsam · Full Fine-Tuning für maximale Anpassung · 4-bit für minimalen VRAM.",
+        "type": "note"
+      },
+      {
+        "label": "Training starten",
+        "code": "Im Studio auf Train klicken — Fortschritt, Loss-Kurve und Logs laufen live mit.",
+        "type": "note"
+      },
+      {
+        "label": "Modell testen im Playground",
+        "code": "Studio-Tab Playground / Compare: Prompts gegen Basis- vs. fine-getuntes Modell laufen lassen.",
+        "type": "note"
+      },
+      {
+        "label": "Exportieren",
+        "code": "Export-Tab: GGUF, merged Weights oder reiner LoRA-Adapter — danach mit Ollama oder llama.cpp lokal laden.",
+        "type": "note"
+      },
+      {
+        "label": "Doku + Recipes",
+        "code": "https://github.com/unslothai/unsloth",
+        "type": "url"
+      }
+    ],
+    "source": { "name": "Unsloth AI", "url": "https://github.com/unslothai/unsloth" },
+    "tags": ["fine-tuning", "gemma", "colab", "lora", "unsloth"],
+    "createdAt": "2026-05-02",
+    "accent": "#22c55e"
+  },
+  {
     "id": "book-to-claude-skill",
     "title": "Beliebiges Buch in einen Claude-Skill verwandeln",
     "subtitle": "Methode aus einem Sachbuch als Slash-Command — Buch → Methode → SKILL.md → /command, einmal eingerichtet, jederzeit aufrufbar.",
