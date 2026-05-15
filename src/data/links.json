@@ -1,5 +1,15 @@
 [
   {
+    "id": "text-to-cad",
+    "title": "Text-to-CAD",
+    "url": "https://github.com/earthtojake/text-to-cad",
+    "description": "Agent-Skills für Claude Code / Codex / Gemini — generieren CAD-Modelle, URDF-Roboter und Hardware-Designs aus Natural-Language-Prompts.",
+    "categories": ["Coding", "Agents", "AI"],
+    "tags": ["cad", "robotics", "urdf", "build123d", "skill"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
     "id": "exort",
     "title": "Exort",
     "url": "https://github.com/Razz19/Exort",
