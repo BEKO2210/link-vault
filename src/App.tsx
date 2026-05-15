@@ -12,9 +12,6 @@ import { Stats } from './components/Stats'
 import { WorkflowCard } from './components/WorkflowCard'
 import { shuffled } from './utils'
 
-const LinkForm = lazy(() =>
-  import('./components/LinkForm').then((m) => ({ default: m.LinkForm })),
-)
 const WorkflowDetail = lazy(() =>
   import('./components/WorkflowDetail').then((m) => ({ default: m.WorkflowDetail })),
 )
@@ -347,11 +344,6 @@ export function App() {
 
   const isDraft = (id: string): boolean => drafts.some((d) => d.id === id)
 
-  const saveDraft = (link: Link) => {
-    const next = [...drafts.filter((d) => d.id !== link.id), link]
-    persistDrafts(next)
-  }
-
   const removeDraft = (id: string) => {
     persistDrafts(drafts.filter((d) => d.id !== id))
   }
@@ -521,10 +513,6 @@ export function App() {
               </section>
             )}
           </main>
-
-          <Suspense fallback={Spinner}>
-            <LinkForm onSaveDraft={saveDraft} />
-          </Suspense>
         </>
       )}
 
