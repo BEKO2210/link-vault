@@ -1,5 +1,25 @@
 [
   {
+    "id": "freemocap",
+    "title": "FreeMoCap",
+    "url": "https://github.com/freemocap/freemocap",
+    "description": "Open-Source-Motion-Capture mit beliebigen Kameras — kein teurer Suit, keine Spezial-Hardware, research-grade Motion-Tracking für alle.",
+    "categories": ["Video", "Tool", "Research"],
+    "tags": ["mocap", "motion-capture", "open-source", "tracking", "python"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
+    "id": "map3d",
+    "title": "Map3d",
+    "url": "https://github.com/cartesiancs/map3d",
+    "description": "Web-Tool, das aus jeder Stadt auf OpenStreetMap in Sekunden ein 3D-Modell (Buildings, Roads) generiert — Export als GLB.",
+    "categories": ["Tool", "Design", "Coding"],
+    "tags": ["3d", "openstreetmap", "react-three-fiber", "glb", "city"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
     "id": "text-to-cad",
     "title": "Text-to-CAD",
     "url": "https://github.com/earthtojake/text-to-cad",
