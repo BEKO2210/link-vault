@@ -1,5 +1,15 @@
 [
   {
+    "id": "cloakbrowser",
+    "title": "CloakBrowser",
+    "url": "https://github.com/CloakHQ/CloakBrowser",
+    "description": "Stealth-Chromium mit 49 source-level C++-Patches gegen Bot-Detection — drop-in für Playwright und Puppeteer, Fingerprint-resistent.",
+    "categories": ["Tool", "Security", "Coding"],
+    "tags": ["chromium", "stealth", "anti-bot", "playwright", "scraping"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
     "id": "freemocap",
     "title": "FreeMoCap",
     "url": "https://github.com/freemocap/freemocap",
