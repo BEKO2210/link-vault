@@ -1,5 +1,15 @@
 [
   {
+    "id": "pixelle-video",
+    "title": "Pixelle-Video",
+    "url": "https://github.com/AIDC-AI/Pixelle-Video",
+    "description": "Vollautomatische AI-Short-Video-Engine — aus einem Thema werden Script, Bilder, Voiceover und Background-Musik generiert.",
+    "categories": ["Video", "AI", "Tool"],
+    "tags": ["short-video", "automation", "ai", "tts", "open-source"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
     "id": "freedomain",
     "title": "DigitalPlat FreeDomain",
     "url": "https://github.com/DigitalPlatDev/FreeDomain",
