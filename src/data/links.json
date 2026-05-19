@@ -1,5 +1,25 @@
 [
   {
+    "id": "arcads-claude-code",
+    "title": "arcads-claude-code",
+    "url": "https://github.com/krusemediallc/arcads-claude-code",
+    "description": "Skill-Pack für Claude Code und Cursor zum Erstellen AI-generierter Marketing-Videos und -Bilder via Arcads-API — Sora 2, Veo 3.1, Kling 3.0.",
+    "categories": ["Video", "Agents", "Coding"],
+    "tags": ["claude-code", "cursor", "arcads", "skill", "marketing"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
+    "id": "spec-kit",
+    "title": "Spec Kit",
+    "url": "https://github.com/github/spec-kit",
+    "description": "GitHub-Toolkit für Spec-Driven Development — ausführbare Spezifikationen generieren direkt die Implementation statt nur Code zu leiten.",
+    "categories": ["Coding", "Agents", "Prompting"],
+    "tags": ["github", "spec-driven", "vibe-coding", "agent-mode", "open-source"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
     "id": "pixelle-video",
     "title": "Pixelle-Video",
     "url": "https://github.com/AIDC-AI/Pixelle-Video",
