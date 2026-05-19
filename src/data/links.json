@@ -1,5 +1,15 @@
 [
   {
+    "id": "freedomain",
+    "title": "DigitalPlat FreeDomain",
+    "url": "https://github.com/DigitalPlatDev/FreeDomain",
+    "description": "Kostenlose Domain-Registrierung über mehrere TLDs — 500.000+ Domains bereits vergeben, ideal für Side-Projects und Subdomains ohne Kosten.",
+    "categories": ["Tool", "Coding", "Business"],
+    "tags": ["domain", "free", "dns", "side-project", "tld"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
     "id": "cloakbrowser",
     "title": "CloakBrowser",
     "url": "https://github.com/CloakHQ/CloakBrowser",
