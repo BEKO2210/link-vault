@@ -1,5 +1,15 @@
 [
   {
+    "id": "spec-kit",
+    "title": "Spec Kit",
+    "url": "https://github.com/github/spec-kit",
+    "description": "GitHub-Toolkit für Spec-Driven Development — ausführbare Spezifikationen generieren direkt die Implementation statt nur Code zu leiten.",
+    "categories": ["Coding", "Agents", "Prompting"],
+    "tags": ["github", "spec-driven", "vibe-coding", "agent-mode", "open-source"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
     "id": "pixelle-video",
     "title": "Pixelle-Video",
     "url": "https://github.com/AIDC-AI/Pixelle-Video",
