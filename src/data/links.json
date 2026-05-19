@@ -1,5 +1,15 @@
 [
   {
+    "id": "arcads-claude-code",
+    "title": "arcads-claude-code",
+    "url": "https://github.com/krusemediallc/arcads-claude-code",
+    "description": "Skill-Pack für Claude Code und Cursor zum Erstellen AI-generierter Marketing-Videos und -Bilder via Arcads-API — Sora 2, Veo 3.1, Kling 3.0.",
+    "categories": ["Video", "Agents", "Coding"],
+    "tags": ["claude-code", "cursor", "arcads", "skill", "marketing"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
     "id": "spec-kit",
     "title": "Spec Kit",
     "url": "https://github.com/github/spec-kit",
