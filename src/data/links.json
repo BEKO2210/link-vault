@@ -1,5 +1,15 @@
 [
   {
+    "id": "agentic-saas-blueprint",
+    "title": "Agentic SaaS Blueprint",
+    "url": "https://github.com/NewMatrixCap/agentic-saas-blueprint",
+    "description": "Production-Template für SaaS-Apps mit Claude — Theme-System, Design-Tokens und Anti-Looping-Patterns, kondensiert aus einem 3-Monats-Projekt.",
+    "categories": ["Coding", "Agents", "Business"],
+    "tags": ["claude-code", "saas", "template", "boilerplate", "design-tokens"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
     "id": "arcads-claude-code",
     "title": "arcads-claude-code",
     "url": "https://github.com/krusemediallc/arcads-claude-code",
