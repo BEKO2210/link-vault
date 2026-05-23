@@ -1,5 +1,15 @@
 [
   {
+    "id": "ai-trader",
+    "title": "AI-Trader",
+    "url": "https://github.com/HKUDS/AI-Trader",
+    "description": "Agent-native Trading-Plattform von HKUDS — AI-Agents und Trader teilen Signale, kollaborieren und führen Trades mit Copy-Trading aus.",
+    "categories": ["Agents", "Business", "Research"],
+    "tags": ["trading", "finance", "agents", "copy-trading", "open-source"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
     "id": "wannacut",
     "title": "WannaCut",
     "url": "https://wannacut.app/",
