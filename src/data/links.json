@@ -1,5 +1,15 @@
 [
   {
+    "id": "wannacut",
+    "title": "WannaCut",
+    "url": "https://wannacut.app/",
+    "description": "Leichtgewichtiger, performanter Video-Editor auf Rust/Tauri + React — professionelle Timeline ohne das Gewicht klassischer Editoren.",
+    "categories": ["Video", "Tool", "Coding"],
+    "tags": ["video-editor", "tauri", "rust", "react", "timeline"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
     "id": "agentic-saas-blueprint",
     "title": "Agentic SaaS Blueprint",
     "url": "https://github.com/NewMatrixCap/agentic-saas-blueprint",
