@@ -1,5 +1,15 @@
 [
   {
+    "id": "knowledge-work-plugins",
+    "title": "Knowledge Work Plugins",
+    "url": "https://github.com/anthropics/knowledge-work-plugins",
+    "description": "Offizielle Anthropic-Plugin-Sammlung, die Claude zum Spezialisten für bestimmte Rollen und Job-Funktionen macht — Team-Workflows und Tool-Integrationen.",
+    "categories": ["Agents", "Coding", "Business"],
+    "tags": ["anthropic", "claude", "plugins", "workflows", "official"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
     "id": "ai-trader",
     "title": "AI-Trader",
     "url": "https://github.com/HKUDS/AI-Trader",
