@@ -1,5 +1,15 @@
 [
   {
+    "id": "scrapegraph-ai",
+    "title": "ScrapeGraphAI",
+    "url": "https://github.com/ScrapeGraphAI/Scrapegraph-ai",
+    "description": "Python-Library, die mit LLMs und Graph-Logik strukturierte Daten aus Websites und Dokumenten per Natural-Language-Prompt extrahiert.",
+    "categories": ["Coding", "AI", "Tool"],
+    "tags": ["python", "scraping", "llm", "graph", "data-extraction"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
     "id": "openvid",
     "title": "OpenVid",
     "url": "https://github.com/CristianOlivera1/openvid",
