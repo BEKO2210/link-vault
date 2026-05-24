@@ -1,5 +1,15 @@
 [
   {
+    "id": "openvid",
+    "title": "OpenVid",
+    "url": "https://github.com/CristianOlivera1/openvid",
+    "description": "Browser-Tool, das aus Screen-Recordings und Screenshots in Sekunden professionelle Demo- und Walkthrough-Videos macht — ohne Premiere.",
+    "categories": ["Video", "Tool", "Coding"],
+    "tags": ["screen-recording", "demo", "walkthrough", "browser", "mockup"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
     "id": "deepseek-reasonix",
     "title": "Reasonix",
     "url": "https://esengine.github.io/DeepSeek-Reasonix/",
