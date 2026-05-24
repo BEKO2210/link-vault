@@ -1,5 +1,15 @@
 [
   {
+    "id": "deepseek-reasonix",
+    "title": "Reasonix",
+    "url": "https://esengine.github.io/DeepSeek-Reasonix/",
+    "description": "Terminal-basierter AI-Coding-Agent powered by DeepSeek — unterstützt Entwickler bei Code-Tasks direkt in der Kommandozeile.",
+    "categories": ["Coding", "Agents", "AI"],
+    "tags": ["deepseek", "cli", "coding-agent", "terminal", "ai"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
     "id": "knowledge-work-plugins",
     "title": "Knowledge Work Plugins",
     "url": "https://github.com/anthropics/knowledge-work-plugins",
