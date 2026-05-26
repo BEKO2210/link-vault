@@ -1,5 +1,25 @@
 [
   {
+    "id": "4-agent-team-kit",
+    "title": "4-Agent Team Kit for Claude Code",
+    "url": "https://github.com/BEKO2210/4-Agent-Team-Kit-for-Claude-Code",
+    "description": "Dateibasiertes Koordinations-Protokoll für 4 parallele Claude-Code-Agents in einem Repo — atomic mkdir-Locking, Green-Gate-Commits, Zero Dependencies.",
+    "categories": ["Coding", "Agents", "Tool"],
+    "tags": ["claude-code", "multi-agent", "coordination", "bash", "shell"],
+    "createdAt": "2026-05-26",
+    "favorite": true
+  },
+  {
+    "id": "cate",
+    "title": "Cate",
+    "url": "https://github.com/0-AI-UG/cate",
+    "description": "Spatial Desktop-IDE mit Infinite-Canvas — Code-Editor, Terminal, Browser und Git-Tools frei im Raum statt in vielen Fenstern.",
+    "categories": ["Coding", "Tool"],
+    "tags": ["ide", "electron", "monaco", "canvas", "desktop"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
     "id": "lytenyte",
     "title": "LyteNyte Grid",
     "url": "https://github.com/1771-Technologies/lytenyte",

@@ -1,5 +1,90 @@
 [
   {
+    "id": "free-domain-digitalplat",
+    "title": "Gratis-Domain bei DigitalPlat FreeDomain holen",
+    "subtitle": "Subdomain auf .dpdns.org, .us.kg, .qzz.io & Co. — kostenlos, ohne Kreditkarte, ideal für Side-Projects.",
+    "highlights": ["Gratis-Domain", "DigitalPlat", "FreeDomain"],
+    "bullets": [
+      {
+        "icon": "🌐",
+        "text": "Verfügbare TLDs: .DPDNS.ORG · .US.KG · .QZZ.IO · .XX.KG · .QD.JE — mehr werden laut Repo nachgereicht. Alle echte DNS-fähige Domains, keine reine Forwarder-URLs."
+      },
+      {
+        "icon": "🆓",
+        "text": "Komplett kostenlos und ohne Kreditkarte — finanziert vom DigitalPlat-Maintainer und Edward Huang. Über 500.000 Domains bereits registriert."
+      },
+      {
+        "icon": "🛠️",
+        "text": "Nutzbar für Side-Projects, Demos, Tor-Onion-Mirror, Newsletter-Subdomains, Cloudflare-Workers, Vercel-/Netlify-Custom-Domains. Volle DNS-Kontrolle (A/AAAA/CNAME/TXT)."
+      },
+      {
+        "icon": "⚠️",
+        "text": "Free heißt nicht ewig: Nutzungsbedingungen lesen — kein Spam, kein Phishing. Sonst wird die Domain entzogen. Eigene Top-Level-Brands (.com / .de) kannst du damit nicht abbilden."
+      }
+    ],
+    "steps": [
+      {
+        "label": "Voraussetzung",
+        "code": "GitHub-Account (für Login im Dashboard) und IP/Server oder CDN-URL, auf die deine Domain zeigen soll.",
+        "type": "note"
+      },
+      {
+        "label": "Repo öffnen + Aktualisierungen checken",
+        "code": "https://github.com/DigitalPlatDev/FreeDomain",
+        "type": "url"
+      },
+      {
+        "label": "Dashboard aufrufen",
+        "code": "https://dash.domain.digitalplat.org/",
+        "type": "url"
+      },
+      {
+        "label": "Mit GitHub einloggen",
+        "code": "Klick auf 'Login with GitHub' im Dashboard — kein neuer Account, kein Passwort.",
+        "type": "note"
+      },
+      {
+        "label": "TLD auswählen",
+        "code": ".dpdns.org für Tech-Projekte · .us.kg / .xx.kg / .qd.je für Kurz-URLs · .qzz.io für Apps",
+        "type": "note"
+      },
+      {
+        "label": "Wunschnamen prüfen",
+        "code": "Im Dashboard 'Check availability' — der Name muss frei sein und den Richtlinien entsprechen (kein Markenmissbrauch).",
+        "type": "note"
+      },
+      {
+        "label": "DNS-Records setzen",
+        "code": "A-Record für IPv4 · AAAA für IPv6 · CNAME für Vercel/Netlify/Pages · TXT für Verifizierungen",
+        "type": "note"
+      },
+      {
+        "label": "Domain registrieren",
+        "code": "Klick auf 'Register' / 'Claim' — Domain ist nach Propagation (meist Minuten) live.",
+        "type": "note"
+      },
+      {
+        "label": "Test der Domain",
+        "code": "dig deine-domain.us.kg +short  # oder im Browser öffnen",
+        "type": "cmd"
+      },
+      {
+        "label": "Spätere Änderungen",
+        "code": "DNS-Records jederzeit im Dashboard editieren — keine Wartezeiten, keine Gebühren.",
+        "type": "note"
+      },
+      {
+        "label": "Tutorial im Repo",
+        "code": "https://github.com/DigitalPlatDev/FreeDomain/blob/main/documents/tutorial/index.md",
+        "type": "url"
+      }
+    ],
+    "source": { "name": "DigitalPlat · Edward Huang", "url": "https://github.com/DigitalPlatDev/FreeDomain" },
+    "tags": ["domain", "free", "dns", "side-project", "tld"],
+    "createdAt": "2026-05-02",
+    "accent": "#10b981"
+  },
+  {
     "id": "claude-21-limit-hacks",
     "title": "21 Hacks, um nie an Claudes Limit zu stoßen",
     "subtitle": "Token sparen, Sessions sauber halten, Modelle clever wählen — die komplette Liste aus der How-to-AI-Infografik.",
