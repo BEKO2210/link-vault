@@ -1,5 +1,15 @@
 [
   {
+    "id": "lytenyte",
+    "title": "LyteNyte Grid",
+    "url": "https://github.com/1771-Technologies/lytenyte",
+    "description": "High-Performance React Data-Grid (~40 KB, zero-dependency) für Millionen Zeilen mit 150+ Enterprise-Features.",
+    "categories": ["Coding", "Tool"],
+    "tags": ["react", "data-grid", "library", "frontend", "performance"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
     "id": "scrapegraph-ai",
     "title": "ScrapeGraphAI",
     "url": "https://github.com/ScrapeGraphAI/Scrapegraph-ai",
