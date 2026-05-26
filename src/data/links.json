@@ -1,5 +1,15 @@
 [
   {
+    "id": "4-agent-team-kit",
+    "title": "4-Agent Team Kit for Claude Code",
+    "url": "https://github.com/BEKO2210/4-Agent-Team-Kit-for-Claude-Code",
+    "description": "Dateibasiertes Koordinations-Protokoll für 4 parallele Claude-Code-Agents in einem Repo — atomic mkdir-Locking, Green-Gate-Commits, Zero Dependencies.",
+    "categories": ["Coding", "Agents", "Tool"],
+    "tags": ["claude-code", "multi-agent", "coordination", "bash", "shell"],
+    "createdAt": "2026-05-26",
+    "favorite": true
+  },
+  {
     "id": "cate",
     "title": "Cate",
     "url": "https://github.com/0-AI-UG/cate",
