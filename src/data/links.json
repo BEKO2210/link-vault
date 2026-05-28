@@ -1,5 +1,45 @@
 [
   {
+    "id": "twenty",
+    "title": "Twenty",
+    "url": "https://github.com/twentyhq/twenty",
+    "description": "Open-Source-CRM für technische Teams — die offene Alternative zu Salesforce, AI-first, code-based extensibility.",
+    "categories": ["Business", "Coding", "Tool"],
+    "tags": ["crm", "open-source", "salesforce-alternative", "ai", "saas"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
+    "id": "ppf-contact-solver",
+    "title": "PPF Contact Solver",
+    "url": "https://github.com/st-tech/ppf-contact-solver",
+    "description": "ZOZOs Open-Source-Engine für physikbasierte Simulation von Stoff, Schalen, Festkörpern und Stäben — industrielle Cloth-Physics.",
+    "categories": ["Research", "Coding", "Tool"],
+    "tags": ["physics", "simulation", "cloth", "zozo", "rust"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
+    "id": "rowboat",
+    "title": "Rowboat",
+    "url": "https://github.com/rowboatlabs/rowboat",
+    "description": "Lokaler Open-Source AI-Coworker — baut aus E-Mails und Meetings einen Knowledge-Graph und nutzt ihn für Decks, Briefs und Voice-Memos.",
+    "categories": ["Memory", "Agents", "Tool"],
+    "tags": ["local-first", "knowledge-graph", "voice", "email", "open-source"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
+    "id": "locate-anything",
+    "title": "LocateAnything",
+    "url": "https://research.nvidia.com/labs/lpr/locate-anything/",
+    "description": "NVIDIA Vision-Language-Modell mit Parallel-Box-Decoding — schnelles, hochwertiges Visual Grounding für Object-Detection, GUI- und Text-Localization.",
+    "categories": ["AI", "Image", "Research"],
+    "tags": ["nvidia", "vision-language", "object-detection", "grounding", "model"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
     "id": "4-agent-team-kit",
     "title": "4-Agent Team Kit for Claude Code",
     "url": "https://github.com/BEKO2210/4-Agent-Team-Kit-for-Claude-Code",
