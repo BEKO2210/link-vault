@@ -1,5 +1,15 @@
 [
   {
+    "id": "bonsai-image-4b",
+    "title": "Bonsai Image 4B",
+    "url": "https://prismml.com/news/bonsai-image-4b",
+    "description": "Quantisierte Image-Generation-Modelle (1-bit + ternär), die FLUX.2 Klein 4B um 6–8× schrumpfen — laufen auf iPhone 17 Pro Max in 9 Sekunden.",
+    "categories": ["Image", "AI", "Research"],
+    "tags": ["flux", "quantization", "on-device", "diffusion", "mobile"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
     "id": "off-grid-mobile-ai",
     "title": "Off-Grid Mobile AI",
     "url": "https://github.com/alichherawalla/off-grid-mobile-ai",
