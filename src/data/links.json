@@ -1,5 +1,15 @@
 [
   {
+    "id": "off-grid-mobile-ai",
+    "title": "Off-Grid Mobile AI",
+    "url": "https://github.com/alichherawalla/off-grid-mobile-ai",
+    "description": "Privacy-Mobile-App für On-Device AI — Text, Image-Generation, Vision und Voice komplett offline, ohne Server-Calls.",
+    "categories": ["Mobile", "AI", "Tool"],
+    "tags": ["mobile", "on-device", "offline", "privacy", "local"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
     "id": "twenty",
     "title": "Twenty",
     "url": "https://github.com/twentyhq/twenty",
