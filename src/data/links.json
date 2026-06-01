@@ -1,5 +1,25 @@
 [
   {
+    "id": "syswatch",
+    "title": "SysWatch",
+    "url": "https://github.com/matthart1983/syswatch",
+    "description": "Terminal-Dashboard für macOS und Linux — Realtime-Monitoring von CPU, RAM, GPU, Power & Co. mit Plain-English-Anomalie-Detection.",
+    "categories": ["Tool", "Coding"],
+    "tags": ["cli", "monitoring", "macos", "linux", "diagnostics"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
+    "id": "arcrift",
+    "title": "ArcRift",
+    "url": "https://github.com/Eshaan-Nair/ArcRift",
+    "description": "Local-first Memory-Layer für AI-Chats und IDE-Coding — baut durchsuchbaren Knowledge-Graph und injiziert Kontext in zukünftige Prompts.",
+    "categories": ["Memory", "Agents", "Coding"],
+    "tags": ["memory", "knowledge-graph", "local-first", "context", "ai"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
     "id": "bonsai-image-4b",
     "title": "Bonsai Image 4B",
     "url": "https://prismml.com/news/bonsai-image-4b",
