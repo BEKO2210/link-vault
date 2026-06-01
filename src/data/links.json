@@ -1,5 +1,45 @@
 [
   {
+    "id": "syswatch",
+    "title": "SysWatch",
+    "url": "https://github.com/matthart1983/syswatch",
+    "description": "Terminal-Dashboard für macOS und Linux — Realtime-Monitoring von CPU, RAM, GPU, Power & Co. mit Plain-English-Anomalie-Detection.",
+    "categories": ["Tool", "Coding"],
+    "tags": ["cli", "monitoring", "macos", "linux", "diagnostics"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
+    "id": "arcrift",
+    "title": "ArcRift",
+    "url": "https://github.com/Eshaan-Nair/ArcRift",
+    "description": "Local-first Memory-Layer für AI-Chats und IDE-Coding — baut durchsuchbaren Knowledge-Graph und injiziert Kontext in zukünftige Prompts.",
+    "categories": ["Memory", "Agents", "Coding"],
+    "tags": ["memory", "knowledge-graph", "local-first", "context", "ai"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
+    "id": "bonsai-image-4b",
+    "title": "Bonsai Image 4B",
+    "url": "https://prismml.com/news/bonsai-image-4b",
+    "description": "Quantisierte Image-Generation-Modelle (1-bit + ternär), die FLUX.2 Klein 4B um 6–8× schrumpfen — laufen auf iPhone 17 Pro Max in 9 Sekunden.",
+    "categories": ["Image", "AI", "Research"],
+    "tags": ["flux", "quantization", "on-device", "diffusion", "mobile"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
+    "id": "off-grid-mobile-ai",
+    "title": "Off-Grid Mobile AI",
+    "url": "https://github.com/alichherawalla/off-grid-mobile-ai",
+    "description": "Privacy-Mobile-App für On-Device AI — Text, Image-Generation, Vision und Voice komplett offline, ohne Server-Calls.",
+    "categories": ["Mobile", "AI", "Tool"],
+    "tags": ["mobile", "on-device", "offline", "privacy", "local"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
     "id": "twenty",
     "title": "Twenty",
     "url": "https://github.com/twentyhq/twenty",
