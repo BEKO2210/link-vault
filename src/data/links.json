@@ -1,5 +1,15 @@
 [
   {
+    "id": "opendataloader-pdf",
+    "title": "OpenDataLoader PDF",
+    "url": "https://github.com/opendataloader-project/opendataloader-pdf",
+    "description": "Open-Source PDF-Parser für AI-ready Daten — 100 Seiten/Sekunde zu Markdown/JSON mit Bounding-Boxes, ideal für RAG-Pipelines.",
+    "categories": ["Tool", "Coding", "Research"],
+    "tags": ["pdf", "parser", "markdown", "rag", "open-source"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
     "id": "odysseus",
     "title": "Odysseus",
     "url": "https://github.com/pewdiepie-archdaemon/odysseus",
