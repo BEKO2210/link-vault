@@ -1,5 +1,15 @@
 [
   {
+    "id": "odysseus",
+    "title": "Odysseus",
+    "url": "https://github.com/pewdiepie-archdaemon/odysseus",
+    "description": "Self-hosted AI-Workspace mit Chat, Agents, Document-Editing, Deep-Research und Modell-Manager — Commercial-AI-Feeling, lokal und privat.",
+    "categories": ["AI", "Tool", "Chat"],
+    "tags": ["self-hosted", "workspace", "agents", "local-first", "research"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
     "id": "syswatch",
     "title": "SysWatch",
     "url": "https://github.com/matthart1983/syswatch",
