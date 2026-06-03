@@ -1,5 +1,15 @@
 [
   {
+    "id": "canopy",
+    "title": "Canopy",
+    "url": "https://github.com/Miosa-osa/canopy",
+    "description": "Workspace-Protokoll, das Markdown-Ordner in echte AI-Firmen verwandelt — Agents, Skills, Budgets und Governance für Claude Code, OSA und Cursor.",
+    "categories": ["Agents", "Coding", "Business"],
+    "tags": ["workspace", "claude-code", "cursor", "governance", "open-source"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
     "id": "ecc",
     "title": "ECC — Everything Claude Code",
     "url": "https://github.com/affaan-m/ECC",
