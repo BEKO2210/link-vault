@@ -1,5 +1,65 @@
 [
   {
+    "id": "ecc",
+    "title": "ECC — Everything Claude Code",
+    "url": "https://github.com/affaan-m/ECC",
+    "description": "Performance-System für AI-Agent-Harnesses — 63 Agents, 249 Skills, AgentShield-Security-Gate, cross-platform für Claude Code, Cursor, Codex, OpenCode & Co.",
+    "categories": ["Agents", "Coding", "Security"],
+    "tags": ["claude-code", "skills", "harness", "agentshield", "open-source"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
+    "id": "openalice",
+    "title": "OpenAlice",
+    "url": "https://openalice.io",
+    "description": "Self-hosted autonomer AI-Trading-Agent — Stocks, Crypto, Forex, Options, Futures, ETFs über mehrere Broker aus einem lokalen Deployment.",
+    "categories": ["Agents", "Business", "Tool"],
+    "tags": ["trading", "self-hosted", "autonomous", "open-source", "finance"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
+    "id": "blink-new",
+    "title": "Blink.new",
+    "url": "https://blink.new/",
+    "description": "AI-Full-Stack-App-Builder — aus Natural-Language entstehen Production-Apps mit echter DB, Auth, Edge-Functions und global gehostet.",
+    "categories": ["Coding", "AI", "Tool"],
+    "tags": ["app-builder", "fullstack", "no-code", "saas", "vibe-coding"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
+    "id": "anthropic-cybersecurity-skills",
+    "title": "Anthropic Cybersecurity Skills",
+    "url": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills",
+    "description": "Open-Source-Library mit 754 strukturierten Cybersecurity-Skills — gemappt auf MITRE ATT&CK, NIST CSF 2.0, ATLAS, D3FEND und NIST AI RMF.",
+    "categories": ["Security", "Agents", "Research"],
+    "tags": ["cybersecurity", "claude-skills", "mitre", "nist", "library"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
+    "id": "opendataloader-pdf",
+    "title": "OpenDataLoader PDF",
+    "url": "https://github.com/opendataloader-project/opendataloader-pdf",
+    "description": "Open-Source PDF-Parser für AI-ready Daten — 100 Seiten/Sekunde zu Markdown/JSON mit Bounding-Boxes, ideal für RAG-Pipelines.",
+    "categories": ["Tool", "Coding", "Research"],
+    "tags": ["pdf", "parser", "markdown", "rag", "open-source"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
+    "id": "odysseus",
+    "title": "Odysseus",
+    "url": "https://github.com/pewdiepie-archdaemon/odysseus",
+    "description": "Self-hosted AI-Workspace mit Chat, Agents, Document-Editing, Deep-Research und Modell-Manager — Commercial-AI-Feeling, lokal und privat.",
+    "categories": ["AI", "Tool", "Chat"],
+    "tags": ["self-hosted", "workspace", "agents", "local-first", "research"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
     "id": "syswatch",
     "title": "SysWatch",
     "url": "https://github.com/matthart1983/syswatch",
