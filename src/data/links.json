@@ -1,5 +1,95 @@
 [
   {
+    "id": "turbovec",
+    "title": "turbovec",
+    "url": "https://github.com/RyanCodrai/turbovec",
+    "description": "Rust-Vektor-Index mit Python-Bindings auf Basis von Google Researchs TurboQuant — bessere Kompression und schnellere Vector-Search.",
+    "categories": ["Coding", "Memory", "Tool"],
+    "tags": ["rust", "python", "vector", "search", "embeddings"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
+    "id": "osint-framework",
+    "title": "OSINT Framework",
+    "url": "https://osintframework.com",
+    "description": "Mind-Map aller OSINT-Tools im Netz, gemappt per Use-Case (Username, E-Mail, Domain, Cloud, Infrastruktur) — die Referenz für Investigations.",
+    "categories": ["Security", "Tool", "Inspiration"],
+    "tags": ["osint", "framework", "tools", "investigation", "reference"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
+    "id": "mamma",
+    "title": "MAMMA",
+    "url": "https://github.com/cuevhv/mamma",
+    "description": "Markerless Multi-Person Motion-Capture mit Multi-View-Video und AI-Pose-Estimation — CVPR 2026, Code + Training released.",
+    "categories": ["Research", "AI", "Video"],
+    "tags": ["motion-capture", "computer-vision", "cvpr", "multi-person", "3d"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
+    "id": "opencut",
+    "title": "OpenCut",
+    "url": "https://github.com/OpenCut-app/OpenCut",
+    "description": "Open-Source-Video-Editor für Web, Desktop und Mobile als CapCut-Alternative — Plugin-Architektur und MCP-Server-Support geplant.",
+    "categories": ["Video", "Tool", "Coding"],
+    "tags": ["video-editor", "capcut", "open-source", "web", "desktop"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
+    "id": "claude-mem",
+    "title": "claude-mem",
+    "url": "https://github.com/thedotmack/claude-mem",
+    "description": "Claude Code Plugin, das alles aus Coding-Sessions captured, mit AI komprimiert und relevanten Kontext in zukünftige Sessions injiziert.",
+    "categories": ["Memory", "Coding", "Agents"],
+    "tags": ["claude-code", "memory", "plugin", "agent-sdk", "context"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
+    "id": "withraven",
+    "title": "Raven (Graylark)",
+    "url": "https://www.withraven.ai/",
+    "description": "Visual-Intelligence-Plattform für OSINT — analysiert Bilder ohne Metadaten und liefert Geolokation, Street-Level-Tracking und Fake-Erkennung.",
+    "categories": ["Security", "Image", "Tool"],
+    "tags": ["osint", "image-analysis", "geolocation", "investigation", "geospy"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
+    "id": "crawl4ai",
+    "title": "Crawl4AI",
+    "url": "https://github.com/unclecode/crawl4ai",
+    "description": "Open-Source Web-Crawler und -Scraper, der Webseiten in sauberes Markdown verwandelt — optimiert für LLM-Pipelines und Daten-Extraktion.",
+    "categories": ["Coding", "Tool", "AI"],
+    "tags": ["crawler", "scraper", "markdown", "llm", "python"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
+    "id": "openstock",
+    "title": "OpenStock",
+    "url": "https://github.com/open-dev-society/openstock",
+    "description": "Open-Source-Stock-Market-Platform mit Realtime-Preisen, personalisierten Alerts und Company-Insights — gratis Alternative zu Bezahl-Tools.",
+    "categories": ["Business", "Tool", "Coding"],
+    "tags": ["stock-market", "finance", "nextjs", "open-source", "alternative"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
+    "id": "quantmind",
+    "title": "QuantMind",
+    "url": "https://github.com/LLMQuant/quant-mind",
+    "description": "Knowledge-Extraction-Framework für Quant-Finance — wandelt unstrukturierten Content (Papers, News, Reports) in eine durchsuchbare Knowledge-Base.",
+    "categories": ["Research", "AI", "Business"],
+    "tags": ["finance", "knowledge-graph", "llm", "python", "retrieval"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
     "id": "canopy",
     "title": "Canopy",
     "url": "https://github.com/Miosa-osa/canopy",
