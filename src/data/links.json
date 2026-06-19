@@ -1,5 +1,115 @@
 [
   {
+    "id": "open-generative-ai",
+    "title": "Open Generative AI",
+    "url": "https://github.com/Anil-matcha/Open-Generative-AI",
+    "description": "Open-Source AI-Studio für Bild + Video — 200+ Modelle (Flux, Midjourney, Kling, Sora, Veo), keine Content-Filter, self-hosted, MIT-Lizenz.",
+    "categories": ["Image", "Video", "AI"],
+    "tags": ["self-hosted", "image-gen", "video-gen", "open-source", "studio"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
+    "id": "iptv",
+    "title": "iptv-org/iptv",
+    "url": "https://github.com/iptv-org/iptv",
+    "description": "Kuratierte Sammlung von 12.000+ frei verfügbaren IPTV-Kanälen aus aller Welt, sortiert nach Land, Sprache und Kategorie.",
+    "categories": ["Video", "Tool", "Inspiration"],
+    "tags": ["iptv", "streaming", "tv", "playlists", "m3u"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
+    "id": "openwa",
+    "title": "OpenWA",
+    "url": "https://github.com/rmyndharis/OpenWA",
+    "description": "Open-Source WhatsApp-API-Gateway — pluggable Architektur, Multi-Session, Docker-native, n8n-Integration. Free Alternative zur Paid-API.",
+    "categories": ["Tool", "Coding", "Business"],
+    "tags": ["whatsapp", "api", "gateway", "docker", "n8n"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
+    "id": "zero-to-mastery-ml",
+    "title": "Zero to Mastery ML",
+    "url": "https://github.com/mrdbourke/zero-to-mastery-ml",
+    "description": "Daniel Bourkes Kurs-Repo zum Selbstlernen von Machine Learning — Notebooks, Übungen und Projekte vom Anfänger zum Practitioner.",
+    "categories": ["Learning", "AI", "Research"],
+    "tags": ["machine-learning", "course", "python", "notebooks", "tutorial"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
+    "id": "youtube-automation-agent",
+    "title": "YouTube Automation Agent",
+    "url": "https://github.com/darkzOGx/youtube-automation-agent",
+    "description": "AI-System, das wie ein 24/7-YouTube-Mitarbeiter arbeitet — Content-Recherche, Scripting, Thumbnail-Erstellung und Upload automatisiert.",
+    "categories": ["Agents", "Video", "Tool"],
+    "tags": ["youtube", "automation", "ai", "content", "agent"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
+    "id": "skillspector",
+    "title": "SkillSpector",
+    "url": "https://github.com/NVIDIA/SkillSpector",
+    "description": "NVIDIAs AI-Antivirus für Agents und Skills — 64 Indikatoren erkennen kompromittierte oder schädliche Agent-Skills bevor sie ausgeführt werden.",
+    "categories": ["Security", "Agents", "Research"],
+    "tags": ["nvidia", "antivirus", "agent-security", "skills", "scanner"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
+    "id": "react-bits",
+    "title": "React Bits",
+    "url": "https://github.com/DavidHDev/react-bits",
+    "description": "Open-Source-Library mit 130+ animierten, customisierbaren React-Komponenten plus Background-Studio, Shape-Magic und Texture-Lab.",
+    "categories": ["Design", "Coding", "Inspiration"],
+    "tags": ["react", "components", "animation", "ui", "library"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
+    "id": "alaya-renderer",
+    "title": "AlayaRenderer",
+    "url": "https://github.com/ShandaAI/AlayaRenderer",
+    "description": "AI-nativer Renderer für Games und Virtual Worlds — fine-getunte Video-Diffusion mit G-Buffer-Kanälen für Real-World-Szenen.",
+    "categories": ["Image", "Research", "AI"],
+    "tags": ["rendering", "world-model", "video-diffusion", "games", "alaya"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
+    "id": "helixdb",
+    "title": "HelixDB",
+    "url": "https://github.com/HelixDB/helix-db",
+    "description": "OLTP Graph-Vector-Datenbank in Rust — Datenspeicher, Vector-Search und Knowledge-Graph in einer einzigen Plattform für AI-Apps.",
+    "categories": ["Coding", "Memory", "Tool"],
+    "tags": ["database", "rust", "vector", "graph", "oltp"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
+    "id": "noop-whoop",
+    "title": "NOOP",
+    "url": "https://github.com/noopapp/noop",
+    "description": "Local-first WHOOP-Companion-App — eigene Strap-Daten ohne Cloud-Account, ohne Subscription, ohne Telemetrie.",
+    "categories": ["Mobile", "Tool"],
+    "tags": ["whoop", "fitness", "local-first", "privacy", "android-ios"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
+    "id": "flint",
+    "title": "Flint",
+    "url": "https://github.com/Chintanpatel24/flint",
+    "description": "Lokale AI-Knowledge-Base mit Markdown, Wiki-Links, Tags und Graph-View — llama.cpp-basiert, läuft offline und privat.",
+    "categories": ["Memory", "AI", "Coding"],
+    "tags": ["knowledge-base", "notes", "local", "llama-cpp", "markdown"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
     "id": "turbovec",
     "title": "turbovec",
     "url": "https://github.com/RyanCodrai/turbovec",
