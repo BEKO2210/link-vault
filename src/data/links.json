@@ -357,7 +357,7 @@
     "categories": ["Coding", "Agents", "Tool"],
     "tags": ["claude-code", "multi-agent", "coordination", "bash", "shell"],
     "createdAt": "2026-05-26",
-    "favorite": true
+    "favorite": false
   },
   {
     "id": "cate",
