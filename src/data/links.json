@@ -1,5 +1,15 @@
 [
   {
+    "id": "logzilla",
+    "title": "LogZilla AI",
+    "url": "https://www.logzilla.ai/",
+    "description": "AI-Operational-Intelligence-Plattform für Logs — Natural-Language-Queries, Auto-Remediation, Cross-Device-Korrelation, 60–80 % weniger SIEM-Kosten.",
+    "categories": ["Security", "Tool", "Business"],
+    "tags": ["logs", "siem", "observability", "ai", "remediation"],
+    "createdAt": "2026-05-02",
+    "favorite": false
+  },
+  {
     "id": "open-generative-ai",
     "title": "Open Generative AI",
     "url": "https://github.com/Anil-matcha/Open-Generative-AI",

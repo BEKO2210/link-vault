@@ -197,7 +197,7 @@ button {
   }
 }
 
-.app > * {
+.app > *:not(.bg-gradient):not(.bg-grid) {
   max-width: var(--container);
   margin-left: auto;
   margin-right: auto;
